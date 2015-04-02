@@ -567,7 +567,7 @@ msgstr ""
 #: modules/nickserv/register.c:119
 #, c-format
 msgid "%s is already registered."
-msgstr ""
+msgstr "%s は既に登録されています。"
 
 #: modules/chanfix/fix.c:370
 #, c-format
@@ -1578,7 +1578,7 @@ msgstr ""
 #: modules/nickserv/ghost.c:58 modules/nickserv/logout.c:52
 #, c-format
 msgid "%s is not online."
-msgstr ""
+msgstr "%s はオンラインではありません。"
 
 #: modules/chanserv/halfop.c:108 modules/chanserv/op.c:98
 #: modules/chanserv/owner.c:108 modules/chanserv/protect.c:108
@@ -2167,7 +2167,7 @@ msgstr ""
 #: modules/nickserv/return.c:65
 #, c-format
 msgid "%s is not a valid e-mail address."
-msgstr ""
+msgstr "%s は有効なEメールアドレスではありません。"
 
 #: modules/chanserv/set_email.c:78
 #, c-format
@@ -2271,25 +2271,25 @@ msgstr ""
 #: modules/nickserv/set_private.c:36 modules/nickserv/set_privmsg.c:36
 #, c-format
 msgid "The %s flag is already set for %s."
-msgstr ""
+msgstr "%2$s には %1$s フラグが既に設定されています。"
 
 #: modules/chanserv/set_limitflags.c:75 modules/chanserv/set_private.c:75
 #: modules/nickserv/set_private.c:45 modules/nickserv/set_privmsg.c:44
 #, c-format
 msgid "The %s flag has been set for %s."
-msgstr ""
+msgstr "%2$s に %1$s フラグが設定されました。"
 
 #: modules/chanserv/set_limitflags.c:84 modules/chanserv/set_private.c:84
 #: modules/nickserv/set_private.c:53 modules/nickserv/set_privmsg.c:52
 #, c-format
 msgid "The %s flag is not set for %s."
-msgstr ""
+msgstr "%2$s には %1$s フラグは設定されていません。"
 
 #: modules/chanserv/set_limitflags.c:92 modules/chanserv/set_private.c:92
 #: modules/nickserv/set_private.c:61 modules/nickserv/set_privmsg.c:60
 #, c-format
 msgid "The %s flag has been removed for %s."
-msgstr ""
+msgstr "%2$s の %1$s フラグが除去されました。"
 
 #: modules/chanserv/set_mlock.c:21
 msgid "Sets channel mode lock."
@@ -2374,7 +2374,7 @@ msgstr ""
 
 #: modules/chanserv/set_property.c:55 modules/nickserv/set_property.c:56
 msgid "Invalid property name."
-msgstr ""
+msgstr "無効なプロパティ名です。"
 
 #: modules/chanserv/set_property.c:80 modules/nickserv/set_property.c:69
 #, c-format
@@ -2393,7 +2393,7 @@ msgstr ""
 
 #: modules/chanserv/set_property.c:108 modules/nickserv/set_property.c:99
 msgid "Parameters are too long. Aborting."
-msgstr ""
+msgstr "パラメータが長過ぎます。中止します。"
 
 #: modules/chanserv/set_property.c:114 modules/nickserv/set_property.c:112
 #, c-format
