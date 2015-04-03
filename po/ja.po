@@ -135,7 +135,7 @@ msgstr ""
 
 #: modules/botserv/bottalk.c:47
 msgid "Syntax: SAY <#channel> <msg>"
-msgstr "書式: SAY <#channel> <メッセージ>"
+msgstr "構文: SAY <#channel> <メッセージ>"
 
 #: modules/botserv/bottalk.c:56 modules/botserv/bottalk.c:105
 #: modules/botserv/set_fantasy.c:70 modules/botserv/set_nobot.c:55
@@ -199,7 +199,7 @@ msgstr "%s が割り当てられたボットはありません。"
 
 #: modules/botserv/bottalk.c:96
 msgid "Syntax: ACT <#channel> <msg>"
-msgstr "書式: ACT <#channel> <メッセージ>"
+msgstr "構文: ACT <#channel> <メッセージ>"
 
 #: modules/botserv/help.c:20 modules/chanfix/fix.c:619
 #: modules/chanserv/help.c:20 modules/gameserv/help.c:20
@@ -223,11 +223,11 @@ msgstr ""
 #: modules/botserv/info.c:58 modules/botserv/info.c:126
 #: modules/chanserv/info.c:48 modules/chanserv/info.c:55
 msgid "Syntax: INFO <#channel>"
-msgstr "書式: INFO <#channel>"
+msgstr "構文: INFO <#channel>"
 
 #: modules/botserv/info.c:59 modules/botserv/info.c:127
 msgid "Syntax: INFO <botnick>"
-msgstr "書式: INFO <botnick>"
+msgstr "構文: INFO <botnick>"
 
 #: modules/botserv/info.c:74
 #, c-format
@@ -683,7 +683,7 @@ msgstr ""
 #: modules/chanfix/fix.c:532 modules/chanfix/fix.c:589
 #: modules/chanserv/mark.c:43 modules/chanserv/mark.c:101
 msgid "Usage: MARK <#channel> <ON|OFF> [note]"
-msgstr "書式: MARK <#channel> <ON|OFF> [メモ]"
+msgstr "構文: MARK <#channel> <ON|OFF> [メモ]"
 
 #: modules/chanfix/fix.c:554 modules/chanserv/mark.c:64
 msgid "Usage: MARK <#channel> ON <note>"
@@ -791,11 +791,11 @@ msgstr "より詳しくは /msg %s HELP ROLE command を実行してくだ�
 
 #: modules/chanserv/access.c:149 modules/chanserv/access.c:160
 msgid "Syntax: ACCESS <#channel> <command> [parameters]"
-msgstr "書式: ACCESS <#channel> <command> [parameters]"
+msgstr "構文: ACCESS <#channel> <command> [parameters]"
 
 #: modules/chanserv/access.c:189 modules/chanserv/access.c:200
 msgid "Syntax: ROLE <#channel> <command> [parameters]"
-msgstr "書式: ROLE <#channel> <command> [parameters]"
+msgstr "構文: ROLE <#channel> <command> [parameters]"
 
 #: modules/chanserv/access.c:495 modules/chanserv/template.c:178
 #: modules/chanserv/template.c:315
@@ -1603,12 +1603,12 @@ msgstr ""
 #: modules/chanserv/halfop.c:141
 #, fuzzy
 msgid "Syntax: HALFOP <#channel> [nickname] [...]"
-msgstr "書式: INFO <#channel>"
+msgstr "構文: INFO <#channel>"
 
 #: modules/chanserv/halfop.c:153
 #, fuzzy
 msgid "Syntax: DEHALFOP <#channel> [nickname] [...]"
-msgstr "書式: INFO <#channel>"
+msgstr "構文: INFO <#channel>"
 
 #: modules/chanserv/help.c:49
 #, c-format
@@ -1946,12 +1946,12 @@ msgstr ""
 #: modules/chanserv/op.c:131
 #, fuzzy
 msgid "Syntax: OP <#channel> [nickname] [...]"
-msgstr "書式: INFO <#channel>"
+msgstr "構文: INFO <#channel>"
 
 #: modules/chanserv/op.c:143
 #, fuzzy
 msgid "Syntax: DEOP <#channel> [nickname] [...]"
-msgstr "書式: INFO <#channel>"
+msgstr "構文: INFO <#channel>"
 
 #: modules/chanserv/owner.c:22
 msgid "Gives the channel owner flag to a user."
@@ -1973,12 +1973,12 @@ msgstr ""
 #: modules/chanserv/owner.c:141
 #, fuzzy
 msgid "Syntax: OWNER <#channel> [nickname] [...]"
-msgstr "書式: ROLE <#channel> <command> [parameters]"
+msgstr "構文: ROLE <#channel> <command> [parameters]"
 
 #: modules/chanserv/owner.c:153
 #, fuzzy
 msgid "Syntax: DEOWNER <#channel> [nickname] [...]"
-msgstr "書式: ROLE <#channel> <command> [parameters]"
+msgstr "構文: ROLE <#channel> <command> [parameters]"
 
 #: modules/chanserv/protect.c:22
 msgid "Gives the channel protection flag to a user."
@@ -2017,7 +2017,7 @@ msgstr ""
 #: modules/chanserv/quiet.c:283
 #, fuzzy
 msgid "Syntax: QUIET <#channel> <nickname|hostmask> [...]"
-msgstr "書式: ACT <#channel> <メッセージ>"
+msgstr "構文: ACT <#channel> <メッセージ>"
 
 #: modules/chanserv/quiet.c:331
 #, c-format
@@ -2034,12 +2034,12 @@ msgstr ""
 #: modules/chanserv/quiet.c:354
 #, fuzzy
 msgid "Syntax: QUIET <#channel> <nickname|hostmask> [,,,]"
-msgstr "書式: ACT <#channel> <メッセージ>"
+msgstr "構文: ACT <#channel> <メッセージ>"
 
 #: modules/chanserv/quiet.c:377 modules/chanserv/quiet.c:386
 #, fuzzy
 msgid "Syntax: UNQUIET <#channel> <nickname|hostmask> [...]"
-msgstr "書式: ACT <#channel> <メッセージ>"
+msgstr "構文: ACT <#channel> <メッセージ>"
 
 #: modules/chanserv/quiet.c:439
 #, c-format
@@ -2635,7 +2635,7 @@ msgstr ""
 #: modules/chanserv/topic.c:282 modules/chanserv/topic.c:293
 #, fuzzy
 msgid "Syntax: TOPICSWAP <#channel> <search>:[<replace>]"
-msgstr "書式: SAY <#channel> <メッセージ>"
+msgstr "構文: SAY <#channel> <メッセージ>"
 
 #: modules/chanserv/topic.c:336
 #, fuzzy, c-format
@@ -2685,12 +2685,12 @@ msgstr ""
 #: modules/chanserv/voice.c:120
 #, fuzzy
 msgid "Syntax: VOICE <#channel> [nickname] [...]"
-msgstr "書式: ROLE <#channel> <command> [parameters]"
+msgstr "構文: ROLE <#channel> <command> [parameters]"
 
 #: modules/chanserv/voice.c:132
 #, fuzzy
 msgid "Syntax: DEVOICE <#channel> [nickname] [...]"
-msgstr "書式: ROLE <#channel> <command> [parameters]"
+msgstr "構文: ROLE <#channel> <command> [parameters]"
 
 #: modules/chanserv/why.c:20
 msgid "Explains channel access logic."
@@ -3816,7 +3816,7 @@ msgstr ""
 #: modules/helpserv/ticket.c:250
 #, fuzzy
 msgid "Syntax: CLOSE <nick> [reason]"
-msgstr "書式: INFO <botnick>"
+msgstr "構文: INFO <botnick>"
 
 #: modules/helpserv/ticket.c:295
 #, c-format
@@ -5405,7 +5405,7 @@ msgstr ""
 #: modules/nickserv/multimark.c:872
 #, fuzzy
 msgid "Usage: MARK <target> ADD <note>"
-msgstr "書式: MARK <#channel> <ON|OFF> [メモ]"
+msgstr "構文: MARK <#channel> <ON|OFF> [メモ]"
 
 #: modules/nickserv/multimark.c:886
 #, fuzzy, c-format
