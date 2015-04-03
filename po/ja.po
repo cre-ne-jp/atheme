@@ -69,7 +69,7 @@ msgstr "あなたには、この操作を実行するために必要な権限が
 #: modules/rpgserv/help.c:24 modules/statserv/main.c:42
 #, c-format
 msgid "***** %s Help *****"
-msgstr ""
+msgstr "***** %s ヘルプ *****"
 
 #: modules/alis/main.c:469
 #, c-format
@@ -85,7 +85,7 @@ msgstr ""
 #: modules/memoserv/help.c:42 modules/nickserv/help.c:64
 #: modules/rpgserv/help.c:27 modules/statserv/main.c:46
 msgid "For more information on a command, type:"
-msgstr "コマンドについて、より詳しい情報を得るために次のコマンドを実行します: "
+msgstr "コマンドについてのより詳しい情報を得るには、以下を入力してください:"
 
 #: modules/alis/main.c:477 modules/botserv/help.c:48
 #: modules/botserv/set_core.c:55 modules/chanfix/fix.c:611
@@ -101,7 +101,7 @@ msgstr "コマンドについて、より詳しい情報を得るために次の
 #: modules/rpgserv/help.c:31 modules/statserv/main.c:54
 #, fuzzy
 msgid "***** End of Help *****"
-msgstr "*** INFO コマンド　ここまで"
+msgstr "*****  ヘルプここまで *****"
 
 #: modules/backend/opensex.c:268
 #, c-format
@@ -453,7 +453,7 @@ msgstr ""
 #, c-format
 msgid "For more specific help use /msg %s HELP SET command."
 msgstr ""
-"より詳細な情報を得るには、 /msg/ %s HELP SET command を実行してください。"
+"より詳細な情報を得るには、/msg/ %s HELP SET command を実行してください。"
 
 #: modules/botserv/set_core.c:70
 msgid "Syntax: SET <destination> <setting> <parameters>"
@@ -623,7 +623,7 @@ msgstr ""
 #: modules/rpgserv/info.c:45
 #, c-format
 msgid "Information on %s:"
-msgstr "アカウント情報:%s"
+msgstr "%s の情報:"
 
 #: modules/chanfix/fix.c:481
 #, c-format
@@ -1603,12 +1603,12 @@ msgstr ""
 #: modules/chanserv/halfop.c:141
 #, fuzzy
 msgid "Syntax: HALFOP <#channel> [nickname] [...]"
-msgstr "構文: INFO <#channel>"
+msgstr "構文: HALFOP <#channel> [ニックネーム] [...]"
 
 #: modules/chanserv/halfop.c:153
 #, fuzzy
 msgid "Syntax: DEHALFOP <#channel> [nickname] [...]"
-msgstr "構文: INFO <#channel>"
+msgstr "構文: DEHALFOP <#channel> [ニックネーム] [...]"
 
 #: modules/chanserv/help.c:49
 #, c-format
@@ -1619,6 +1619,11 @@ msgid ""
 "Registration is a quick and painless process. Once registered,\n"
 "the founder can maintain complete and total control over the channel."
 msgstr ""
+"%s は、通常の利用者がボットを必要とすることなく\n"
+"チャンネル制御を管理できるようにします。チャンネルが %s に\n"
+"登録されているとき、チャンネルの乗っ取りは実質的に不可能に\n"
+"なります。登録は素早く簡単な作業です。一度登録すれば、設置者は\n"
+"完全かつ全体的なチャンネル制御の管理が可能になります。"
 
 #: modules/chanserv/help.c:57
 #, c-format
@@ -1627,12 +1632,16 @@ msgid ""
 "or if there are no eligible channel successors.\n"
 "Activity is defined as a user with one of %s being on the channel."
 msgstr ""
+"活動がないまま %d 日経過する、または適格なチャンネル継承者がいない\n"
+"場合はチャンネルが失効することにご注意ください。\n"
+"活動とは、%s の一つを持つ利用者がチャンネルにいることと定義されます。"
 
 #: modules/chanserv/help.c:63
 msgid ""
 "Please note that channels will expire if there are no eligible channel "
 "successors."
 msgstr ""
+"適格なチャンネル継承者がいない場合はチャンネルが失効することにご注意ください。"
 
 #: modules/chanserv/help.c:65
 msgid ""
@@ -1641,6 +1650,9 @@ msgid ""
 "people may be chosen depending on their access\n"
 "level and activity."
 msgstr ""
+"継承者とは、主にチャンネル内のアカウントに +R フラグが設定されて\n"
+"いる利用者のことをいいます。ただし、アクセスレベルと活動によっては\n"
+"他の利用者が選ばれる可能性もあります。"
 
 #: modules/chanserv/help.c:72
 #, c-format
@@ -1649,10 +1661,14 @@ msgid ""
 "and omitting the channel name. These are called \"fantasy\"\n"
 "commands and can also be disabled on a per-channel basis."
 msgstr ""
+"コマンドは、チャンネル上で '%s' のひとつを接頭辞として付け、チャンネル名を\n"
+"省略することでも実行可能です。これらは \"ファンタジー\" コマンドと呼ばれ、\n"
+"チャンネル単位で無効化することもできます。"
+
 
 #: modules/chanserv/help.c:79 modules/nickserv/help.c:66
 msgid "For a verbose listing of all commands, type:"
-msgstr ""
+msgstr "すべてのコマンドの冗長な一覧を表示するには、以下を入力してください:"
 
 #: modules/chanserv/help.c:89 modules/nickserv/help.c:76
 #, c-format
@@ -1677,7 +1693,7 @@ msgstr ""
 
 #: modules/chanserv/hold.c:20
 msgid "Prevents a channel from expiring."
-msgstr ""
+msgstr "チャンネルの失効を防ぎます。"
 
 #: modules/chanserv/hold.c:42 modules/chanserv/hold.c:89
 msgid "Usage: HOLD <#channel> <ON|OFF>"
@@ -1715,65 +1731,65 @@ msgstr ""
 #: modules/chanserv/info.c:84
 #, c-format
 msgid "Founder    : %s"
-msgstr ""
+msgstr "設置者      : %s"
 
 #: modules/chanserv/info.c:90
 #, c-format
 msgid "Successor  : %s"
-msgstr ""
+msgstr "継承者      : %s"
 
 #: modules/chanserv/info.c:92
 msgid "Successor  : (none)"
-msgstr ""
+msgstr "継承者      : (なし)"
 
 #: modules/chanserv/info.c:95 modules/nickserv/info.c:134
 #, c-format
 msgid "Registered : %s (%s ago)"
-msgstr ""
+msgstr "登録        : %s (%s 前)"
 
 #: modules/chanserv/info.c:100
 #, c-format
 msgid "Last used  : (about %d weeks ago)"
-msgstr ""
+msgstr "最後の利用  : (約 %d 週間前)"
 
 #: modules/chanserv/info.c:105
 #, c-format
 msgid "Last used  : %s (%s ago)"
-msgstr ""
+msgstr "最後の利用  : %s (%s 前)"
 
 #: modules/chanserv/info.c:115
 msgid "Mode lock is too long, not entirely shown"
-msgstr ""
+msgstr "モードロックが長すぎるため、全体は表示されません"
 
 #: modules/chanserv/info.c:119
 #, c-format
 msgid "Mode lock  : %s"
-msgstr ""
+msgstr "モードロック: %s"
 
 #: modules/chanserv/info.c:145 modules/nickserv/info.c:299
 #, c-format
 msgid "Metadata   : %s = %s"
-msgstr ""
+msgstr "メタデータ  : %s"
 
 #: modules/chanserv/info.c:251 modules/nickserv/info.c:380
 #, c-format
 msgid "Flags      : %s"
-msgstr ""
+msgstr "フラグ      : %s"
 
 #: modules/chanserv/info.c:256
 #, c-format
 msgid "Prefix     : %s"
-msgstr ""
+msgstr "接頭辞      : %s"
 
 #: modules/chanserv/info.c:258
 #, c-format
 msgid "Prefix     : %s (default)"
-msgstr ""
+msgstr "接頭辞      : %s (既定値)"
 
 #: modules/chanserv/info.c:280
 #, c-format
 msgid "%s is temporarily holding this channel."
-msgstr ""
+msgstr "%s が一時的にこのチャンネルを保持しています。"
 
 #: modules/chanserv/info.c:297
 #, c-format
@@ -1794,7 +1810,7 @@ msgstr ""
 
 #: modules/chanserv/invite.c:54
 msgid "Syntax: INVITE <#channel>"
-msgstr ""
+msgstr "構文: INVITE <#チャンネル>"
 
 #: modules/chanserv/invite.c:85
 #, c-format
@@ -1804,7 +1820,7 @@ msgstr ""
 #: modules/chanserv/invite.c:91
 #, c-format
 msgid "You have been invited to %s."
-msgstr ""
+msgstr "%s に招待されました。"
 
 #: modules/chanserv/kick.c:21
 msgid "Removes a user from a channel."
