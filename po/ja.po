@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: http://wiki.arabeyes.org/Technical_Dictionary\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-31 14:55+0900\n"
-"PO-Revision-Date: 2015-04-03 21:12+0900\n"
+"PO-Revision-Date: 2015-05-05 21:19+0900\n"
 "Last-Translator: ocha <ochaochaocha3@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -683,11 +683,11 @@ msgstr ""
 #: modules/chanfix/fix.c:532 modules/chanfix/fix.c:589
 #: modules/chanserv/mark.c:43 modules/chanserv/mark.c:101
 msgid "Usage: MARK <#channel> <ON|OFF> [note]"
-msgstr "構文: MARK <#channel> <ON|OFF> [メモ]"
+msgstr "使用法: MARK <#チャンネル> <ON|OFF> [メモ]"
 
 #: modules/chanfix/fix.c:554 modules/chanserv/mark.c:64
 msgid "Usage: MARK <#channel> ON <note>"
-msgstr ""
+msgstr "使用法: MARK <#チャンネル> ON <メモ>"
 
 #: modules/chanfix/fix.c:560 modules/chanserv/mark.c:70
 #: modules/nickserv/mark.c:122
@@ -1457,7 +1457,7 @@ msgstr ""
 
 #: modules/chanserv/flags.c:21
 msgid "Manipulates specific permissions on a channel."
-msgstr ""
+msgstr "チャンネルの特定アクセス許可を操作します。"
 
 #: modules/chanserv/flags.c:115
 msgid "Entry Nickname/Host          Flags"
@@ -1496,7 +1496,7 @@ msgstr ""
 #: modules/groupserv/set_open.c:42 modules/groupserv/set_public.c:42
 #: modules/groupserv/set_url.c:36
 msgid "You are not authorized to execute this command."
-msgstr ""
+msgstr "このコマンドを実行する権限がありません。"
 
 #: modules/chanserv/flags.c:304
 #, c-format
@@ -1798,7 +1798,7 @@ msgstr ""
 
 #: modules/chanserv/invite.c:20
 msgid "Invites you to a channel."
-msgstr ""
+msgstr "あなたをチャンネルへ招待します。"
 
 #: modules/chanserv/invite.c:40 modules/chanserv/unban_self.c:46
 #: modules/hostserv/group.c:42 modules/hostserv/onoff.c:46
@@ -1806,7 +1806,7 @@ msgstr ""
 #: modules/nickserv/identify.c:64 modules/operserv/identify.c:48
 #, c-format
 msgid "%s can only be executed via IRC."
-msgstr ""
+msgstr "%s はIRCを通してのみ実行することができます。"
 
 #: modules/chanserv/invite.c:54
 msgid "Syntax: INVITE <#channel>"
@@ -1943,11 +1943,11 @@ msgstr ""
 
 #: modules/chanserv/op.c:22
 msgid "Gives channel ops to a user."
-msgstr ""
+msgstr "利用者にチャンネルオペレータ権限を与えます。"
 
 #: modules/chanserv/op.c:24
 msgid "Removes channel ops from a user."
-msgstr ""
+msgstr "利用者からチャンネルオペレータ権限を除去します。"
 
 #: modules/chanserv/op.c:84
 #, fuzzy, c-format
@@ -8503,7 +8503,7 @@ msgstr ""
 #: modules/statserv/main.c:43
 #, c-format
 msgid "%s records various network statistics."
-msgstr ""
+msgstr "%s は様々なネットワークの統計を記録します。"
 
 #: modules/statserv/netsplit.c:19
 msgid "Monitor network splits."
@@ -8546,23 +8546,23 @@ msgstr ""
 
 #: modules/statserv/server.c:20
 msgid "Obtain information about servers on the network."
-msgstr ""
+msgstr "ネットワーク上のサーバについての情報を取得します。"
 
 #: modules/statserv/server.c:23
 msgid "Obtain a list of servers."
-msgstr ""
+msgstr "サーバの一覧を取得します。"
 
 #: modules/statserv/server.c:26
 msgid "Count the amount of servers connected to the network."
-msgstr ""
+msgstr "ネットワークに接続されているサーバの数を数えます。"
 
 #: modules/statserv/server.c:29
 msgid "Obtain information about a specified server."
-msgstr ""
+msgstr "特定のサーバについての情報を取得します。"
 
 #: modules/statserv/server.c:60
 msgid "Syntax: SERVER [INFO|LIST|COUNT] [parameters]"
-msgstr ""
+msgstr "構文: SERVER [INFO|LIST|COUNT] [パラメータ]"
 
 #: modules/statserv/server.c:86
 #, c-format
@@ -8571,52 +8571,52 @@ msgstr ""
 
 #: modules/statserv/server.c:89
 msgid "End of server list."
-msgstr ""
+msgstr "サーバ一覧ここまで。"
 
 #: modules/statserv/server.c:100
 msgid "Syntax: SERVER INFO <server>"
-msgstr ""
+msgstr "構文: SERVER INFO <サーバ>"
 
 #: modules/statserv/server.c:106 modules/statserv/server.c:112
 #, c-format
 msgid "Server %s does not exist."
-msgstr ""
+msgstr "サーバ %s は存在しません。"
 
 #: modules/statserv/server.c:116
 #, c-format
 msgid "Information for server %s:"
-msgstr ""
+msgstr "サーバ %s の情報:"
 
 #: modules/statserv/server.c:117
 #, c-format
 msgid "Server description: %s"
-msgstr ""
+msgstr "サーバの説明: %s"
 
 #: modules/statserv/server.c:118
 #, c-format
 msgid "Current users: %u (%u invisible)"
-msgstr ""
+msgstr "現在のユーザ: %u (%u 非表示)"
 
 #: modules/statserv/server.c:119
 #, c-format
 msgid "Online operators: %u"
-msgstr ""
+msgstr "オンラインオペレータ: %u"
 
 #: modules/statserv/server.c:123
 #, c-format
 msgid "Server uplink: %s"
-msgstr ""
+msgstr "サーバアップリンク"
 
 #: modules/statserv/server.c:124
 #, c-format
 msgid "Servers linked from %s: %u"
-msgstr ""
+msgstr "%s からリンクされているサーバ: %u"
 
 #: modules/statserv/server.c:126
 msgid "End of server info."
-msgstr ""
+msgstr "サーバ情報ここまで。"
 
 #: modules/statserv/server.c:132
 #, c-format
 msgid "Network size: %u servers"
-msgstr ""
+msgstr "ネットワークの大きさ: %u サーバ"
