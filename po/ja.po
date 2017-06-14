@@ -10,7 +10,7 @@ msgstr ""
 "Language-Team: Japanese\n"
 "Language: ja\n"
 "POT-Creation-Date: 2016-10-19 16:27+0300\n"
-"PO-Revision-Date: 2017-06-14 09:52+0900\n"
+"PO-Revision-Date: 2017-06-14 14:25+0900\n"
 "Last-Translator: koi-chan <koi-chan@mail.kazagakure.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -264,11 +264,11 @@ msgstr "  作成日 : %s (%s 前)"
 
 #: modules/botserv/info.c:82
 msgid "  Options : Private"
-msgstr ""
+msgstr "オプション：プライベート"
 
 #: modules/botserv/info.c:84
 msgid "  Options : None"
-msgstr ""
+msgstr "オプション：なし"
 
 #: modules/botserv/info.c:85
 #, c-format
@@ -283,101 +283,101 @@ msgstr ""
 #: modules/botserv/info.c:104
 #, c-format
 msgid "Information for channel %s:"
-msgstr ""
+msgstr "チャンネル %s の情報："
 
 #: modules/botserv/info.c:106
 #, c-format
 msgid "         Bot nick : %s"
-msgstr ""
+msgstr "ボットのニックネーム：%s"
 
 #: modules/botserv/info.c:108
 msgid "         Bot nick : not assigned yet"
-msgstr ""
+msgstr "ボットのニックネーム：指定なし"
 
 #: modules/botserv/info.c:126
 #, c-format
 msgid "          Options : %s"
-msgstr ""
+msgstr "オプション：%s"
 
 #: modules/botserv/main.c:540 modules/botserv/main.c:561
 #: modules/botserv/main.c:698
 msgid "Syntax: BOT ADD <nick> <user> <host> <real>"
-msgstr ""
+msgstr "構文：BOT ADD <nick> <user> <host> <real>"
 
 #: modules/botserv/main.c:541 modules/botserv/main.c:562
 #: modules/botserv/main.c:597 modules/botserv/main.c:661
 msgid "Syntax: BOT CHANGE <oldnick> <newnick> [<user> [<host> [<real>]]]"
-msgstr ""
+msgstr "構文：BOT CHANGE <oldnick> <newnick> [<user> [<host> [<real>]]]"
 
 #: modules/botserv/main.c:542 modules/botserv/main.c:563
 #: modules/botserv/main.c:770
 msgid "Syntax: BOT DEL <nick>"
-msgstr ""
+msgstr "構文：BOT DEL <nick>"
 
 #: modules/botserv/main.c:604 modules/botserv/main.c:776
 #: modules/botserv/main.c:892
 #, c-format
 msgid "%s is not a bot"
-msgstr ""
+msgstr "%sはボットではありません。"
 
 #: modules/botserv/main.c:610 modules/botserv/main.c:712
 #, c-format
 msgid "%s is a registered nick."
-msgstr ""
+msgstr "ニックネーム%sは既に登録されています。"
 
 #: modules/botserv/main.c:619 modules/botserv/main.c:705
 #, c-format
 msgid "%s is already a bot or service."
-msgstr ""
+msgstr "ニックネーム%sは既にボット若しくはサービスとして登録されています。"
 
 #: modules/botserv/main.c:627 modules/botserv/main.c:723
 #, c-format
 msgid "%s is an invalid nickname."
-msgstr ""
+msgstr "%sはニックネームとして利用できません。"
 
 #: modules/botserv/main.c:644
 #, c-format
 msgid "%s is an invalid realname, not changing it"
-msgstr ""
+msgstr "%sはリアルネームとして利用できないため、変更を中止しました。"
 
 #: modules/botserv/main.c:654
 #, c-format
 msgid "%s is an invalid username, not changing it."
-msgstr ""
+msgstr "%sはユーザー名として利用できないため、変更を中止しました。"
 
 #: modules/botserv/main.c:729
 #, c-format
 msgid "%s is an invalid username."
-msgstr ""
+msgstr "%sはユーザー名として利用出来ません。"
 
 #: modules/botserv/main.c:738
 #, c-format
 msgid "%s is an invalid realname."
-msgstr ""
+msgstr "%sはリアルネームとして利用できません。"
 
 #: modules/botserv/main.c:818
 #, c-format
 msgid "Listing of bots available on %s:"
-msgstr ""
+msgstr "チャンネル%s有効なボットの一覧："
 
 #: modules/botserv/main.c:828
 #, c-format
 msgid "%d bots available."
-msgstr ""
+msgstr "%d個のボットが有効です。"
 
 #: modules/botserv/main.c:832
 #, c-format
 msgid "Listing of private bots available on %s:"
-msgstr ""
+msgstr "チャンネル%sで有効なプライベートボットの一覧："
 
 #: modules/botserv/main.c:840
 #, c-format
 msgid "%d private bots available."
-msgstr ""
+msgstr "%d個のプライベートボットが有効です。"
 
 #: modules/botserv/main.c:859
 msgid "Syntax: ASSIGN <#channel> <nick>"
-msgstr ""
+msgstr "構文：ASSIGN <#channel> <nick>"
 
 #: modules/botserv/main.c:865 modules/botserv/main.c:942
 #: modules/chanserv/access.c:675 modules/chanserv/access.c:772
