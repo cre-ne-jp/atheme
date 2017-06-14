@@ -51,16 +51,14 @@
  * Bahamut 1.8.x                                modules/protocol/bahamut
  * Charybdis IRCd                               modules/protocol/charybdis
  * DreamForge 4.6.7 or later                    modules/protocol/dreamforge
- * Hybrid 7.1.2 and later                       modules/protocol/hybrid
  * InspIRCd 2.0                                 modules/protocol/inspircd
  * ircd-ratbox 2.0 and later                    modules/protocol/ratbox
  * IRCNet ircd (ircd 2.11)                      modules/protocol/ircnet
  * ircd-seven                                   modules/protocol/ircd-seven
- * ircu 2.10.11.07 or later                     modules/protocol/undernet
  * Nefarious IRCu 0.4.0 or later                modules/protocol/nefarious
  * ngIRCd 19 or later [experimental]            modules/protocol/ngircd
- * ShadowIRCd 5.0 or later                      modules/protocol/shadowircd
- * UnrealIRCd 3.2 or later                      modules/protocol/unreal
+ * UnrealIRCd 3.2.*                             modules/protocol/unreal
+ * UnrealIRCd 4 or later                        modules/protocol/unreal4
  *
  * If your IRCd vendor has supplied a module file, build it and load it here
  * instead of one above.
@@ -198,6 +196,7 @@ loadmodule "modules/crypto/posix";
  * SET NOGREET command                          modules/nickserv/set_nogreet
  * SET NOMEMO command                           modules/nickserv/set_nomemo
  * SET NOOP command                             modules/nickserv/set_noop
+ * SET NOPASSWORD command                       modules/nickserv/set_nopassword
  * SET PASSWORD command                         modules/nickserv/set_password
  * PRIVMSG instead of NOTICE (SET PRIVMSG cmd)  modules/nickserv/set_privmsg
  * Account info hiding (SET PRIVATE command)    modules/nickserv/set_private
@@ -254,6 +253,7 @@ loadmodule "modules/nickserv/set_neverop";
 loadmodule "modules/nickserv/set_nogreet";
 loadmodule "modules/nickserv/set_nomemo";
 loadmodule "modules/nickserv/set_noop";
+#loadmodule "modules/nickserv/set_nopassword";
 loadmodule "modules/nickserv/set_password";
 #loadmodule "modules/nickserv/set_privmsg";
 #loadmodule "modules/nickserv/set_private";
@@ -610,6 +610,7 @@ loadmodule "modules/saslserv/authcookie";
  * SET FANTASY command                          modules/botserv/set_fantasy
  * SET NOBOT command                            modules/botserv/set_nobot
  * SET PRIVATE command                          modules/botserv/set_private
+ * SET SAYCALLER command                        modules/botserv/set_saycaller
  */
 #loadmodule "modules/botserv/main";
 #loadmodule "modules/botserv/help";
@@ -619,6 +620,7 @@ loadmodule "modules/saslserv/authcookie";
 #loadmodule "modules/botserv/set_fantasy";
 #loadmodule "modules/botserv/set_nobot";
 #loadmodule "modules/botserv/set_private";
+#loadmodule "modules/botserv/set_saycaller";
 
 /* HostServ modules.
  *
@@ -638,6 +640,7 @@ loadmodule "modules/saslserv/authcookie";
  * VHOST and LISTVHOST commands                 modules/hostserv/vhost
  * VHOSTNICK command                            modules/hostserv/vhostnick
  * GROUP command                                modules/hostserv/group
+ * DROP command                                 modules/hostserv/drop
  */
 #loadmodule "modules/hostserv/main";
 #loadmodule "modules/hostserv/help";
@@ -647,6 +650,7 @@ loadmodule "modules/saslserv/authcookie";
 #loadmodule "modules/hostserv/vhost";
 #loadmodule "modules/hostserv/vhostnick";
 #loadmodule "modules/hostserv/group";
+#loadmodule "modules/hostserv/drop";
 
 /* HelpServ modules.
  * HelpServ allows users to request help from network staff in a few different ways.
@@ -748,7 +752,7 @@ loadmodule "modules/groupserv/set_url";
  *
  * HTTP Server                                  modules/misc/httpd
  */
-loadmodule "modules/misc/httpd";
+#loadmodule "modules/misc/httpd";
 
 /* XMLRPC server module.
  * 
@@ -757,7 +761,7 @@ loadmodule "modules/misc/httpd";
  *
  * XMLRPC handler for the httpd                 modules/transport/xmlrpc
  */
-loadmodule "modules/transport/xmlrpc";
+#loadmodule "modules/transport/xmlrpc";
 
 /* Extended target entity types. [EXPERIMENTAL]
  *
@@ -778,6 +782,15 @@ loadmodule "modules/transport/xmlrpc";
 #loadmodule "modules/exttarget/channel";
 #loadmodule "modules/exttarget/chanacs";
 #loadmodule "modules/exttarget/server";
+
+/* Proxyscan (DNSBL) modules.
+ *
+ * Atheme can also check set DNS Blacklists for matches and respond 
+ * as set.  Activate modules here and customize further down under Proxyscan
+ * section.
+ */
+#loadmodule "modules/proxyscan/main";
+#loadmodule "modules/proxyscan/dnsbl";
 
 /* Other modules.
  *
@@ -807,7 +820,7 @@ serverinfo {
 	desc = "Atheme IRC Services";
 
 	/* numeric
-	 * Some protocol drivers (Charybdis, Ratbox2, Hybrid, P10, IRCNet)
+	 * Some protocol drivers (Charybdis, Ratbox2, P10, IRCNet)
 	 * require a server id, also known as a numeric. Please consult your
 	 * ircd's documentation when providing this value. 
 	 */
@@ -825,7 +838,7 @@ serverinfo {
 
 	/* (*)hidehostsuffix
 	 * P10 +x host hiding gives <account>.<hidehostsuffix>.
-	 * If using +x on asuka/bircd/undernet, this must agree
+	 * If using +x on asuka, this must agree
 	 * with F:HIDDEN_HOST.
 	 */
 	hidehostsuffix = "users.misconfigured";
@@ -849,8 +862,7 @@ serverinfo {
 	/* (*)hidden
 	 * If this is enabled, Atheme will indicate to the uplink IRCd
 	 * that it should not be included in /links output.  This only works
-	 * on the following IRCds at present: charybdis, hybrid, ircd-seven,
-	 * ratbox, shadowircd.
+	 * on the following IRCds at present: charybdis, ircd-seven, ratbox.
 	 */
 	#hidden;
 
@@ -1203,10 +1215,10 @@ chanserv {
 	 * This also solves the "join-mode" problem where someone recreates
 	 * a registered channel and then sets some modes before they are
 	 * deopped.
-	 * This is currently supported for charybdis, hybrid, ratbox,
-	 * bahamut and inspircd 1.1+. For charybdis, hybrid and ratbox
-	 * it only fully works with TS6, with TS5 bans and last-moment modes
-	 * will still apply.
+	 * This is currently supported for charybdis, ratbox, bahamut,
+	 * and inspircd 1.1+. For charybdis and ratbox it only fully
+	 * works with TS6, with TS5 bans and last-moment modes will
+	 * still apply.
 	 * (That can also be used to advantage, when first enabling this.)
 	 */
 	#changets;
@@ -1948,7 +1960,7 @@ general {
 	 *
 	 * If enabled, you can tell ChanServ to join via SET GUARD ON.
 	 *
-	 * If you use ircu-like ircd (asuka, bircd, undernet), you must
+	 * If you use ircu-like ircd (asuka), you must
 	 * leave this enabled, and put guard in default cflags.
 	 *
 	 * For ratbox it is recommended to leave it on and put guard in 
@@ -2053,7 +2065,7 @@ general {
 	/* (*)kline_verified_ident
 	 * KLINE *@host if the first character of the ident is ~,
 	 * irrespective of the value of kline_with_ident.
-	 * /
+	 */
 	#kline_verified_ident;
 
 	/* (*)clone_time
@@ -2132,6 +2144,32 @@ general {
 	 * than just opers with user:auspex or group:auspex privileges.
 	 */
 	show_entity_id;
+};
+
+proxyscan {
+	/* Here you can configure the details of your Proxyscan (DNS Blacklist)
+	 * scanner service.  
+	 */
+
+	nick = "Proxyscan";
+	user = "dnsbl";
+	host = "services.int";
+	real = "Proxyscan Service";
+
+	blacklists {
+	 "dnsbl.dronebl.org";
+	 "rbl.efnetrbl.org";
+	 "tor.efnet.org";
+	};
+	
+	/* Available dnsbl_action's:
+	 * NONE - Do nothing
+	 * NOTIFY - Notify user that they are listed in a DNSBL and which one
+	 * SNOOP - Report the user to the logchannel or services channel
+	 * KLINE - AKILL the user from the network (default AKILL is 24 hours)
+	 */
+	 
+	dnsbl_action = kline;
 };
 
 /******************************************************************************

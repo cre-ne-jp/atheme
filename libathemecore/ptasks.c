@@ -44,8 +44,13 @@ void handle_info(user_t *u)
 int get_version_string(char *buf, size_t bufsize)
 {
 	const crypt_impl_t *ci = crypt_get_default_provider();
+#ifdef REPRODUCIBLE_BUILDS
+	return snprintf(buf, bufsize, "%s. %s %s :%s [%s] [enc:%s]",
+		PACKAGE_STRING, me.name, revision, get_conf_opts(), ircd->ircdname, ci->id);
+#else
 	return snprintf(buf, bufsize, "%s. %s %s :%s [%s] [enc:%s] Build Date: %s",
 		PACKAGE_STRING, me.name, revision, get_conf_opts(), ircd->ircdname, ci->id, __DATE__);
+#endif
 }
 
 void handle_version(user_t *u)
@@ -824,9 +829,6 @@ void handle_eob(server_t *s)
 		if (s2->flags & SF_EOB2)
 			handle_eob(s2);
 	}
-	/* Reseed RNG now we have a little more data to seed with */
-	if (s->uplink == me.me)
-		srand(rand() ^ ((CURRTIME << 20) + cnt.user + (cnt.chanuser << 12)) ^ (cnt.chan << 17) ^ ~cnt.bin);
 }
 
 /* Received a message from a user, check if they are flooding

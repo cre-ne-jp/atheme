@@ -472,7 +472,12 @@ char *pretty_mask(char *mask)
         old_mask_pos = mask_pos;
 
         at = ex = NULL;
-        if((t = strchr(mask, '@')) != NULL)
+	if(is_valid_host(mask))
+	{
+		if (*mask != '\0')
+			host = mask;
+	}
+	else if((t = strchr(mask, '@')) != NULL)
 	{
                 at = t;
                 *t++ = '\0';
@@ -699,7 +704,7 @@ int sendemail(user_t *u, myuser_t *mu, const char *type, const char *email, cons
 
 	date = timebuf;
 
-	snprintf(from, sizeof from, "\"%s\" <%s>",
+	snprintf(from, sizeof from, "\"%s Network Services\" <%s>",
 			me.netname, me.register_email);
 	snprintf(to, sizeof to, "\"%s\" <%s>", entity(mu)->name, email);
 	/* \ is special here; escape it */

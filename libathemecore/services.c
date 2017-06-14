@@ -94,12 +94,18 @@ int remove_ban_exceptions(user_t *source, channel_t *chan, user_t *target)
 
 void try_kick_real(user_t *source, channel_t *chan, user_t *target, const char *reason)
 {
+	chanuser_t *cu;
+
 	return_if_fail(source != NULL);
 	return_if_fail(chan != NULL);
 	return_if_fail(target != NULL);
 	return_if_fail(reason != NULL);
 
-	if (chan->modes & ircd->oimmune_mode && is_ircop(target))
+	cu = chanuser_find(chan, target);
+	if (cu == NULL)
+		return;
+
+	if ((chan->modes & ircd->oimmune_mode || cu->modes & CSTATUS_IMMUNE) && is_ircop(target))
 	{
 		wallops("Not kicking oper %s!%s@%s from protected %s (%s: %s)",
 				target->nick, target->user, target->vhost,
@@ -252,6 +258,8 @@ void services_init(void)
 			kill_id_sts(NULL, svs->nick, "Attempt to use service nick");
 		introduce_nick(svs->me);
 	}
+
+	hook_add_event("user_can_login");
 }
 
 void joinall(const char *name)
@@ -569,6 +577,7 @@ void handle_certfp(sourceinfo_t *si, user_t *u, const char *certfp)
 	myuser_t *mu;
 	mycertfp_t *mcfp;
 	service_t *svs;
+	hook_user_login_check_t req;
 
 	free(u->certfp);
 	u->certfp = sstrdup(certfp);
@@ -597,6 +606,15 @@ void handle_certfp(sourceinfo_t *si, user_t *u, const char *certfp)
 		return;
 	}
 
+	req.si = si;
+	req.mu = mu;
+	req.allowed = true;
+	hook_call_user_can_login(&req);
+	if (!req.allowed)
+	{
+		return;
+	}
+
 	notice(svs->me->nick, u->nick, nicksvs.no_nick_ownership ? _("You are now logged in as \2%s\2.") : _("You are now identified for \2%s\2."), entity(mu)->name);
 
 	myuser_login(svs, u, mu, true);
@@ -615,13 +633,28 @@ void myuser_login(service_t *svs, user_t *u, myuser_t *mu, bool sendaccount)
 	return_if_fail(u->myuser == NULL);
 
 	if (is_soper(mu))
-		slog(LG_INFO, "SOPER: \2%s\2 as \2%s\2", u->nick, entity(mu)->name);
+		slog(LG_INFO, "SOPER: \2%s\2 as \2%s\2 (%s)", u->nick, entity(mu)->name, mu->soper->operclass->name);
 
 	myuser_notice(svs->me->nick, mu, "%s!%s@%s has just authenticated as you (%s)", u->nick, u->user, u->vhost, entity(mu)->name);
 
 	u->myuser = mu;
 	mowgli_node_add(u, mowgli_node_create(), &mu->logins);
 	u->flags &= ~UF_SOPER_PASS;
+
+	/* check for previous login and let them know, unless they have opt'd OUT */
+
+		if (metadata_find(mu, "private:host:actual") != NULL && metadata_find(mu, "private:showlast:optout") == NULL)
+		{
+			metadata_t *md_loginaddr;
+			time_t ts = CURRTIME;
+
+			md_loginaddr = metadata_find(mu, "private:host:actual");
+			tm = *localtime(&mu->lastlogin);
+			strftime(strfbuf, sizeof strfbuf, TIME_FORMAT, &tm);
+
+			notice(svs->me->nick, u->nick, "Last login from: \2%s\2 on %s.", md_loginaddr->value, strfbuf);
+
+		}
 
 	/* keep track of login address for users */
 	mowgli_strlcpy(lau, u->user, BUFSIZE);
@@ -800,7 +833,7 @@ bool bad_password(sourceinfo_t *si, myuser_t *mu)
 	}
 
 	if (is_soper(mu))
-		slog(LG_INFO, "SOPER:AF: \2%s\2 as \2%s\2", get_source_name(si), entity(mu)->name);
+		slog(LG_INFO, "SOPER:AF: \2%s\2 FAILED Authentication as \2%s\2 (%s)", get_source_name(si), entity(mu)->name, mu->soper->operclass->name);
 
 	if (count % 10 == 0)
 	{

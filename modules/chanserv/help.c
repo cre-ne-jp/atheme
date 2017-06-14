@@ -12,7 +12,7 @@ DECLARE_MODULE_V1
 (
 	"chanserv/help", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void cs_cmd_help(sourceinfo_t *si, int parc, char *parv[]);
@@ -62,10 +62,9 @@ static void cs_cmd_help(sourceinfo_t *si, int parc, char *parv[])
 		{
 			command_success_nodata(si, _("Please note that channels will expire if there are no eligible channel successors."));
 		}
-		command_success_nodata(si, _("Successors are primarily those who have the +R flag\n"
-					"set on their account in the channel, although other\n"
-					"people may be chosen depending on their access\n"
-					"level and activity."));
+		command_success_nodata(si, _("Successors are primarily those who have the +S (if available) or +R flag\n"
+					"set on their account in the channel, although other people may be chosen\n"
+					"depending on their access level and activity."));
 		command_success_nodata(si, " ");
 		if (chansvs.fantasy && config_options.join_chans && chansvs.trigger != '\0')
 		{
@@ -80,7 +79,7 @@ static void cs_cmd_help(sourceinfo_t *si, int parc, char *parv[])
 		command_success_nodata(si, "\2/%s%s help commands\2", (ircd->uses_rcommand == false) ? "msg " : "", chansvs.me->disp);
 		command_success_nodata(si, " ");
 
-		command_help_short(si, chansvs.me->commands, "REGISTER OP INVITE UNBAN FLAGS RECOVER SET CLOSE FDROP FFLAGS FTRANSFER");
+		command_help_short(si, chansvs.me->commands, "REGISTER OP INVITE UNBAN FLAGS INFO SET CLOSE FDROP FFLAGS FTRANSFER");
 
 		command_success_nodata(si, _("***** \2End of Help\2 *****"));
 

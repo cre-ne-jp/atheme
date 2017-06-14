@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010 Atheme Development Group
+ * Copyright (c) 2010-2016 Atheme Development Group
  * Rights to this code are as documented in doc/LICENSE.
  *
  * This file contains code for the CService CLONE functions.
@@ -12,7 +12,7 @@ DECLARE_MODULE_V1
 (
 	"chanserv/clone", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void cs_cmd_clone(sourceinfo_t *si, int parc, char *parv[]);
@@ -117,22 +117,35 @@ static void cs_cmd_clone(sourceinfo_t *si, int parc, char *parv[])
 		ca = n->data;
 
 		if (!ca->host)
-			chanacs_change_simple(mc2, ca->entity, NULL, ca->level, 0, ca->setter ? myentity_find(ca->setter) : NULL);
+			chanacs_change_simple(mc2, ca->entity, NULL, ca->level, 0, *ca->setter_uid != '\0' ? myentity_find_uid(ca->setter_uid) : NULL);
 		else if (ca->host != NULL)
-			chanacs_change_simple(mc2, NULL, ca->host, ca->level, 0, ca->setter ? myentity_find(ca->setter) : NULL);
+			chanacs_change_simple(mc2, NULL, ca->host, ca->level, 0, *ca->setter_uid != '\0' ? myentity_find_uid(ca->setter_uid) : NULL);
 	}
 
 	/* Copy ze metadata! */
 	MOWGLI_PATRICIA_FOREACH(md, &state, object(mc)->metadata)
 	{
 		if(!strncmp(md->name, "private:topic:", 14))
-				continue;
+		{
+			continue;
+		}
+
+		/* Replace ANTIFLOOD AKILL with QUIET if it exists --shaynejellesma */
+		if((strcasecmp(md->name, "private:antiflood:enforce-method") == 0) && (strcasecmp(md->value, "AKILL") == 0))
+		{
+			metadata_add(mc2, md->name, "QUIET");
+			continue;
+		}
 
 		metadata_add(mc2, md->name, md->value);
 	}
 
 	/* Copy channel flags */
 	mc2->flags = mc->flags;
+
+	/* Remove HOLD flag if it exists --shaynejellesma */
+	if (mc2->flags & MC_HOLD)
+		mc2->flags &= ~MC_HOLD;
 
 	command_add_flood(si, FLOOD_MODERATE);
 

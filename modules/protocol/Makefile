@@ -14,7 +14,6 @@ SRCS = \
 	base36uid.c	\
 	charybdis.c	\
 	elemental-ircd.c\
-	hybrid.c	\
 	inspircd.c	\
 	ircd-seven.c  \
 	ircnet.c	\
@@ -26,10 +25,9 @@ SRCS = \
 	ngircd.c	\
 	p10-generic.c	\
 	ratbox.c	\
-	shadowircd.c	\
 	ts6-generic.c	\
-	undernet.c	\
-	unreal.c
+	unreal.c	\
+	unreal4.c
 
 include ../../extra.mk
 include ../../buildsys.mk

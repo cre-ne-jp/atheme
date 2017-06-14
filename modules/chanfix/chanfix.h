@@ -82,10 +82,12 @@ E bool chanfix_do_autofix;
 E void chanfix_autofix_ev(void *unused);
 E void chanfix_can_register(hook_channel_register_check_t *req);
 
+E command_t cmd_list;
 E command_t cmd_chanfix;
 E command_t cmd_scores;
 E command_t cmd_info;
 E command_t cmd_help;
 E command_t cmd_mark;
+E command_t cmd_nofix;
 
 #endif

@@ -12,7 +12,7 @@
 #include "pmodule.h"
 #include "protocol/charybdis.h"
 
-DECLARE_MODULE_V1("protocol/charybdis", true, _modinit, NULL, PACKAGE_STRING, "Atheme Development Group <http://www.atheme.org>");
+DECLARE_MODULE_V1("protocol/charybdis", true, _modinit, NULL, PACKAGE_STRING, VENDOR_STRING);
 
 /* *INDENT-OFF* */
 
@@ -26,7 +26,7 @@ ircd_t Charybdis = {
 	.uses_halfops = false,
 	.uses_p10 = false,
 	.uses_vhost = false,
-	.oper_only_modes = CMODE_EXLIMIT | CMODE_PERM,
+	.oper_only_modes = CMODE_EXLIMIT | CMODE_PERM | CMODE_IMMUNE,
 	.owner_mode = 0,
 	.protect_mode = 0,
 	.halfops_mode = 0,
@@ -35,7 +35,7 @@ ircd_t Charybdis = {
 	.halfops_mchar = "+",
 	.type = PROTOCOL_CHARYBDIS,
 	.perm_mode = CMODE_PERM,
-	.oimmune_mode = 0,
+	.oimmune_mode = CMODE_IMMUNE,
 	.ban_like_modes = "beIq",
 	.except_mchar = 'e',
 	.invex_mchar = 'I',
@@ -64,6 +64,8 @@ struct cmode_ charybdis_mode_list[] = {
   { 'A', CMODE_ADMINONLY },
   { 'c', CMODE_NOCOLOR	 },
   { 'C', CMODE_NOCTCP	 },
+  { 'T', CMODE_NONOTICE  },
+  { 'M', CMODE_IMMUNE	 },
 
   { '\0', 0 }
 };

@@ -11,8 +11,7 @@
  *
  * This module is not very useful on it's own.	It implements
  * the basis of the TS6 extended linking profile, which is used
- * by hybrid, charybdis, ratbox (--enable-services), weircd
- * and others.
+ * by charybdis, ratbox (--enable-services), weircd and others.
  *
  * Everything in this module can be subclassed.  To do so, we
  * recommend either directly subclassing this module, or subclassing
@@ -38,7 +37,7 @@
 #include "uplink.h"
 #include "pmodule.h"
 
-DECLARE_MODULE_V1("protocol/ts6-generic", true, _modinit, NULL, PACKAGE_STRING, "Atheme Development Group <http://www.atheme.org>");
+DECLARE_MODULE_V1("protocol/ts6-generic", true, _modinit, NULL, PACKAGE_STRING, VENDOR_STRING);
 
 static bool use_rserv_support = false;
 static bool use_tb = false;
@@ -515,6 +514,11 @@ static void ts6_sasl_sts(char *target, char mode, char *data)
 			target,
 			mode,
 			data);
+}
+
+static void ts6_sasl_mechlist_sts(const char *mechlist)
+{
+	sts(":%s ENCAP * MECHLIST :%s", ME, mechlist);
 }
 
 static void ts6_holdnick_sts(user_t *source, int duration, const char *nick, myuser_t *mu)
@@ -1492,6 +1496,7 @@ void _modinit(module_t * m)
 	holdnick_sts = &ts6_holdnick_sts;
 	svslogin_sts = &ts6_svslogin_sts;
 	sasl_sts = &ts6_sasl_sts;
+	sasl_mechlist_sts = &ts6_sasl_mechlist_sts;
 	is_valid_host = &ts6_is_valid_host;
 	mlock_sts = &ts6_mlock_sts;
 	dline_sts = &ts6_dline_sts;

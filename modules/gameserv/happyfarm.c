@@ -10,7 +10,7 @@
 #include "atheme.h"
 #include "gameserv_common.h"
 
-DECLARE_MODULE_V1("gameserv/happyfarm", false, _modinit, _moddeinit, PACKAGE_STRING, "Atheme Development Group <http://www.atheme.org>");
+DECLARE_MODULE_V1("gameserv/happyfarm", false, _modinit, _moddeinit, PACKAGE_STRING, VENDOR_STRING);
 
 /* Privatedata schema... */
 #define SCHEMA_KEY_HAPPYFARMER		"gameserv:happyfarm:farmer"
@@ -41,17 +41,17 @@ struct {
 	const char *name;
 	happy_planttype_t plant;
 } happy_planttype_mapping[] = {
-	{"nothing", PLANT_NOTHING},
-	{"turnip", PLANT_TURNIP},
-	{"tomato", PLANT_TOMATO},
-	{"parsley", PLANT_PARSLEY},
-	{"lettuce", PLANT_LETTUCE},
-	{"corn", PLANT_CORN},
-	{"potato", PLANT_POTATO},
-	{"beans", PLANT_BEANS},
-	{"peaches", PLANT_PEACHES},
-	{"pears", PLANT_PEARS},
-	{"apples", PLANT_APPLES},
+	{N_("nothing"), PLANT_NOTHING},
+	{N_("turnip"), PLANT_TURNIP},
+	{N_("tomato"), PLANT_TOMATO},
+	{N_("parsley"), PLANT_PARSLEY},
+	{N_("lettuce"), PLANT_LETTUCE},
+	{N_("corn"), PLANT_CORN},
+	{N_("potato"), PLANT_POTATO},
+	{N_("beans"), PLANT_BEANS},
+	{N_("peaches"), PLANT_PEACHES},
+	{N_("pears"), PLANT_PEARS},
+	{N_("apples"), PLANT_APPLES},
 	{NULL, PLANT_NOTHING},
 };
 
@@ -287,7 +287,7 @@ static happy_planttype_t happy_plant_by_name(const char *name)
 
 	for (i = 0; i < ARRAY_SIZE(happy_planttype_mapping); i++)
 	{
-		if (!strcasecmp(happy_planttype_mapping[i].name, name))
+		if (!strcasecmp(_(happy_planttype_mapping[i].name), name))
 			return happy_planttype_mapping[i].plant;
 	}
 

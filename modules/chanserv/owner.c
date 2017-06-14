@@ -13,7 +13,7 @@ DECLARE_MODULE_V1
 (
 	"chanserv/owner", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void cs_cmd_owner(sourceinfo_t *si, int parc, char *parv[]);
@@ -81,7 +81,7 @@ static void cmd_owner(sourceinfo_t *si, bool ownering, int parc, char *parv[])
 		return;
 	}
 
-	nicks = (!nick ? strdup(si->su->nick) : strdup(nick));
+	nicks = (!nick ? sstrdup(si->su->nick) : sstrdup(nick));
 	prefix_action_set_all(&owner_actions, ownering, nicks);
 	free(nicks);
 

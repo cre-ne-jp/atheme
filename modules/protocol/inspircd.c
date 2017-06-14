@@ -24,7 +24,7 @@ ircd_t InspIRCd = {
 	.uses_halfops = true,
 	.uses_p10 = false,
 	.uses_vhost = true,
-	.oper_only_modes = CMODE_OPERONLY | CMODE_PERM | CMODE_IMMUNE,
+	.oper_only_modes = CMODE_OPERONLY | CMODE_PERM,
 	.owner_mode = CSTATUS_OWNER,
 	.protect_mode = CSTATUS_PROTECT,
 	.halfops_mode = CSTATUS_HALFOP,
@@ -33,7 +33,7 @@ ircd_t InspIRCd = {
 	.halfops_mchar = "+h",
 	.type = PROTOCOL_INSPIRCD,
 	.perm_mode = CMODE_PERM,
-	.oimmune_mode = CMODE_IMMUNE,
+	.oimmune_mode = 0,
 	.ban_like_modes = "beIgXw",
 	.except_mchar = 'e',
 	.invex_mchar = 'I',
@@ -63,7 +63,6 @@ struct cmode_ inspircd_mode_list[] = {
   { 'T', CMODE_NONOTICE },
   { 'u', CMODE_HIDING	},
   { 'Q', CMODE_PEACE	},
-  { 'Y', CMODE_IMMUNE	},
   { 'D', CMODE_DELAYJOIN },
   { '\0', 0 }
 };
@@ -90,6 +89,7 @@ struct extmode inspircd_ignore_mode_list[] = {
 };
 
 struct cmode_ inspircd_status_mode_list[] = {
+  { 'Y', CSTATUS_IMMUNE	 },
   { 'q', CSTATUS_OWNER	 },
   { 'a', CSTATUS_PROTECT },
   { 'o', CSTATUS_OP	 },
@@ -99,6 +99,7 @@ struct cmode_ inspircd_status_mode_list[] = {
 };
 
 struct cmode_ inspircd_prefix_mode_list[] = {
+  { '!', CSTATUS_IMMUNE	 },
   { '~', CSTATUS_OWNER	 },
   { '&', CSTATUS_PROTECT },
   { '@', CSTATUS_OP	 },
@@ -295,7 +296,7 @@ static bool check_rejoindelay(const char *value, channel_t *c, mychan_t *mc, use
 		ch++;
 	}
 
-	if (atoi(value) <= 0 || atoi(value) >= max_rejoindelay)
+	if (atoi(value) <= 0 || atoi(value) > max_rejoindelay)
 	{
 		return false;
 	}
@@ -366,9 +367,10 @@ static void inspircd_introduce_nick(user_t *u)
 {
 	/* :penguin.omega.org.za UID 497AAAAAB 1188302517 OperServ 127.0.0.1 127.0.0.1 OperServ +s 127.0.0.1 :Operator Server */
 	const char *umode = user_get_umodestr(u);
+	const bool send_oper = (is_ircop(u) && !has_servprotectmod);
 
-	sts(":%s UID %s %lu %s %s %s %s 0.0.0.0 %lu %s%s%s%s :%s", me.numeric, u->uid, (unsigned long)u->ts, u->nick, u->host, u->host, u->user, (unsigned long)u->ts, umode, has_hideopermod ? "H" : "", has_hidechansmod ? "I" : "", has_servprotectmod ? "k" : "", u->gecos);
-	if (is_ircop(u) && !has_servprotectmod)
+	sts(":%s UID %s %lu %s %s %s %s 0.0.0.0 %lu %s%s%s%s :%s", me.numeric, u->uid, (unsigned long)u->ts, u->nick, u->host, u->host, u->user, (unsigned long)u->ts, umode, (send_oper && has_hideopermod) ? "H" : "", has_hidechansmod ? "I" : "", has_servprotectmod ? "k" : "", u->gecos);
+	if (send_oper)
 		sts(":%s OPERTYPE Service", u->uid);
 }
 

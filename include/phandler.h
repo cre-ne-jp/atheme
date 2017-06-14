@@ -54,10 +54,9 @@ typedef struct ircd_ ircd_t;
 #define PROTOCOL_PTLINK			10
 #define PROTOCOL_RATBOX			11
 #define PROTOCOL_SCYLLA			12
-#define PROTOCOL_SHADOWIRCD		13
+#define PROTOCOL_ELEMENTAL_IRCD		13
 #define PROTOCOL_SORCERY		14 /* obsolete */
 #define PROTOCOL_ULTIMATE3		15
-#define PROTOCOL_UNDERNET		16
 #define PROTOCOL_UNREAL			17
 #define PROTOCOL_SOLIDIRCD		18
 #define PROTOCOL_NEFARIOUS		19
@@ -166,10 +165,10 @@ E void (*qline_sts)(const char *server, const char *mask, long duration, const c
  * if the ircd requires unqlines to be sent from users, use opersvs */
 E void (*unqline_sts)(const char *server, const char *mask);
 /* add a dline (sometimes called zline) on the servers matching mask
- * if the ircd requires zlines to be sent from users, use opersvs */
+ * if the ircd requires dlines to be sent from users, use opersvs */
 E void (*dline_sts)(const char *server, const char *host, long duration, const char *reason);
 /* remove a dline (sometimes called zline) on the servers matching the given mask
- * if the ircd requires unqlines to be sent from users, use opersvs */
+ * if the ircd requires undlines to be sent from users, use opersvs */
 E void (*undline_sts)(const char *server, const char *host);
 /* make the given service set a topic on a channel
  * setter and ts should be used if the ircd supports topics to be set

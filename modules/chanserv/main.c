@@ -15,7 +15,7 @@ DECLARE_MODULE_V1
 (
 	"chanserv/main", true, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void cs_join(hook_channel_joinpart_t *hdata);
@@ -543,7 +543,7 @@ static void cs_join(hook_channel_joinpart_t *hdata)
 			cu->modes |= CSTATUS_OP;
 		}
 	}
-	else if (secure && (cu->modes & CSTATUS_OP) && !(flags & CA_OP))
+	else if (secure && (cu->modes & CSTATUS_OP) && !(flags & CA_OP) && !is_service(cu->user))
 	{
 		modestack_mode_param(chansvs.nick, chan, MTYPE_DEL, 'o', CLIENT_NAME(u));
 		cu->modes &= ~CSTATUS_OP;
@@ -933,7 +933,7 @@ static void cs_bounce_mode_change(hook_channel_mode_change_t *data)
 		modestack_mode_param(chansvs.nick, chan, MTYPE_DEL, ircd->protect_mchar[1], CLIENT_NAME(cu->user));
 		cu->modes &= ~data->mvalue;
 	}
-	else if (data->mchar == 'o' && !(chanacs_user_flags(mc, cu->user) & (CA_OP | CA_AUTOOP)))
+	else if (data->mchar == 'o' && !(chanacs_user_flags(mc, cu->user) & (CA_OP | CA_AUTOOP)) && !is_service(cu->user))
 	{
 		modestack_mode_param(chansvs.nick, chan, MTYPE_DEL, 'o', CLIENT_NAME(cu->user));
 		cu->modes &= ~data->mvalue;

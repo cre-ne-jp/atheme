@@ -12,7 +12,7 @@ DECLARE_MODULE_V1
 (
 	"chanserv/info", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void cs_cmd_info(sourceinfo_t *si, int parc, char *parv[]);
@@ -222,6 +222,14 @@ static void cs_cmd_info(sourceinfo_t *si, int parc, char *parv[])
 
 		strcat(buf, "FANTASY");
 	}
+	
+	if (MC_NOSYNC & mc->flags)
+	{
+		if (*buf)
+			strcat(buf, " ");
+
+		strcat(buf, "NOSYNC");
+	}
 
 	if (use_channel_private && MC_PRIVATE & mc->flags)
 	{
@@ -257,6 +265,15 @@ static void cs_cmd_info(sourceinfo_t *si, int parc, char *parv[])
 		else
 			command_success_nodata(si, _("Prefix     : %s (default)"), chansvs.trigger);
 	}
+
+	if (!hide_info && (md = metadata_find(mc, "private:antiflood:enforce-method")))
+	{
+		if ((md = metadata_find(mc, "private:antiflood:enforce-method")))
+			command_success_nodata(si, _("AntiFlood  : %s"), md->value);
+		else
+			command_success_nodata(si, _("AntiFlood  : (default)"));
+	}
+
 
 	if (has_priv(si, PRIV_CHAN_AUSPEX) && (md = metadata_find(mc, "private:mark:setter")))
 	{

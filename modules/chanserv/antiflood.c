@@ -24,11 +24,11 @@ DECLARE_MODULE_V1
 (
 	"chanserv/antiflood", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org/>"
+	VENDOR_STRING
 );
 
-static int antiflood_msg_time = 60;
-static int antiflood_msg_count = 10;
+static time_t antiflood_msg_time = 60;
+static size_t antiflood_msg_count = 10;
 
 #define METADATA_KEY_ENFORCE_METHOD	"private:antiflood:enforce-method"
 
@@ -298,7 +298,7 @@ typedef struct {
 static antiflood_enforce_method_impl_t antiflood_enforce_methods[ANTIFLOOD_ENFORCE_COUNT] = {
 	[ANTIFLOOD_ENFORCE_QUIET]   = { &antiflood_enforce_quiet, &antiflood_unenforce_banlike },
 	[ANTIFLOOD_ENFORCE_KICKBAN] = { &antiflood_enforce_kickban, &antiflood_unenforce_banlike },
-	[ANTIFLOOD_ENFORCE_KLINE]   = { &antiflood_enforce_kline },
+	[ANTIFLOOD_ENFORCE_KLINE]   = { &antiflood_enforce_kline, NULL },
 };
 
 static inline antiflood_enforce_method_impl_t *

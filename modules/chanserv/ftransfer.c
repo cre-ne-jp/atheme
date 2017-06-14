@@ -12,7 +12,7 @@ DECLARE_MODULE_V1
 (
 	"chanserv/ftransfer", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void cs_cmd_ftransfer(sourceinfo_t *si, int parc, char *parv[]);
@@ -53,6 +53,12 @@ static void cs_cmd_ftransfer(sourceinfo_t *si, int parc, char *parv[])
 		return;
 	}
 
+	if (!myentity_allow_foundership(mt))
+	{
+		command_fail(si, fault_toomany, _("\2%s\2 cannot take foundership of a channel."), mt->name);
+		return;
+	}
+
 	if (!(mc = mychan_find(name)))
 	{
 		command_fail(si, fault_nosuch_target, _("Channel \2%s\2 is not registered."), name);
@@ -69,7 +75,7 @@ static void cs_cmd_ftransfer(sourceinfo_t *si, int parc, char *parv[])
 	/* no maxchans check (intentional -- this is an oper command) */
 	wallops("%s transferred foundership of %s from %s to %s", get_oper_name(si), name, oldfndr, mt->name);
 	logcommand(si, CMDLOG_ADMIN | LG_REGISTER, "FTRANSFER: \2%s\2 transferred from \2%s\2 to \2%s\2", mc->name, oldfndr, mt->name);
-	verbose(mc, "Foundership transfer from \2%s\2 to \2%s\2 forced by %s administration.", oldfndr, mt->name, me.netname);
+	verbose(mc, _("Foundership transfer from \2%s\2 to \2%s\2 forced by %s administration."), oldfndr, mt->name, me.netname);
 	command_success_nodata(si, _("Foundership of \2%s\2 has been transferred from \2%s\2 to \2%s\2."),
 		name, oldfndr, mt->name);
 
@@ -80,7 +86,7 @@ static void cs_cmd_ftransfer(sourceinfo_t *si, int parc, char *parv[])
 		 * ensures we don't crash if not -- jilles
 		 */
 		if (ca->entity != NULL && ca->level & CA_FOUNDER)
-			chanacs_modify_simple(ca, CA_FLAGS, CA_FOUNDER);
+			chanacs_modify_simple(ca, CA_FLAGS, CA_FOUNDER, si->smu);
 	}
 	mc->used = CURRTIME;
 	chanacs_change_simple(mc, mt, NULL, CA_FOUNDER_0, 0, entity(si->smu));

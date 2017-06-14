@@ -13,7 +13,7 @@ DECLARE_MODULE_V1
 (
 	"chanserv/set_limitflags", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void cs_cmd_set_limitflags(sourceinfo_t *si, int parc, char *parv[]);
@@ -69,6 +69,7 @@ static void cs_cmd_set_limitflags(sourceinfo_t *si, int parc, char *parv[])
 		}
 
 		logcommand(si, CMDLOG_SET, "SET:LIMITFLAGS:ON: \2%s\2", mc->name);
+		verbose(mc, _("\2%s\2 enabled the LIMITFLAGS flag"), get_source_name(si));
 
 		mc->flags |= MC_LIMITFLAGS;
 
@@ -86,6 +87,7 @@ static void cs_cmd_set_limitflags(sourceinfo_t *si, int parc, char *parv[])
 		}
 
 		logcommand(si, CMDLOG_SET, "SET:LIMITFLAGS:OFF: \2%s\2", mc->name);
+		verbose(mc, _("\2%s\2 disabled the LIMITFLAGS flag"), get_source_name(si));
 
 		mc->flags &= ~MC_LIMITFLAGS;
 

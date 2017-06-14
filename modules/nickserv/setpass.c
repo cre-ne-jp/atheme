@@ -12,7 +12,7 @@ DECLARE_MODULE_V1
 (
 	"nickserv/setpass", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void clear_setpass_key(user_t *u);
@@ -62,6 +62,12 @@ static void ns_cmd_setpass(sourceinfo_t *si, int parc, char *parv[])
 	if (!(mu = myuser_find(nick)))
 	{
 		command_fail(si, fault_nosuch_target, _("\2%s\2 is not registered."), nick);
+		return;
+	}
+
+	if (si->smu == mu)
+	{
+		command_fail(si, fault_already_authed, _("You are logged in and can change your password using the SET PASSWORD command."));
 		return;
 	}
 

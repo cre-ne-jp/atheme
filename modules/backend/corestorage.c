@@ -22,7 +22,7 @@ DECLARE_MODULE_V1
 (
 	"backend/corestorage", true, _modinit, NULL,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 unsigned int dbv;
@@ -194,6 +194,7 @@ corestorage_db_save(database_handle_t *db)
 
 		MOWGLI_ITER_FOREACH(tn, mc->chanacs.head)
 		{
+			myentity_t *setter = NULL;
 			ca = (chanacs_t *)tn->data;
 
 			db_start_row(db, "CA");
@@ -201,7 +202,12 @@ corestorage_db_save(database_handle_t *db)
 			db_write_word(db, ca->entity ? ca->entity->name : ca->host);
 			db_write_word(db, bitmask_to_flags(ca->level));
 			db_write_time(db, ca->tmodified);
-			db_write_word(db, ca->setter ? ca->setter : "*");
+
+			if (*ca->setter_uid != '\0' && (setter = myentity_find_uid(ca->setter_uid)))
+				db_write_word(db, setter->name);
+			else
+				db_write_word(db, "*");
+
 			db_commit_row(db);
 
 			if (object(ca)->metadata)
@@ -805,7 +811,7 @@ static void corestorage_h_si(database_handle_t *db, const char *type)
 	strip(buf);
 	svsignore = svsignore_add(mask, reason);
 	svsignore->settime = settime;
-	svsignore->setby = strdup(setby);
+	svsignore->setby = sstrdup(setby);
 }
 
 static void corestorage_h_kid(database_handle_t *db, const char *type)

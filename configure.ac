@@ -7,7 +7,7 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
 
-AC_INIT(atheme, 7.2.5, bugs@atheme.org)
+AC_INIT(atheme, 7.2.8, [https://github.com/atheme/atheme/issues/])
 
 AC_CONFIG_AUX_DIR(autoconf)
 
@@ -50,6 +50,8 @@ dnl Automake compatibility. --nenolod
 AC_SUBST([PACKAGE], [AC_PACKAGE_TARNAME])
 AC_SUBST([VERSION], [AC_PACKAGE_VERSION])
 
+AC_DEFINE(VENDOR_STRING, "Atheme Development Group <http://atheme.github.io>", [Vendor and URL for modules's "vendor" field])
+
 AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE", [Name of package])
 AC_DEFINE_UNQUOTED(VERSION, "$VERSION", [Version number of package])
 
@@ -70,7 +72,7 @@ dnl Checks for header files.
 AC_CHECK_HEADERS(link.h,,,[-])
 
 dnl Checks for library functions.
-AC_CHECK_FUNCS([inet_pton inet_ntop gettimeofday umask arc4random getrlimit fork getpid execve strtok_r inet_ntop strcasestr])
+AC_CHECK_FUNCS([inet_pton inet_ntop gettimeofday umask arc4random arc4random_buf arc4random_uniform explicit_bzero memset_s getrlimit fork getpid execve strtok_r inet_ntop strcasestr])
 AC_CHECK_FUNC(socket,, AC_CHECK_LIB(socket, socket))
 AC_CHECK_FUNC(gethostbyname,, AC_CHECK_LIB(nsl, gethostbyname))
 AC_SEARCH_LIBS(crypt, crypt, [AC_DEFINE([HAVE_CRYPT], [], [Define if crypt() is available])])
@@ -209,6 +211,23 @@ dnl gettext
 LOCALEDIR='${datadir}/locale'
 AC_SUBST(LOCALEDIR)
 
+REPRODUCIBLEBUILDS="no"
+AC_MSG_CHECKING(if you want reproducible builds)
+AC_ARG_ENABLE(reproducible-builds,
+AC_HELP_STRING([--enable-reproducible-builds],[ Enable reproducible builds.]),
+[
+  case "$enableval" in
+  yes)
+    REPRODUCIBLEBUILDS="yes"
+    AC_DEFINE([REPRODUCIBLE_BUILDS], 1, [Uncomment to enable reproducible builds.])
+    ;;
+  no)
+    REPRODUCIBLEBUILDS="no"
+    ;;
+  esac
+])
+AC_MSG_RESULT($REPRODUCIBLEBUILDS)
+
 LARGENET="no"
 AC_MSG_CHECKING(if you want large network support)
 AC_ARG_ENABLE(large-net,
@@ -301,7 +320,7 @@ ATHEME_C_GCC_TRY_FLAGS([-Wimplicit -Wnested-externs], atheme_cv_c_gcc_w_implicit
 ATHEME_C_GCC_TRY_FLAGS([-Wcast-align], atheme_cv_c_gcc_w_cast_align)
 ATHEME_C_GCC_TRY_FLAGS([-Wcast-qual], atheme_cv_c_gcc_w_cast_qual)
 ATHEME_C_GCC_TRY_FLAGS([-Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations], atheme_cv_c_gcc_prototypes)
-ATHEME_C_GCC_TRY_FLAGS([-Wparenthesis], atheme_cv_c_gcc_parenthesis)
+ATHEME_C_GCC_TRY_FLAGS([-Wparentheses], atheme_cv_c_gcc_parentheses)
 ATHEME_C_GCC_TRY_FLAGS([-W -Wno-unused], atheme_cv_c_gcc_w)
 ATHEME_C_GCC_TRY_FLAGS([-Wextra], atheme_cv_c_gcc_w_extra)
 ATHEME_C_GCC_TRY_FLAGS([-Wshadow], atheme_cv_c_gcc_w_shadow)
@@ -437,6 +456,7 @@ Configuration:
 	Logfile directory    : ${LOGDIR}
 	Data directory       : ${DATADIR}
 	PID directory        : ${RUNDIR}
+	Reproducible builds  : ${REPRODUCIBLEBUILDS}
 	Large network support: ${LARGENET}
 	OpenSSL SASL support : ${SSL}
 	Contrib modules      : ${CONTRIB}

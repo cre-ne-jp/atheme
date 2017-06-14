@@ -14,7 +14,7 @@ DECLARE_MODULE_V1
 (
 	"botserv/info", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://atheme.org/>"
+	VENDOR_STRING
 );
 
 static void bs_cmd_info(sourceinfo_t *si, int parc, char *parv[]);
@@ -116,6 +116,11 @@ static void bs_cmd_info(sourceinfo_t *si, int parc, char *parv[])
 		if (metadata_find(mc, "private:botserv:no-bot"))
 		{
 			end += snprintf(end, sizeof(buf) - (end - buf), "%s%s", (comma) ? ", " : "", "No bot");
+			comma = 1;
+		}
+		if (metadata_find(mc, "private:botserv:saycaller"))
+		{
+			end += snprintf(end, sizeof(buf) - (end - buf), "%s%s", (comma) ? ", " : "", "Say Caller");
 			comma = 1;
 		}
 		command_success_nodata(si, _("          Options : %s"), (*buf) ? buf : "None");

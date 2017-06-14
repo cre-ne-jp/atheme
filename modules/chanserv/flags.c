@@ -13,22 +13,39 @@ DECLARE_MODULE_V1
 (
 	"chanserv/flags", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void cs_cmd_flags(sourceinfo_t *si, int parc, char *parv[]);
+static void check_registration_keywords(hook_user_register_check_t *hdata);
 
 command_t cs_flags = { "FLAGS", N_("Manipulates specific permissions on a channel."),
                         AC_NONE, 3, cs_cmd_flags, { .path = "cservice/flags" } };
 
+static bool anope_flags_compat = true;
+
 void _modinit(module_t *m)
 {
 	service_named_bind_command("chanserv", &cs_flags);
+
+	add_bool_conf_item("ANOPE_FLAGS_COMPAT", &chansvs.me->conf_table, 0, &anope_flags_compat, true);
+
+	hook_add_event("nick_can_register");
+	hook_add_nick_can_register(check_registration_keywords);
+
+	hook_add_event("user_can_register");
+	hook_add_user_can_register(check_registration_keywords);
 }
 
 void _moddeinit(module_unload_intent_t intent)
 {
 	service_named_unbind_command("chanserv", &cs_flags);
+
+	hook_del_nick_can_register(check_registration_keywords);
+
+	hook_del_user_can_register(check_registration_keywords);
+
+	del_conf_item("ANOPE_FLAGS_COMPAT", &chansvs.me->conf_table);
 }
 
 typedef struct {
@@ -120,6 +137,8 @@ static void do_list(sourceinfo_t *si, mychan_t *mc, unsigned int flags)
 		const char *template, *mod_ago;
 		struct tm tm;
 		char mod_date[64];
+		myentity_t *setter;
+		const char *setter_name;
 
 		ca = n->data;
 
@@ -132,12 +151,17 @@ static void do_list(sourceinfo_t *si, mychan_t *mc, unsigned int flags)
 		tm = *localtime(&ca->tmodified);
 		strftime(mod_date, sizeof mod_date, TIME_FORMAT, &tm);
 
-		if (template != NULL)
-			command_success_nodata(si, _("%-5d %-22s %-20s (%s) (%s) [modified %s ago, on %s]"),
-				i, ca->entity ? ca->entity->name : ca->host, bitmask_to_flags(ca->level), template, mc->name, mod_ago, mod_date);
+		if (*ca->setter_uid != '\0' && (setter = myentity_find_uid(ca->setter_uid)))
+			setter_name = setter->name;
 		else
-			command_success_nodata(si, _("%-5d %-22s %-20s (%s) [modified %s ago, on %s]"),
-				i, ca->entity ? ca->entity->name : ca->host, bitmask_to_flags(ca->level), mc->name, mod_ago, mod_date);
+			setter_name = "?";
+
+		if (template != NULL)
+			command_success_nodata(si, _("%-5d %-22s %-20s (%s) (%s) [modified %s ago, on %s by %s]"),
+				i, ca->entity ? ca->entity->name : ca->host, bitmask_to_flags(ca->level), template, mc->name, mod_ago, mod_date, setter_name);
+		else
+			command_success_nodata(si, _("%-5d %-22s %-20s (%s) [modified %s ago, on %s by %s]"),
+				i, ca->entity ? ca->entity->name : ca->host, bitmask_to_flags(ca->level), mc->name, mod_ago, mod_date, setter_name);
 		i++;
 	}
 
@@ -148,6 +172,20 @@ static void do_list(sourceinfo_t *si, mychan_t *mc, unsigned int flags)
 		logcommand(si, CMDLOG_ADMIN, "FLAGS: \2%s\2 (oper override)", mc->name);
 	else
 		logcommand(si, CMDLOG_GET, "FLAGS: \2%s\2", mc->name);
+}
+
+static void check_registration_keywords(hook_user_register_check_t *hdata)
+{
+	if (hdata->approved || !anope_flags_compat)
+	{
+		return;
+	}
+
+	if (!strcasecmp(hdata->account, "LIST") || !strcasecmp(hdata->account, "CLEAR") || !strcasecmp(hdata->account, "MODIFY"))
+	{
+		command_fail(hdata->si, fault_badparams, _("The nick \2%s\2 is reserved and cannot be registered."), hdata->account);
+		hdata->approved = 1;
+	}
 }
 
 /* FLAGS <channel> [user] [flags] */
@@ -218,14 +256,14 @@ static void cs_cmd_flags(sourceinfo_t *si, int parc, char *parv[])
 	 *
 	 *   --nenolod
 	 */
-	else if (!strcasecmp(target, "LIST") && myentity_find_ext(target) == NULL)
+	else if (anope_flags_compat && !strcasecmp(target, "LIST") && myentity_find_ext(target) == NULL)
 	{
 		do_list(si, mc, 0);
 		free(target);
 
 		return;
 	}
-	else if (!strcasecmp(target, "CLEAR") && myentity_find_ext(target) == NULL)
+	else if (anope_flags_compat && !strcasecmp(target, "CLEAR") && myentity_find_ext(target) == NULL)
 	{
 		free(target);
 
@@ -251,7 +289,7 @@ static void cs_cmd_flags(sourceinfo_t *si, int parc, char *parv[])
 		command_success_nodata(si, _("Cleared flags in \2%s\2."), mc->name);
 		return;
 	}
-	else if (!strcasecmp(target, "MODIFY") && myentity_find_ext(target) == NULL)
+	else if (anope_flags_compat && !strcasecmp(target, "MODIFY") && myentity_find_ext(target) == NULL)
 	{
 		free(target);
 
@@ -266,7 +304,7 @@ static void cs_cmd_flags(sourceinfo_t *si, int parc, char *parv[])
 		if (flagstr)
 			*flagstr++ = '\0';
 
-		target = strdup(parv[2]);
+		target = sstrdup(parv[2]);
 	}
 
 	{
@@ -429,7 +467,7 @@ static void cs_cmd_flags(sourceinfo_t *si, int parc, char *parv[])
 			req.ca = ca;
 			req.oldlevel = ca->level;
 
-			if (!chanacs_modify(ca, &addflags, &removeflags, restrictflags))
+			if (!chanacs_modify(ca, &addflags, &removeflags, restrictflags, si->smu))
 			{
 				command_fail(si, fault_noprivs, _("You are not allowed to set \2%s\2 on \2%s\2 in \2%s\2."), bitmask_to_flags2(addflags, removeflags), mt->name, mc->name);
 				chanacs_close(ca);
@@ -460,7 +498,7 @@ static void cs_cmd_flags(sourceinfo_t *si, int parc, char *parv[])
 			req.ca = ca;
 			req.oldlevel = ca->level;
 
-			if (!chanacs_modify(ca, &addflags, &removeflags, restrictflags))
+			if (!chanacs_modify(ca, &addflags, &removeflags, restrictflags, si->smu))
 			{
 		                command_fail(si, fault_noprivs, _("You are not allowed to set \2%s\2 on \2%s\2 in \2%s\2."), bitmask_to_flags2(addflags, removeflags), target, mc->name);
 				chanacs_close(ca);
@@ -481,7 +519,7 @@ static void cs_cmd_flags(sourceinfo_t *si, int parc, char *parv[])
 		flagstr = bitmask_to_flags2(addflags, removeflags);
 		command_success_nodata(si, _("Flags \2%s\2 were set on \2%s\2 in \2%s\2."), flagstr, target, channel);
 		logcommand(si, CMDLOG_SET, "FLAGS: \2%s\2 \2%s\2 \2%s\2", mc->name, target, flagstr);
-		verbose(mc, "\2%s\2 set flags \2%s\2 on \2%s\2", get_source_name(si), flagstr, target);
+		verbose(mc, _("\2%s\2 set flags \2%s\2 on \2%s\2"), get_source_name(si), flagstr, target);
 	}
 
 	free(target);

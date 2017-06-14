@@ -13,7 +13,7 @@ DECLARE_MODULE_V1
 (
 	"saslserv/authcookie", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 sasl_mech_register_func_t *regfuncs;
@@ -73,8 +73,8 @@ static int mech_step(sasl_session_t *p, char *message, size_t len, char **out, s
 	if(!(mu = myuser_find_by_nick(authc)))
 		return ASASL_FAIL;
 
-	p->username = strdup(authc);
-	p->authzid = strdup(authz);
+	p->username = sstrdup(authc);
+	p->authzid = sstrdup(authz);
 	return authcookie_find(cookie, mu) != NULL ? ASASL_DONE : ASASL_FAIL;
 }
 

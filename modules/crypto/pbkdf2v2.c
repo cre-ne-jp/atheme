@@ -50,63 +50,6 @@ DECLARE_MODULE_V1("crypto/pbkdf2v2", false, _modinit, _moddeinit,
 static const char salt_chars[62] =
 	"AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
 
-/*
- * This equivalent implementation provided incase the user doesn't
- * have a new enough OpenSSL library installed on their machine
- */
-int PKCS5_PBKDF2_HMAC(const char *pass, int pl,
-                      const unsigned char *salt, int sl,
-                      int iter, const EVP_MD *PRF,
-                      int dkLen, unsigned char *out)
-{
-	if (! pass)
-		pl = 0;
-
-	if (pass && pl < 0)
-		pl = strlen(pass);
-
-	int tkLen = dkLen;
-	int mdLen = EVP_MD_size(PRF);
-	unsigned char *p = out;
-	unsigned long i = 1;
-
-	HMAC_CTX hctx;
-	HMAC_CTX_init(&hctx);
-
-	while (tkLen) {
-
-		unsigned char itmp[4];
-		itmp[0] = (unsigned char) ((i >> 24) & 0xFF);
-		itmp[1] = (unsigned char) ((i >> 16) & 0xFF);
-		itmp[2] = (unsigned char) ((i >>  8) & 0xFF);
-		itmp[3] = (unsigned char) ((i >>  0) & 0xFF);
-		i++;
-
-		unsigned char digtmp[EVP_MAX_MD_SIZE];
-		HMAC_Init_ex(&hctx, pass, pl, PRF, NULL);
-		HMAC_Update(&hctx, salt, sl);
-		HMAC_Update(&hctx, itmp, 4);
-		HMAC_Final(&hctx, digtmp, NULL);
-
-		int cpLen = (tkLen > mdLen) ? mdLen : tkLen;
-		memcpy(p, digtmp, cpLen);
-
-		int j, k;
-		for (j = 1; j < iter; j++) {
-			HMAC(PRF, pass, pl, digtmp, mdLen, digtmp, NULL);
-			for (k = 0; k < cpLen; k++)
-				p[k] ^= digtmp[k];
-		}
-
-		tkLen -= cpLen;
-		p += cpLen;
-	}
-
-	HMAC_CTX_cleanup(&hctx);
-
-	return 1;
-}
-
 static const char *pbkdf2v2_make_salt(void)
 {
 	char		salt[PBKDF2_SALTLEN + 1];
@@ -115,9 +58,8 @@ static const char *pbkdf2v2_make_salt(void)
 	memset(salt, 0x00, sizeof salt);
 	memset(result, 0x00, sizeof result);
 
-	srand(time(NULL));
 	for (int i = 0; i < PBKDF2_SALTLEN; i++)
-		salt[i] = salt_chars[rand() % sizeof salt_chars];
+		salt[i] = salt_chars[arc4random() % sizeof salt_chars];
 
 	(void) snprintf(result, sizeof result, PBKDF2_F_SALT,
 	                PBKDF2_PRF_DEF, PBKDF2_ITER_DEF, salt);
@@ -135,20 +77,14 @@ static const char *pbkdf2v2_crypt(const char *pass, const char *crypt_str)
 	char		digest_b64[(EVP_MAX_MD_SIZE * 2) + 5];
 	static char	result[PASSLEN];
 
-	/* Attempt to extract the PRF, iteration count and salt */
-	if (sscanf(crypt_str, PBKDF2_F_SCAN, &prf, &iter, salt) < 3) {
-
-		/*
-		 * Didn't get all of the parameters we wanted, the crypt
-		 * string must not be for a hash produced by this module.
-		 * But we can't just return NULL or an empty string incase
-		 * we're being asked to generate a new password hash for a
-		 * new user registration (rather than for verification) or
-		 * something along those lines. Therefore, generate params.
-		 */
-		(void) sscanf(pbkdf2v2_make_salt(), PBKDF2_F_SCAN,
-		              &prf, &iter, salt);
-	}
+	/*
+	 * Attempt to extract the PRF, iteration count and salt
+	 *
+	 * If this fails, we're trying to verify a hash not produced by
+	 * this module - just bail out, libathemecore can handle NULL
+	 */
+	if (sscanf(crypt_str, PBKDF2_F_SCAN, &prf, &iter, salt) < 3)
+		return NULL;
 
 	/* Look up the digest method corresponding to the PRF */
 	switch (prf) {
@@ -162,10 +98,11 @@ static const char *pbkdf2v2_crypt(const char *pass, const char *crypt_str)
 		break;
 
 	default:
-		/* This should match the default PRF */
-		prf = PBKDF2_PRF_DEF;
-		md = EVP_sha512();
-		break;
+		/*
+		 * Similar to above, trying to verify a password
+		 * that we cannot ever verify - bail out here
+		 */
+		return NULL;
 	}
 
 	/* Compute the PBKDF2 digest */

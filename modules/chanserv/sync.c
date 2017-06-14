@@ -11,7 +11,7 @@ DECLARE_MODULE_V1
 (
 	"chanserv/sync", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void cs_cmd_sync(sourceinfo_t *si, int parc, char *parv[]);
@@ -332,7 +332,7 @@ static void cs_cmd_sync(sourceinfo_t *si, int parc, char *parv[])
 		return;
 	}
 
-	verbose(mc, "\2%s\2 used SYNC.", get_source_name(si));
+	verbose(mc, _("\2%s\2 used SYNC."), get_source_name(si));
 	logcommand(si, CMDLOG_SET, "SYNC: \2%s\2", mc->name);
 
 	do_channel_sync(mc, NULL);

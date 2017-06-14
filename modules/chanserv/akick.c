@@ -20,7 +20,7 @@ DECLARE_MODULE_V1
 (
 	"chanserv/akick", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 command_t cs_akick = { "AKICK", N_("Manipulates a channel's AKICK list."),
@@ -321,7 +321,7 @@ void cs_cmd_akick_add(sourceinfo_t *si, int parc, char *parv[])
 		req.ca = ca2;
 		req.oldlevel = ca2->level;
 
-		chanacs_modify_simple(ca2, CA_AKICK, 0);
+		chanacs_modify_simple(ca2, CA_AKICK, 0, si->smu);
 
 		req.newlevel = ca2->level;
 
@@ -336,7 +336,7 @@ void cs_cmd_akick_add(sourceinfo_t *si, int parc, char *parv[])
 			snprintf(expiry, sizeof expiry, "%ld", expireson);
 			metadata_add(ca2, "expires", expiry);
 
-			verbose(mc, "\2%s\2 added \2%s\2 to the AKICK list, expires in %s.", get_source_name(si), uname,timediff(duration));
+			verbose(mc, _("\2%s\2 added \2%s\2 to the AKICK list, expires in %s."), get_source_name(si), uname,timediff(duration));
 			logcommand(si, CMDLOG_SET, "AKICK:ADD: \2%s\2 on \2%s\2, expires in %s.", uname, mc->name,timediff(duration));
 			command_success_nodata(si, _("AKICK on \2%s\2 was successfully added for \2%s\2 and will expire in %s."), uname, mc->name,timediff(duration) );
 
@@ -353,7 +353,7 @@ void cs_cmd_akick_add(sourceinfo_t *si, int parc, char *parv[])
 		}
 		else
 		{
-			verbose(mc, "\2%s\2 added \2%s\2 to the AKICK list.", get_source_name(si), uname);
+			verbose(mc, _("\2%s\2 added \2%s\2 to the AKICK list."), get_source_name(si), uname);
 			logcommand(si, CMDLOG_SET, "AKICK:ADD: \2%s\2 on \2%s\2", uname, mc->name);
 
 			command_success_nodata(si, _("AKICK on \2%s\2 was successfully added to the AKICK list for \2%s\2."), uname, mc->name);
@@ -387,7 +387,7 @@ void cs_cmd_akick_add(sourceinfo_t *si, int parc, char *parv[])
 		req.ca = ca2;
 		req.oldlevel = ca2->level;
 
-		chanacs_modify_simple(ca2, CA_AKICK, 0);
+		chanacs_modify_simple(ca2, CA_AKICK, 0, si->smu);
 
 		req.newlevel = ca2->level;
 
@@ -403,7 +403,7 @@ void cs_cmd_akick_add(sourceinfo_t *si, int parc, char *parv[])
 			metadata_add(ca2, "expires", expiry);
 
 			command_success_nodata(si, _("AKICK on \2%s\2 was successfully added for \2%s\2 and will expire in %s."), mt->name, mc->name, timediff(duration));
-			verbose(mc, "\2%s\2 added \2%s\2 to the AKICK list, expires in %s.", get_source_name(si), mt->name, timediff(duration));
+			verbose(mc, _("\2%s\2 added \2%s\2 to the AKICK list, expires in %s."), get_source_name(si), mt->name, timediff(duration));
 			logcommand(si, CMDLOG_SET, "AKICK:ADD: \2%s\2 on \2%s\2, expires in %s", mt->name, mc->name, timediff(duration));
 
 			timeout = akick_add_timeout(mc, mt, mt->name, expireson);
@@ -421,7 +421,7 @@ void cs_cmd_akick_add(sourceinfo_t *si, int parc, char *parv[])
 		{
 			command_success_nodata(si, _("AKICK on \2%s\2 was successfully added to the AKICK list for \2%s\2."), mt->name, mc->name);
 
-			verbose(mc, "\2%s\2 added \2%s\2 to the AKICK list.", get_source_name(si), mt->name);
+			verbose(mc, _("\2%s\2 added \2%s\2 to the AKICK list."), get_source_name(si), mt->name);
 			logcommand(si, CMDLOG_SET, "AKICK:ADD: \2%s\2 on \2%s\2", mt->name, mc->name);
 		}
 
@@ -488,14 +488,14 @@ void cs_cmd_akick_del(sourceinfo_t *si, int parc, char *parv[])
 		req.ca = ca;
 		req.oldlevel = ca->level;
 
-		chanacs_modify_simple(ca, 0, CA_AKICK);
+		chanacs_modify_simple(ca, 0, CA_AKICK, si->smu);
 
 		req.newlevel = ca->level;
 
 		hook_call_channel_acl_change(&req);
 		chanacs_close(ca);
 
-		verbose(mc, "\2%s\2 removed \2%s\2 from the AKICK list.", get_source_name(si), uname);
+		verbose(mc, _("\2%s\2 removed \2%s\2 from the AKICK list."), get_source_name(si), uname);
 		logcommand(si, CMDLOG_SET, "AKICK:DEL: \2%s\2 on \2%s\2", uname, mc->name);
 		command_success_nodata(si, _("\2%s\2 has been removed from the AKICK list for \2%s\2."), uname, mc->name);
 
@@ -539,7 +539,7 @@ void cs_cmd_akick_del(sourceinfo_t *si, int parc, char *parv[])
 	req.ca = ca;
 	req.oldlevel = ca->level;
 
-	chanacs_modify_simple(ca, 0, CA_AKICK);
+	chanacs_modify_simple(ca, 0, CA_AKICK, si->smu);
 
 	req.newlevel = ca->level;
 
@@ -548,7 +548,7 @@ void cs_cmd_akick_del(sourceinfo_t *si, int parc, char *parv[])
 
 	command_success_nodata(si, _("\2%s\2 has been removed from the AKICK list for \2%s\2."), mt->name, mc->name);
 	logcommand(si, CMDLOG_SET, "AKICK:DEL: \2%s\2 on \2%s\2", mt->name, mc->name);
-	verbose(mc, "\2%s\2 removed \2%s\2 from the AKICK list.", get_source_name(si), mt->name);
+	verbose(mc, _("\2%s\2 removed \2%s\2 from the AKICK list."), get_source_name(si), mt->name);
 
 	return;
 }
@@ -622,6 +622,7 @@ void cs_cmd_akick_list(sourceinfo_t *si, int parc, char *parv[])
 		if (ca->level == CA_AKICK)
 		{
 			char buf[BUFSIZE], *buf_iter;
+			myentity_t *setter = NULL;
 
 			md = metadata_find(ca, "reason");
 
@@ -639,17 +640,17 @@ void cs_cmd_akick_list(sourceinfo_t *si, int parc, char *parv[])
 					     ++i, ca->entity != NULL ? ca->entity->name : ca->host,
 					     md != NULL ? md->value : _("no AKICK reason specified"));
 
-			if (ca->setter)
+			if (*ca->setter_uid != '\0' && (setter = myentity_find_uid(ca->setter_uid)))
 				buf_iter += snprintf(buf_iter, sizeof(buf) - (buf_iter - buf), _("setter: %s"),
-						     ca->setter);
+						     setter->name);
 
 			if (expires_on > 0)
 				buf_iter += snprintf(buf_iter, sizeof(buf) - (buf_iter - buf), _("%sexpires: %s"),
-						     ca->setter != NULL ? ", " : "", timediff(time_left));
+						     setter != NULL ? ", " : "", timediff(time_left));
 
 			if (ca->tmodified)
 				buf_iter += snprintf(buf_iter, sizeof(buf) - (buf_iter - buf), _("%smodified: %s"),
-						     expires_on > 0 || ca->setter != NULL ? ", " : "", ago);
+						     expires_on > 0 || setter != NULL ? ", " : "", ago);
 
 			mowgli_strlcat(buf, "]", sizeof buf);
 
@@ -714,7 +715,7 @@ void akick_timeout_check(void *arg)
 
 		if (ca)
 		{
-			chanacs_modify_simple(ca, 0, CA_AKICK);
+			chanacs_modify_simple(ca, 0, CA_AKICK, NULL);
 			chanacs_close(ca);
 		}
 
@@ -780,7 +781,7 @@ void akickdel_list_create(void *arg)
 
 			if (CURRTIME > expireson)
 			{
-				chanacs_modify_simple(ca, 0, CA_AKICK);
+				chanacs_modify_simple(ca, 0, CA_AKICK, NULL);
 				chanacs_close(ca);
 			}
 			else

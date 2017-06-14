@@ -12,7 +12,7 @@ DECLARE_MODULE_V1
 (
 	"chanserv/recover", false, _modinit, _moddeinit,
 	PACKAGE_STRING,
-	"Atheme Development Group <http://www.atheme.org>"
+	VENDOR_STRING
 );
 
 static void cs_cmd_recover(sourceinfo_t *si, int parc, char *parv[]);
@@ -84,7 +84,7 @@ static void cs_cmd_recover(sourceinfo_t *si, int parc, char *parv[])
 	}
 
 	command_add_flood(si, FLOOD_HEAVY);
-	verbose(mc, "\2%s\2 used RECOVER.", get_source_name(si));
+	verbose(mc, _("\2%s\2 used RECOVER."), get_source_name(si));
 	logcommand(si, CMDLOG_DO, "RECOVER: \2%s\2", mc->name);
 
 	/* deop everyone */

@@ -211,7 +211,7 @@ struct chanacs_
 	mowgli_node_t    cnode;
 	mowgli_node_t    unode;
 
-	stringref setter;
+	char setter_uid[IDLEN];
 };
 
 /* the new atheme-style channel flags */
@@ -332,6 +332,12 @@ typedef struct {
 } hook_user_register_check_t;
 
 typedef struct {
+	sourceinfo_t *si;
+	myuser_t *mu;
+	bool allowed;
+} hook_user_login_check_t;
+
+typedef struct {
 	user_t *u;
 	mynick_t *mn;
 } hook_nick_enforce_t;
@@ -394,6 +400,7 @@ E mowgli_list_t qlnlist;
 E qline_t *qline_add(const char *mask, const char *reason, long duration, const char *setby);
 E void qline_delete(const char *mask);
 E qline_t *qline_find(const char *mask);
+E qline_t *qline_find_match(const char *mask);
 E qline_t *qline_find_num(unsigned int number);
 E qline_t *qline_find_user(user_t *u);
 E qline_t *qline_find_channel(channel_t *c);
@@ -462,8 +469,8 @@ E unsigned int chanacs_source_flags(mychan_t *mychan, sourceinfo_t *si);
 
 E chanacs_t *chanacs_open(mychan_t *mychan, myentity_t *mt, const char *hostmask, bool create, myentity_t *setter);
 //inline void chanacs_close(chanacs_t *ca);
-E bool chanacs_modify(chanacs_t *ca, unsigned int *addflags, unsigned int *removeflags, unsigned int restrictflags);
-E bool chanacs_modify_simple(chanacs_t *ca, unsigned int addflags, unsigned int removeflags);
+E bool chanacs_modify(chanacs_t *ca, unsigned int *addflags, unsigned int *removeflags, unsigned int restrictflags, myuser_t *setter);
+E bool chanacs_modify_simple(chanacs_t *ca, unsigned int addflags, unsigned int removeflags, myuser_t *setter);
 
 //inline bool chanacs_is_table_full(chanacs_t *ca);
 
