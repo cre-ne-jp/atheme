@@ -2143,16 +2143,16 @@ msgstr ""
 msgid ""
 "The system is currently too busy to process your registration, please try "
 "again later."
-msgstr ""
+msgstr "システムが過負荷状態にあり、あなたの登録を処理できませんでした。後ほどもう一度お試しください。"
 
 #: modules/chanserv/register.c:132
 msgid "You have too many channels registered."
-msgstr ""
+msgstr "あなたが登録可能なチャンネル数の上限を超えています。"
 
 #: modules/chanserv/set_core.c:21 modules/groupserv/set.c:24
 #: modules/nickserv/set_core.c:21 modules/operserv/set.c:37
 msgid "Sets various control flags."
-msgstr ""
+msgstr "様々な制御フラグを設定します。"
 
 #: modules/chanserv/set_core.c:46
 msgid ""
@@ -2163,21 +2163,21 @@ msgstr ""
 
 #: modules/chanserv/set_core.c:69 modules/chanserv/set_core.c:80
 msgid "Syntax: SET <#channel> <setting> [parameters]"
-msgstr ""
+msgstr "構文: SET <#channel> <setting> [パラメータ]"
 
 #: modules/chanserv/set_email.c:21
 msgid "Sets the channel e-mail address."
-msgstr ""
+msgstr "チャンネルのメールアドレスを設定します。"
 
 #: modules/chanserv/set_email.c:59
 #, c-format
 msgid "The e-mail address for channel %s was deleted."
-msgstr ""
+msgstr "チャンネル %s のメールアドレスは削除されました。"
 
 #: modules/chanserv/set_email.c:64
 #, c-format
 msgid "The e-mail address for channel %s was not set."
-msgstr ""
+msgstr "チャンネル %s にはメールアドレスが設定されていません。"
 
 #: modules/chanserv/set_email.c:70 modules/groupserv/set_email.c:56
 #: modules/nickserv/return.c:65
@@ -2188,26 +2188,26 @@ msgstr "%s は有効なEメールアドレスではありません。"
 #: modules/chanserv/set_email.c:78
 #, c-format
 msgid "The e-mail address for channel %s has been set to %s."
-msgstr ""
+msgstr "チャンネル %s のメールアドレスを %s に設定しました。"
 
 #: modules/chanserv/set_entrymsg.c:21
 msgid "Sets the channel's entry message."
-msgstr ""
+msgstr "チャンネルに入った時のメッセージ(エントリーメッセージ)を設定します。"
 
 #: modules/chanserv/set_entrymsg.c:62
 #, c-format
 msgid "The entry message for %s has been cleared."
-msgstr ""
+msgstr "チャンネル %s のエントリーメッセージを削除しました。"
 
 #: modules/chanserv/set_entrymsg.c:66
 #, c-format
 msgid "The entry message for %s was not set."
-msgstr ""
+msgstr "チャンネル %s にはエントリーメッセージが設定されていません。"
 
 #: modules/chanserv/set_entrymsg.c:77
 #, c-format
 msgid "The entry message for %s has been set to %s"
-msgstr ""
+msgstr "チャンネル %s のエントリーメッセージを %s に設定しました。"
 
 #: modules/chanserv/set_fantasy.c:23
 msgid "Allows or disallows in-channel commands."
@@ -2220,7 +2220,7 @@ msgstr ""
 #: modules/chanserv/set_verbose.c:99 modules/chanserv/sync.c:383
 #, c-format
 msgid "The %s flag has been set for channel %s."
-msgstr ""
+msgstr "%s フラグをチャンネル %s に設定しました。"
 
 #: modules/chanserv/set_fantasy.c:96 modules/chanserv/set_guard.c:102
 #: modules/chanserv/set_keeptopic.c:78 modules/chanserv/set_pubacl.c:77
@@ -2229,7 +2229,7 @@ msgstr ""
 #: modules/chanserv/sync.c:390
 #, c-format
 msgid "The %s flag is not set for channel %s."
-msgstr ""
+msgstr "%s フラグはチャンネル %s に設定されていません。"
 
 #: modules/chanserv/set_fantasy.c:103 modules/chanserv/set_guard.c:113
 #: modules/chanserv/set_keeptopic.c:86 modules/chanserv/set_pubacl.c:85
@@ -2238,7 +2238,7 @@ msgstr ""
 #: modules/chanserv/sync.c:398
 #, c-format
 msgid "The %s flag has been removed for channel %s."
-msgstr ""
+msgstr "%s フラグをチャンネル %s から削除しました。"
 
 #: modules/chanserv/set_gameserv.c:21
 msgid "Allows or disallows gaming services."
@@ -2266,7 +2266,7 @@ msgstr ""
 
 #: modules/chanserv/set_guard.c:23
 msgid "Sets whether or not services will inhabit the channel."
-msgstr ""
+msgstr "サービスがチャンネルに常駐するか設定します。"
 
 #: modules/chanserv/set_guard.c:84
 #, c-format
@@ -2309,7 +2309,7 @@ msgstr "%2$s の %1$s フラグが除去されました。"
 
 #: modules/chanserv/set_mlock.c:21
 msgid "Sets channel mode lock."
-msgstr ""
+msgstr "チャンネルモードを変更できないようにします。"
 
 #: modules/chanserv/set_mlock.c:112 modules/chanserv/set_mlock.c:143
 #: modules/chanserv/set_mlock.c:185
@@ -2386,7 +2386,7 @@ msgstr ""
 
 #: modules/chanserv/set_property.c:48
 msgid "Syntax: SET <#channel> PROPERTY <property> [value]"
-msgstr ""
+msgstr "構文: SET <#channel> PROPERTY <プロパティ> [設定値]"
 
 #: modules/chanserv/set_property.c:55 modules/nickserv/set_property.c:56
 msgid "Invalid property name."
@@ -2436,22 +2436,22 @@ msgstr ""
 
 #: modules/chanserv/set_url.c:21
 msgid "Sets the channel URL."
-msgstr ""
+msgstr "チャンネルのウェブサイトを設定します。"
 
 #: modules/chanserv/set_url.c:63 modules/groupserv/set_url.c:49
 #, c-format
 msgid "The URL for %s has been cleared."
-msgstr ""
+msgstr "チャンネル %s のウェブサイトを削除しました。"
 
 #: modules/chanserv/set_url.c:67 modules/groupserv/set_url.c:53
 #, c-format
 msgid "The URL for %s was not set."
-msgstr ""
+msgstr "チャンネル %s にはウェブサイトが登録されていません。"
 
 #: modules/chanserv/set_url.c:75 modules/groupserv/set_url.c:61
 #, c-format
 msgid "The URL of %s has been set to %s."
-msgstr ""
+msgstr "チャンネル %s のウェブサイトを %s に設定しました。"
 
 #: modules/chanserv/set_verbose.c:21
 msgid "Notifies channel about access list modifications."
@@ -2459,27 +2459,27 @@ msgstr ""
 
 #: modules/chanserv/status.c:20
 msgid "Displays your status in services."
-msgstr ""
+msgstr "サービスに登録されたあなたの情報を出力します。"
 
 #: modules/chanserv/status.c:64
 #, c-format
 msgid "You are banned from %s."
-msgstr ""
+msgstr "チャンネル %s において、あなたは BAN されています。"
 
 #: modules/chanserv/status.c:67
 #, c-format
 msgid "You have access flags %s on %s."
-msgstr ""
+msgstr "チャンネル %s におけるあなたのアクセスフラグは %s です。"
 
 #: modules/chanserv/status.c:70
 #, c-format
 msgid "You have no special access to %s."
-msgstr ""
+msgstr "チャンネル %s において、あなたは特別なアクセス権を持っていません。"
 
 #: modules/chanserv/status.c:80 modules/nickserv/status.c:101
 #, c-format
 msgid "You are logged in as %s."
-msgstr ""
+msgstr "あなたは %s としてログインしています。"
 
 #: modules/chanserv/status.c:86 modules/nickserv/status.c:107
 #, c-format
@@ -2493,11 +2493,11 @@ msgstr ""
 
 #: modules/chanserv/status.c:101 modules/nickserv/status.c:122
 msgid "You are a server administrator."
-msgstr ""
+msgstr "あなたはサーバーオペレータです。"
 
 #: modules/chanserv/status.c:104 modules/nickserv/status.c:125
 msgid "You are an IRC operator."
-msgstr ""
+msgstr "あなたはIRCオペレータです。"
 
 #: modules/chanserv/sync.c:345
 msgid "Disables automatic channel ACL syncing."
@@ -2509,17 +2509,17 @@ msgstr ""
 
 #: modules/chanserv/taxonomy.c:44
 msgid "Syntax: TAXONOMY <#channel>"
-msgstr ""
+msgstr "構文: TAXONOMY <#channel>"
 
 #: modules/chanserv/taxonomy.c:50 modules/operserv/override.c:180
 #, c-format
 msgid "%s is not a registered channel."
-msgstr ""
+msgstr "チャンネル %s は登録されていません。"
 
 #: modules/chanserv/taxonomy.c:59
 #, c-format
 msgid "Channel %s is private."
-msgstr ""
+msgstr "チャンネル %s はプライベートに設定されています。"
 
 #: modules/chanserv/taxonomy.c:68 modules/nickserv/taxonomy.c:61
 #, c-format
@@ -2611,11 +2611,11 @@ msgstr ""
 
 #: modules/chanserv/topic.c:23
 msgid "Sets a topic on a channel."
-msgstr ""
+msgstr "チャンネルのトピックを設定します。"
 
 #: modules/chanserv/topic.c:25
 msgid "Appends a topic on a channel."
-msgstr ""
+msgstr "チャンネルに関するトピックを追加します。"
 
 #: modules/chanserv/topic.c:27
 msgid "Prepends a topic on a channel."
@@ -2627,12 +2627,12 @@ msgstr ""
 
 #: modules/chanserv/topic.c:60
 msgid "Syntax: TOPIC <#channel> <topic>"
-msgstr ""
+msgstr "構文: TOPIC <#channel> <topic>"
 
 #: modules/chanserv/topic.c:92 modules/chanserv/topic.c:167
 #: modules/chanserv/topic.c:242 modules/chanserv/topic.c:350
 msgid "The new topic is invalid or too long."
-msgstr ""
+msgstr "新しいトピックは、無効であるかもしくは長すぎます。"
 
 #: modules/chanserv/topic.c:108 modules/chanserv/topic.c:183
 #: modules/chanserv/topic.c:258 modules/chanserv/topic.c:366
