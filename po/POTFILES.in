@@ -15,9 +15,9 @@ modules/chanserv/access.c
 modules/chanserv/akick.c
 modules/chanserv/antiflood.c
 modules/chanserv/ban.c
+modules/chanserv/clear.c
 modules/chanserv/clear_akicks.c
 modules/chanserv/clear_bans.c
-modules/chanserv/clear.c
 modules/chanserv/clear_flags.c
 modules/chanserv/clear_users.c
 modules/chanserv/clone.c
@@ -47,6 +47,7 @@ modules/chanserv/set_core.c
 modules/chanserv/set_email.c
 modules/chanserv/set_entrymsg.c
 modules/chanserv/set_fantasy.c
+modules/chanserv/set_founder.c
 modules/chanserv/set_gameserv.c
 modules/chanserv/set_guard.c
 modules/chanserv/set_keeptopic.c
@@ -85,7 +86,6 @@ modules/contrib/ns_generatehash.c
 modules/contrib/ns_goodmail.c
 modules/contrib/ns_guestnoreg.c
 modules/contrib/ns_listlogins.c
-modules/contrib/ns_sendpassmail.c
 modules/contrib/ns_waitreg.c
 modules/contrib/os_defcon.c
 modules/contrib/os_helpme.c
@@ -149,8 +149,8 @@ modules/memoserv/ignore.c
 modules/memoserv/list.c
 modules/memoserv/main.c
 modules/memoserv/read.c
-modules/memoserv/sendall.c
 modules/memoserv/send.c
+modules/memoserv/sendall.c
 modules/memoserv/sendgroup.c
 modules/memoserv/sendops.c
 modules/nickserv/access.c
@@ -187,6 +187,7 @@ modules/nickserv/set_core.c
 modules/nickserv/set_email.c
 modules/nickserv/set_emailmemos.c
 modules/nickserv/set_enforcetime.c
+modules/nickserv/set_hidelastlogin.c
 modules/nickserv/set_hidemail.c
 modules/nickserv/set_language.c
 modules/nickserv/set_nevergroup.c
@@ -195,13 +196,13 @@ modules/nickserv/set_nogreet.c
 modules/nickserv/set_nomemo.c
 modules/nickserv/set_noop.c
 modules/nickserv/set_nopassword.c
-modules/nickserv/setpass.c
 modules/nickserv/set_password.c
 modules/nickserv/set_private.c
 modules/nickserv/set_privmsg.c
 modules/nickserv/set_property.c
 modules/nickserv/set_pubkey.c
 modules/nickserv/set_quietchg.c
+modules/nickserv/setpass.c
 modules/nickserv/status.c
 modules/nickserv/taxonomy.c
 modules/nickserv/vacation.c
