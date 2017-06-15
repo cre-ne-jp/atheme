@@ -1,0 +1,15 @@
+From: &from&
+To: &to&
+Reply-To: &replyto&
+Subject: &netname& アカウントの新規メールアドレスの確認
+Date: &date&
+
+&accountname&,
+
+あなたのアカウントに登録されたメールアドレスを変更するには、以下の操作をIRCで行なう必要があります。
+
+/msg &nicksvs& VERIFY EMAILCHG &accountname& &param&
+
+&netname& にご登録頂いたメールアドレスの変更手続きをして頂きありがとうございました。
+--
+このメールに心当たりがないようでしたら、%replyto& にメール全文を送信してください。

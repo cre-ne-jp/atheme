@@ -1,0 +1,20 @@
+From: &from&
+To: &to&
+Reply-To: &replyto&
+Subject: &netname& アカウントのパスワード変更
+Date: &date&
+
+&accountname&,
+
+誰かが、あなたのアカウントのパスワードを変更する手続きを行ないました。
+
+もしあなた自身の操作ではない場合は、今すぐ運営元に連絡してください。
+あなたのアカウントを保護するため、手続きを行ないます。
+
+パスワードを変更するには、以下のコマンドをIRCに送信してください。
+その際、<password> を新しいパスワードに置き換えてください。
+
+/msg &nicksvs& SETPASS &accountname& &param& <password>
+
+--
+このメールに心当たりがないようでしたら、%replyto& にメール全文を送信してください。

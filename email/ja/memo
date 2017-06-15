@@ -1,0 +1,20 @@
+From: &from&
+To: &to&
+Reply-To: &replyto&
+Subject: &netname& にて新しいメッセージが届きました
+Date: &date&
+
+&accountname&,
+
+あなた宛に、 &entityname& から新しいメッセージが届きました。
+
+&param&
+
+
+この通知メールを無効化するには、以下のコマンドをIRCに送信してください。
+
+/msg &nicksvs& SET EMAILMEMOS OFF 
+
+
+--
+このメールに心当たりがないようでしたら、%replyto& にメール全文を送信してください。
