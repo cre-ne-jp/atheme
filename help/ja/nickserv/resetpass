@@ -3,7 +3,7 @@ Help for RESETPASS:
 RESETPASS sets a random password for the specified
 account.
 
-Syntax: RESETPASS <nickname>
+構文: RESETPASS <nickname>
 
-Examples:
+コマンド例:
     /msg &nick& RESETPASS pfish

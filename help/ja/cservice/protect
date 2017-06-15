@@ -8,7 +8,7 @@ notified that you did it.
 If the last parameter is omitted the action is performed
 on the person requesting the command.
 
-Syntax: PROTECT|DEPROTECT <#channel> [nickname]
+構文: PROTECT|DEPROTECT <#channel> [nickname]
 
-Examples:
+コマンド例:
     /msg &nick& PROTECT #foo

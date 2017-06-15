@@ -8,7 +8,7 @@ to read your memo.
 
 Your memo cannot be more than 300 characters.
 
-Syntax: SEND <user|nick> text
+構文: SEND <user|nick> text
 
-Examples:
+コマンド例:
     /msg &nick& SEND Kog pay your bills

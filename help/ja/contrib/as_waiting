@@ -2,7 +2,7 @@ Help for WAITING:
 
 WAITING lists all announcements currently waiting for activation.
 
-Syntax: WAITING
+構文: WAITING
 
-Examples:
+コマンド例:
     /msg &nick& WAITING

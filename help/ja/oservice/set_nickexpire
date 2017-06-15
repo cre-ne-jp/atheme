@@ -3,7 +3,7 @@ Help for SET NICKEXPIRE:
 SET NICKEXPIRE allows network staff to modify how often nickname
 and account expirations will be checked.
 
-Syntax: SET NICKEXPIRE <time in days>
+構文: SET NICKEXPIRE <time in days>
 
-Example:
+コマンド例:
     /msg &nick& SET NICKEXPIRE 30

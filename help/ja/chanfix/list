@@ -4,8 +4,8 @@ LIST displays a list of matching &nick&
 channels (or all channels if no criteria
 is given)
 
-Syntax: INFO [*]
+構文: INFO [*]
 
-Examples:
+コマンド例:
     /msg &nick& LIST
     /msg &nick& LIST #Chat*

@@ -4,7 +4,7 @@ INFO displays chanfix information such as
 the highest score, usercount, score stepping
 and the fix status of the channel.
 
-Syntax: INFO <#channel>
+構文: INFO <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& INFO #foo

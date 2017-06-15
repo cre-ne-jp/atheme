@@ -9,7 +9,7 @@ someone makes changes to the access lists.
 Fantasy commands are always executed as if SET VERBOSE ON is
 in effect.
 
-Syntax: SET <#channel> VERBOSE ON|OPS|OFF
+構文: SET <#channel> VERBOSE ON|OPS|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET #foo VERBOSE ON

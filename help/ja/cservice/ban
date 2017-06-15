@@ -3,8 +3,8 @@ Help for BAN:
 The BAN command allows you to ban a user or hostmask from
 a channel.
 
-Syntax: BAN <#channel> <nickname|hostmask>
+構文: BAN <#channel> <nickname|hostmask>
 
-Examples:
+コマンド例:
     /msg &nick& BAN #chat carnell
     /msg &nick& BAN #chat *!*@*.ipt.aol.com

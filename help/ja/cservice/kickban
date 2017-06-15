@@ -5,8 +5,8 @@ a channel while placing a ban on the user.
 
 Any matching ban exceptions will be removed.
 
-Syntax: KICKBAN <#channel> <nick> [reason]
+構文: KICKBAN <#channel> <nick> [reason]
 
-Examples:
+コマンド例:
     /msg &nick& KICKBAN #foo abuser
     /msg &nick& KICKBAN #foo abuser go away

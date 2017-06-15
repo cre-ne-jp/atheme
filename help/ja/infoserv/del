@@ -4,7 +4,7 @@ DEL is used to delete informational messages that you no longer
 want users to see on connect. This will not allow you to delete
 oper &nick& messages.
 
-Syntax: DEL <id>
+構文: DEL <id>
 
-Example:
+コマンド例:
     /msg &nick& DEL 1

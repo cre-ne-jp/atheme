@@ -12,18 +12,18 @@ restrictions on how much you can wildcard. If you omit
 the mask, &nick& will attempt to generate one matching
 your current connection.
 
-Syntax: ACCESS LIST
-Syntax: ACCESS ADD [mask]
-Syntax: ACCESS DEL <mask>
+構文: ACCESS LIST
+構文: ACCESS ADD [mask]
+構文: ACCESS DEL <mask>
 #if priv user:auspex
 
 Operators with user:auspex privilege can also
 view another user's access list.
 
-Syntax: ACCESS LIST <nick>
+構文: ACCESS LIST <nick>
 #endif
 
-Examples:
+コマンド例:
     /msg &nick& ACCESS LIST
     /msg &nick& ACCESS ADD jack@host.example.com
     /msg &nick& ACCESS ADD user@10.0.0.8

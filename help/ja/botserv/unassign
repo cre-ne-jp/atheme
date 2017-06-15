@@ -6,7 +6,7 @@ configuration for the channel is kept, so you will always
 be able to reassign a bot later without having to reconfigure
 it entirely.
 
-Syntax: UNASSIGN <chan>
+構文: UNASSIGN <chan>
 
-Examples:
+コマンド例:
     /msg &nick& UNASSIGN #help

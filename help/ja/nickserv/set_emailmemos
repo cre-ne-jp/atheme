@@ -3,7 +3,7 @@ Help for SET EMAILMEMOS:
 This will forward memos sent to your account
 to the email address listed on your registration.
 
-Syntax: SET EMAILMEMOS [ON|OFF]
+構文: SET EMAILMEMOS [ON|OFF]
 
-Example:
+コマンド例:
     /msg &nick& SET EMAILMEMOS ON

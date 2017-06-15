@@ -11,7 +11,7 @@ of it.
 If you are logged in to the nick, you need not specify
 a password, otherwise you have to.
 
-Syntax: RELEASE <nick> [password]
+構文: RELEASE <nick> [password]
 
-Example:
+コマンド例:
     /msg &nick& RELEASE smith sesame

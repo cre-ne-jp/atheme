@@ -3,4 +3,4 @@ Help for FENFORCE:
 FENFORCE allows operators to enable or disable
 nickname enforcement for any account.
 
-Syntax: FENFORCE <account> ON|OFF
+構文: FENFORCE <account> ON|OFF

@@ -4,7 +4,7 @@ Activates the vHost currently assigned to the nick in use.
 When you use this command any user who performs a /whois
 on you will see the vHost instead of your real IP address.
 
-Syntax: ON
+構文: ON
 
-Examples:
+コマンド例:
     /msg &nick& ON

@@ -4,9 +4,9 @@ ACTIVATE allows you to accept a channel's
 registration request.  (For networks that
 moderate Channel Registration requests)
 
-Syntax: ACTIVATE <#channel>
+構文: ACTIVATE <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& ACTIVATE #FunChat
 See Also:
     /msg &nick& WAITING

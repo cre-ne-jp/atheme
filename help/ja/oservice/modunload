@@ -7,7 +7,7 @@ The names can be gathered from the MODLIST command. They
 are not necessarily equal to the pathnames to load them
 with MODLOAD.
 
-Syntax: MODUNLOAD <name...>
+構文: MODUNLOAD <name...>
 
-Example:
+コマンド例:
     /msg &nick& MODUNLOAD chanserv/register

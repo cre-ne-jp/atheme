@@ -2,7 +2,7 @@ Help for UNOFFER:
 
 Remove a offered vHost from the OFFER list.
 
-Syntax: UNOFFER <vHost>
+構文: UNOFFER <vHost>
 
-Examples:
+コマンド例:
     /msg &nick& UNOFFER users.example.net

@@ -4,8 +4,8 @@ LISTVHOST shows accounts which have a vHost set
 on them. If a pattern is given, only accounts
 with vHosts matching the pattern are shown.
 
-Syntax: LISTVHOST [pattern]
+構文: LISTVHOST [pattern]
 
-Examples:
+コマンド例:
     /msg &nick& LISTVHOST
     /msg &nick& LISTVHOST *staff*

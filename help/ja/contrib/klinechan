@@ -3,7 +3,7 @@ Help for KLINECHAN:
 KLINECHAN k:lines all users joining a channel. Useful for unwanted Botnet
 channels and the like.
 
-Syntax: KLINECHAN <#channel> <ON|OFF> [reason]
+構文: KLINECHAN <#channel> <ON|OFF> [reason]
 
-Examples:
+コマンド例:
     /msg &nick& KLINECHAN #lamers ON Channel of Lamers.

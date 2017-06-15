@@ -10,19 +10,19 @@ which depends on the IRCd. If in question, use the CERT ADD
 command without any arguments, which will add the current
 fingerprint to the list, or ask network staff.
 
-Syntax: CERT LIST
-Syntax: CERT ADD [fingerprint]
-Syntax: CERT DEL <fingerprint>
-Syntax: CERT CLEAR
+構文: CERT LIST
+構文: CERT ADD [fingerprint]
+構文: CERT DEL <fingerprint>
+構文: CERT CLEAR
 #if priv user:auspex
 
 Operators with user:auspex privilege can also
 view another user's fingerprint list.
 
-Syntax: CERT LIST <nick>
+構文: CERT LIST <nick>
 #endif
 
-Examples:
+コマンド例:
     /msg &nick& CERT LIST
     /msg &nick& CERT ADD
     /msg &nick& CERT ADD f3a1aad46ca88e180c25c9c7021a4b3a

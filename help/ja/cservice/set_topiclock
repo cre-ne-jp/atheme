@@ -9,7 +9,7 @@ TOPICLOCK requires KEEPTOPIC and will
 automatically enable it; disabling KEEPTOPIC
 will disable TOPICLOCK also.
 
-Syntax: SET <#channel> TOPICLOCK ON|OFF
+構文: SET <#channel> TOPICLOCK ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET #foo TOPICLOCK ON

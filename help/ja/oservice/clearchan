@@ -10,8 +10,8 @@ the channel.
 
 This command should not be used lightly.
 
-Syntax: CLEARCHAN KICK|KILL|AKILL <#channel> <reason>
+構文: CLEARCHAN KICK|KILL|AKILL <#channel> <reason>
 
-Example:
+コマンド例:
     /msg &nick& CLEARCHAN KICK #warez warez is bad, mk?
     /msg &nick& CLEARCHAN AKILL #warez you were warned!

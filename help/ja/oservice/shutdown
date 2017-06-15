@@ -3,7 +3,7 @@ Help for SHUTDOWN:
 SHUTDOWN shuts down services. Services will
 not reconnect or restart.
 
-Syntax: SHUTDOWN
+構文: SHUTDOWN
 
-Example:
+コマンド例:
     /msg &nick& SHUTDOWN

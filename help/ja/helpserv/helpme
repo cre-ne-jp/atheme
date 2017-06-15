@@ -3,8 +3,8 @@ Help for HELPME:
 HELPME allows you to easily request help from the network staff.
 This works more like an alert than a ticketing system.
 
-Syntax: HELPME [topic]
+構文: HELPME [topic]
 
-Examples:
+コマンド例:
     /msg &nick& HELPME
     /msg &nick& HELPME I need help with registering a channel.

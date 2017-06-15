@@ -3,7 +3,7 @@ Help for SET MAXNICKS:
 SET MAXNICKS allows setting how many nicknames one account
 is allowed to own.
 
-Syntax: SET MAXNICKS <value>
+構文: SET MAXNICKS <value>
 
-Example:
+コマンド例:
     /msg &nick& SET MAXNICKS 7

@@ -18,9 +18,9 @@ previous days to search in addition to today.
 Note that this command will only work if sufficient
 information is written to log files.
 
-Syntax: GREPLOG <service> <pattern> [days]
-Syntax: GREPLOG * <pattern> [days]
+構文: GREPLOG <service> <pattern> [days]
+構文: GREPLOG * <pattern> [days]
 
-Examples:
+コマンド例:
     /msg &nick& GREPLOG ChanServ *#somechan* 7
     /msg &nick& GREPLOG * *#somechan* 60

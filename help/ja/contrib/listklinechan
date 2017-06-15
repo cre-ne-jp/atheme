@@ -2,8 +2,8 @@ Help for LISTKLINECHAN
 
 LISTKLINECHAN lists all (or a pattern of) channels with an active KLINECHAN on them.
 
-Syntax: LISTKLINECHAN [pattern]
+構文: LISTKLINECHAN [pattern]
 
-Examples:
+コマンド例:
     /msg &nick& LISTKLINECHAN
     /msg &nick& LISTKLINECHAN #lame*

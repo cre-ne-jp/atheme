@@ -7,7 +7,7 @@ channel's access list.
 This command can only be used by users with the +R and
 +f flags.
 
-Syntax: CLEAR <#channel> AKICKS
+構文: CLEAR <#channel> AKICKS
 
-Examples:
+コマンド例:
     /msg &nick& CLEAR #atheme AKICKS

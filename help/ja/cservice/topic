@@ -2,7 +2,7 @@ Help for TOPIC:
 
 The TOPIC command allows for the changing of a topic on a channel.
 
-Syntax: TOPIC <#channel> <topic>
+構文: TOPIC <#channel> <topic>
 
-Examples:
+コマンド例:
     /msg &nick& TOPIC #foo bar

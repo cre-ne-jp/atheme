@@ -5,14 +5,14 @@ corresponding to the specified nickname
 that can be used to set a new password
 using SETPASS.
 
-Syntax: SENDPASS <nickname>
+構文: SENDPASS <nickname>
 #if priv user:sendpass
 
 If a key has been emailed but not yet used,
 you can clear it using the CLEAR keyword.
 
-Syntax: SENDPASS <nickname> CLEAR
+構文: SENDPASS <nickname> CLEAR
 #endif
 
-Examples:
+コマンド例:
     /msg &nick& SENDPASS foo

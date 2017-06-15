@@ -3,8 +3,8 @@ Help for QUIET:
 The QUIET command allows you to mute a user or hostmask in
 a channel. Affected users will be notified that you did it.
 
-Syntax: QUIET <#channel> <nickname|hostmask>
+構文: QUIET <#channel> <nickname|hostmask>
 
-Examples:
+コマンド例:
     /msg &nick& QUIET #chat AfterDeath
     /msg &nick& QUIET #chat *!*@*.ipt.aol.com

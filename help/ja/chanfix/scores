@@ -3,7 +3,7 @@ Help for SCORES:
 SCORES lists all users' chanfix scores
 for the specified channel.
 
-Syntax: SCORES <#channel>
+構文: SCORES <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& SCORES #foo

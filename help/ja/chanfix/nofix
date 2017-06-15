@@ -6,7 +6,7 @@ fixes.
 
 NOFIX information will be displayed in INFO output.
 
-Syntax: NOFIX <#channel> ON|OFF <reason>
+構文: NOFIX <#channel> ON|OFF <reason>
 
-Examples:
+コマンド例:
     /msg &nick& NOFIX #warez ON Channel not supported by services on this network.

@@ -3,7 +3,7 @@ Help for SET COMMITINTERVAL:
 SET COMMITINTERVAL allows network staff to set how often (in minutes)
 the services database will be written to disk.
 
-Syntax: SET COMMITINTERVAL <time in minutes>
+構文: SET COMMITINTERVAL <time in minutes>
 
-Example:
+コマンド例:
     /msg &nick& SET COMMITINTERVAL 5

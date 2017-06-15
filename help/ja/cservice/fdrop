@@ -7,7 +7,7 @@ Once you FDROP a channel all of the data associated
 with it (access lists, etc) are removed and cannot
 be restored.
 
-Syntax: FDROP <#channel>
+構文: FDROP <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& FDROP #foo

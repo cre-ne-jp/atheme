@@ -10,12 +10,12 @@ These include at least SOP/AOP/HOP/VOP.
 These include at least SOP/AOP/VOP.
 #endif
 
-Syntax: TEMPLATE
+構文: TEMPLATE
 
 When given only the channel argument, a listing of
 templates for the channel will be displayed.
 
-Syntax: TEMPLATE <#channel>
+構文: TEMPLATE <#channel>
 
 Otherwise, a template is modified. A modification may be
 specified by a template name (copies the template) or a
@@ -34,11 +34,11 @@ channel.
 If you are not a founder, similar restrictions apply
 as in FLAGS.
 
-Syntax: TEMPLATE <#channel> [template oldtemplate]
-Syntax: TEMPLATE <#channel> [template flag_changes]
-Syntax: TEMPLATE <#channel> [template !flag_changes]
+構文: TEMPLATE <#channel> [template oldtemplate]
+構文: TEMPLATE <#channel> [template flag_changes]
+構文: TEMPLATE <#channel> [template !flag_changes]
 
-Examples:
+コマンド例:
     /msg &nick& TEMPLATE #foo
     /msg &nick& TEMPLATE #foo user VOP
     /msg &nick& TEMPLATE #foo user !+A

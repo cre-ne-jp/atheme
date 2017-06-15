@@ -7,8 +7,8 @@ been warned.
 
 MARK information will be displayed in INFO output.
 
-Syntax: MARK <nickname> ON|OFF <reason>
+構文: MARK <nickname> ON|OFF <reason>
 
-Examples:
+コマンド例:
     /msg &nick& MARK game_boy ON Persistent spammer
     /msg &nick& MARK nenolod OFF

@@ -2,7 +2,7 @@ Help for RNC:
 
 RNC shows the most common realnames on the network.
 
-Syntax: RNC [number]
+構文: RNC [number]
 
-Example:
+コマンド例:
     /msg &nick& RNC 10

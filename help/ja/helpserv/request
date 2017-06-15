@@ -4,7 +4,7 @@ REQUEST help from network staff. This works much like
 a bugtracker or helpdesk ticketing system. Please be
 patient while your request is considered by network staff.
 
-Syntax: REQUEST <topic>
+構文: REQUEST <topic>
 
-Examples:
+コマンド例:
     /msg &nick& REQUEST I need help with a vHost.

@@ -6,11 +6,11 @@ in a channel will be checked against (if BLOCKBADWORDS is set).
 The ACTION parameter can be: KICK, WARN, BAN, KICKBAN or (if your
 IRCd supports it) QUIET.
 
-Syntax: BADWORDS <#channel> LIST
-Syntax: BADWORDS <#channel> ADD <word> <action>
-Syntax: BADWORDS <#channel> DEL <word>
+構文: BADWORDS <#channel> LIST
+構文: BADWORDS <#channel> ADD <word> <action>
+構文: BADWORDS <#channel> DEL <word>
 
-Examples:
+コマンド例:
     /msg &nick& BADWORDS #atheme LIST
     /msg &nick& BADWORDS #sailors ADD f?ck kick
     /msg &nick& BADWORDS #sailors ADD *dam?it* quiet

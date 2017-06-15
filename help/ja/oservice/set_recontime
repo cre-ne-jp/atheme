@@ -3,7 +3,7 @@ Help for SET RECONTIME:
 SET RECONTIME allows modifying how long before services will
 try to reconnect to the uplink.
 
-Syntax: SET RECONTIME <time in seconds>
+構文: SET RECONTIME <time in seconds>
 
-Example:
+コマンド例:
     /msg &nick& SET RECONTIME 5

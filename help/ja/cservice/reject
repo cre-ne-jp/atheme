@@ -4,9 +4,9 @@ REJECT allows you to deny a channel's
 registration request.  (For networks that
 moderate Channel Registration requests)
 
-Syntax: REJECT <#channel>
+構文: REJECT <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& REJECT #BotHouse
 See Also:
     /msg &nick& WAITING

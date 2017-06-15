@@ -9,7 +9,7 @@ enough.
 Vacation mode is disabled automatically the
 next time you identify to &nick&.
 
-Syntax: VACATION
+構文: VACATION
 
-Examples:
+コマンド例:
     /msg &nick& VACATION

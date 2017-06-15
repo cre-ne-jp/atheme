@@ -7,8 +7,8 @@ nickname, IRC operator, and SRA status.
 If the channel parameter is specified, your
 access to the given channel is returned.
 
-Syntax: STATUS [#channel]
+構文: STATUS [#channel]
 
-Example:
+コマンド例:
     /msg &nick& STATUS
     /msg &nick& STATUS #foo

@@ -6,7 +6,7 @@ list do not match a xOP value.
 
 The second line shows how many access entries have each flag.
 
-Syntax: COUNT <#channel>
+構文: COUNT <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& COUNT #oscn

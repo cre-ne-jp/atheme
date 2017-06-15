@@ -5,7 +5,7 @@ When it is enabled, users will be able to use all
 chanserv commands like !op, !deop, !voice, !devoice,
 !kick, !kb, !unban, !akick, !info on a channel.
 
-Syntax: SET <#channel> FANTASY {ON|OFF}
+構文: SET <#channel> FANTASY {ON|OFF}
 
-Examples:
+コマンド例:
     /msg &nick& SET #help FANTASY ON

@@ -3,7 +3,7 @@ Help for LIST:
 LIST gives a list of channels matching the
 pattern, modified by the other options.
 
-Syntax: LIST <pattern> [options]
+構文: LIST <pattern> [options]
 
 Options are:
     -min <n>: show only channels with at least <n> users
@@ -30,7 +30,7 @@ For example, for channel names, from most to least specific:
  *cows*moo* - anything containing "cows", 0 or more characters, and "moo"
  *bar*      - anything containing "bar" (equivalent to "bar")
 
-Examples:
+コマンド例:
     /msg &nick& LIST searchterm
     /msg &nick& LIST * -topic multiple*ordered*search*terms
     /msg &nick& LIST * -min 50

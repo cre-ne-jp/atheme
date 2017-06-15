@@ -5,7 +5,7 @@ access to.
 
 AKICKs are not shown.
 
-Syntax: LISTCHANS <group>
+構文: LISTCHANS <group>
 
-Example:
+コマンド例:
     /msg &nick& LISTCHANS !foo

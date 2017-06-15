@@ -7,8 +7,8 @@ on two users, or two channels.
 It is useful in clone detection,
 amongst other situations.
 
-Syntax: COMPARE <#channel|user> <#channel|user>
+構文: COMPARE <#channel|user> <#channel|user>
 
-Example:
+コマンド例:
     /msg &nick& COMPARE #warez #dcc
     /msg &nick& COMPARE w00t Brik

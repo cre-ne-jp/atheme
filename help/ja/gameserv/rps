@@ -2,7 +2,7 @@ Help for RPS:
 
 RPS will randomly reply "Rock", "Paper", or "Scissors".
 
-Syntax: RPS
+構文: RPS
 
-Examples:
+コマンド例:
     /msg &nick& RPS

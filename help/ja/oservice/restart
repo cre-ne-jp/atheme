@@ -2,7 +2,7 @@ Help for RESTART:
 
 RESTART shuts down services and restarts them.
 
-Syntax: RESTART
+構文: RESTART
 
-Example:
+コマンド例:
     /msg &nick& RESTART

@@ -10,7 +10,7 @@ suffix like .so is optional.
 If any of the modules need a rehash after being
 loaded, this is done automatically.
 
-Syntax: MODLOAD <path...>
+構文: MODLOAD <path...>
 
-Example:
+コマンド例:
     /msg &nick& MODLOAD ../contrib/fc_dice

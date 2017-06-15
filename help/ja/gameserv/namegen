@@ -6,7 +6,7 @@ names you could use.
 It can display the result to either yourself or
 a channel.
 
-Syntax: NAMEGEN [number of names]
+構文: NAMEGEN [number of names]
 
-Example:
+コマンド例:
     /msg &nick& NAMEGEN 5

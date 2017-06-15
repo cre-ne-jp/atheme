@@ -3,7 +3,7 @@ Help for SET PRIVATE:
 This option prevents a bot from being assigned to a
 channel by users that do not have chan:admin privilege.
 
-Syntax: SET <botnick> PRIVATE {ON|OFF}
+構文: SET <botnick> PRIVATE {ON|OFF}
 
-Examples:
+コマンド例:
     /msg &nick& SET Security PRIVATE ON

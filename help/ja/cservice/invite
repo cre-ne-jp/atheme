@@ -4,7 +4,7 @@ INVITE requests services to invite you to the
 specified channel. This is useful if you use
 the +i channel mode.
 
-Syntax: INVITE <#channel>
+構文: INVITE <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& INVITE #foo

@@ -5,7 +5,7 @@ in a given channel. It will display role, long-form flags
 and short-form flags along with the last date the user's
 access was modified.
 
-Syntax: ACCESS <#channel> INFO <user>
+構文: ACCESS <#channel> INFO <user>
 
-Examples:
+コマンド例:
     /msg &nick& ACCESS #atheme INFO nenolod

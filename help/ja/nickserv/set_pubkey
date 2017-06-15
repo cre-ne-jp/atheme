@@ -6,4 +6,4 @@ authentication.
 If no pubkey is given, your public key will
 be removed from the services database.
 
-Syntax: SET PUBKEY [<pubkey>]
+構文: SET PUBKEY [<pubkey>]

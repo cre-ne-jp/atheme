@@ -2,15 +2,15 @@ Help for NETSPLIT:
 
 NETSPLIT allows you to monitor server splits.
 
-Syntax: NETSPLIT LIST
+構文: NETSPLIT LIST
 
 Lists all servers currently split from the network
 and how long they have been disconnected.
 
-Syntax: NETSPLIT REMOVE <server>
+構文: NETSPLIT REMOVE <server>
 
 Removes a given server from the netsplit list.
 
-Examples:
+コマンド例:
    /msg &nick& NETSPLIT REMOVE moocow.int
 

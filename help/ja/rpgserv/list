@@ -7,7 +7,7 @@ Please note that this command will not include all role-playing channels,
 only those that utilize RPGServ. For a complete list of channels on
 the network, use /LIST.
 
-Syntax: LIST
+構文: LIST
 
-Example:
+コマンド例:
     /msg &nick& LIST

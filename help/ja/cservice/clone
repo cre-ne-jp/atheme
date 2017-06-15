@@ -12,7 +12,7 @@ It will also remove all chanacs (except founders)
 and metadata of the same type from the target
 channel.
 
-Syntax: CLONE <#source-channel> <#target-channel>
+構文: CLONE <#source-channel> <#target-channel>
 
-Examples:
+コマンド例:
     /msg &nick& CLONE #funstuff #morefun

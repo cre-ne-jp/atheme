@@ -4,7 +4,7 @@ JOIN allows you to join a group set as open for anyone to
 join. No privileges will be set on you when you join a group
 this way, you will only be listed as a group member.
 
-Syntax: JOIN <!group>
+構文: JOIN <!group>
 
-Examples:
+コマンド例:
     /msg &nick& JOIN !baz

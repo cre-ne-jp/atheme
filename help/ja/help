@@ -1,6 +1,5 @@
-Help for HELP:
+HELP のヘルプ
 
-HELP displays help information on all
-commands in services.
+HELP コマンドは、各サービスの使い方を表示します。
 
-Syntax: HELP <command> [parameters]
+構文: HELP <command> [parameters]

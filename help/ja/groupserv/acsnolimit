@@ -3,7 +3,7 @@ Help for ACSNOLIMIT:
 ACSNOLIMIT allows a group to have a unlimited number of
 group access list entries.
 
-Syntax: ACSNOLIMIT <!group> ON|OFF
+構文: ACSNOLIMIT <!group> ON|OFF
 
-Examples:
+コマンド例:
     /msg &nick& ACSNOLIMIT !awesome-people ON

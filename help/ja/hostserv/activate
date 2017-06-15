@@ -5,8 +5,8 @@ A memo informing the user will also be sent.
 If an asterisk ("*") is used in place of a nick,
 all waiting vHosts will be activated.
 
-Syntax: ACTIVATE <nick>
+構文: ACTIVATE <nick>
 
-Examples:
+コマンド例:
     /msg &nick& ACTIVATE nenolod
     /msg &nick& ACTIVATE *

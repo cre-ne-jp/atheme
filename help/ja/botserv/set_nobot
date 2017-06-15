@@ -4,7 +4,7 @@ This option marks a channel as unassignable. If a bot
 is already assigned to the channel, it is unassigned
 automatically when you enable the option.
 
-Syntax: SET <#channel> NOBOT {ON|OFF}
+構文: SET <#channel> NOBOT {ON|OFF}
 
-Examples:
+コマンド例:
     /msg &nick& SET #help NOBOT ON

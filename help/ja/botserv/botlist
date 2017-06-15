@@ -2,7 +2,7 @@ Help for BOTLIST:
 
 Lists all available bots on this network.
 
-Syntax: BOTLIST
+構文: BOTLIST
 
-Examples:
+コマンド例:
     /msg &nick& BOTLIST

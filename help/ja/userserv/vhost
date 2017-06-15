@@ -5,15 +5,15 @@ known as a spoof or cloak) on an account. This vHost
 will be set on the user immediately and each time
 they log in.
 
-Syntax: VHOST <account> ON <vHost>
-Syntax: VHOST <account> OFF
+構文: VHOST <account> ON <vHost>
+構文: VHOST <account> OFF
 
 If the account is marked, you can override this
 using the FORCE keyword.
 
-Syntax: VHOST <account> ON <vHost> FORCE
-Syntax: VHOST <account> OFF FORCE
+構文: VHOST <account> ON <vHost> FORCE
+構文: VHOST <account> OFF FORCE
 
-Examples:
+コマンド例:
     /msg &nick& VHOST spb ON may.explode.on.impact
     /msg &nick& VHOST nenolod OFF

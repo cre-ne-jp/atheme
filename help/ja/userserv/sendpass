@@ -10,19 +10,19 @@ that can be used to set a new password
 using SETPASS.
 #endif
 
-Syntax: SENDPASS <account>
+構文: SENDPASS <account>
 
 If the account is marked, you can override this
 using the FORCE keyword.
 
-Syntax: SENDPASS <account> FORCE
+構文: SENDPASS <account> FORCE
 #if module nickserv/setpass
 
 If a key has been emailed but not yet used,
 you can clear it using the CLEAR keyword.
 
-Syntax: SENDPASS <account> CLEAR
+構文: SENDPASS <account> CLEAR
 #endif
 
-Examples:
+コマンド例:
     /msg &nick& SENDPASS foo

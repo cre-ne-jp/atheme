@@ -6,7 +6,7 @@ where that is enabled as well.
 
 See also: SET BLOCKBADWORDS
 
-Syntax: SET <#channel> BLOCKBADWORDSOPS ON|OFF
+構文: SET <#channel> BLOCKBADWORDSOPS ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET #sailors BLOCKBADWORDSOPS ON

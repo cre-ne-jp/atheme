@@ -2,7 +2,7 @@ Help for SET NOGREET:
 
 This setting allows you to opt-out of channel greeting notices.
 
-Syntax: SET NOGREET ON|OFF
+構文: SET NOGREET ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET NOGREET ON

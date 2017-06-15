@@ -4,7 +4,7 @@ SET URL allows you to change or set the URL
 associated with a group. This is shown
 to all users in INFO.
 
-Syntax: SET <!group> URL [url]
+構文: SET <!group> URL [url]
 
-Example:
+コマンド例:
     /msg &nick& SET !slashdot URL http://slashdot.org

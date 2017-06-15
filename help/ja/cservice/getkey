@@ -3,7 +3,7 @@ Help for GETKEY:
 GETKEY returns the key (+k, password to be allowed in)
 of the specified channel: /join #channel key
 
-Syntax: GETKEY <#channel>
+構文: GETKEY <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& GETKEY #foo

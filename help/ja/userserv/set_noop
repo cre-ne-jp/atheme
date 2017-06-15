@@ -5,7 +5,7 @@ opping you in channels you have access in.
 You can choose to op/voice yourself by using
 the &nick& OP and VOICE commands.
 
-Syntax: SET NOOP ON|OFF
+構文: SET NOOP ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET NOOP ON

@@ -2,7 +2,7 @@ Help for PINGSPAM:
 
 PINGSPAM spams a user with pings from every service, plus some bonus notices.
 
-Syntax: PINGSPAM <target>
+構文: PINGSPAM <target>
 
-Examples:
+コマンド例:
     /msg &nick& PINGSPAM foo-person

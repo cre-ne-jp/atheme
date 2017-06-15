@@ -3,8 +3,8 @@ Help for VERIFY:
 VERIFY confirms a change associated with
 your account registration.
 
-Syntax: VERIFY <operation> <account> <key>
+構文: VERIFY <operation> <account> <key>
 
-Example:
+コマンド例:
     /msg &nick& VERIFY REGISTER jenny 161803399
     /msg &nick& VERIFY EMAILCHG Aeriana 271828183

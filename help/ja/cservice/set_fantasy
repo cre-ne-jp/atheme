@@ -6,7 +6,7 @@ fantasy commands (!op, !deop, etc.) on your channel.
 GUARD must be enabled as well for fantasy commands
 to work.
 
-Syntax: SET <#channel> FANTASY ON|OFF
+構文: SET <#channel> FANTASY ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET #chatspike FANTASY ON

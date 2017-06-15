@@ -5,14 +5,14 @@ to, including those that you own.
 
 Group BANs are not shown.
 
-Syntax: LISTGROUPS
+構文: LISTGROUPS
 #if priv group:auspex
 
 Operators with group:auspex privilege can also
 check another user's access.
 
-Syntax: LISTGROUPS <nick>
+構文: LISTGROUPS <nick>
 #endif
 
-Example:
+コマンド例:
     /msg &nick& LISTGROUPS

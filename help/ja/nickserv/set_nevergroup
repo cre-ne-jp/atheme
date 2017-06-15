@@ -3,7 +3,7 @@ Help for SET NEVERGROUP:
 SET NEVERGROUP prevents others from adding you to
 group access lists.
 
-Syntax: SET NEVERGROUP ON|OFF
+構文: SET NEVERGROUP ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET NEVERGROUP ON

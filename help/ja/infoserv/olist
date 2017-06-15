@@ -4,7 +4,7 @@ LIST allows you to view all oper informational messages in the database.
 These messages will also be sent to all opers upon oper-up.
 This command will not list user informational messages, use LIST for that.
 
-Syntax: OLIST
+構文: OLIST
 
-Example:
+コマンド例:
     /msg &nick& OLIST

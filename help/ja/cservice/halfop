@@ -8,7 +8,7 @@ notified that you did it.
 If the last parameter is omitted the action is performed
 on the person requesting the command.
 
-Syntax: HALFOP|DEHALFOP <#channel> [nickname]
+構文: HALFOP|DEHALFOP <#channel> [nickname]
 
-Examples:
+コマンド例:
     /msg &nick& HALFOP #foo

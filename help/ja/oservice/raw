@@ -5,7 +5,7 @@ command is for debugging only and should
 not be used unless you know what you're
 doing.
 
-Syntax: RAW <parameters>
+構文: RAW <parameters>
 
-Example:
+コマンド例:
     /msg &nick& RAW :&nick& OPERWALL :My admin is a loser

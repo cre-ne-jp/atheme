@@ -7,7 +7,7 @@ When dropping and re-registering an account during a
 netsplit, users on the other side of the split may later
 be recognized as the new account.
 
-Syntax: FDROP <nickname>
+構文: FDROP <nickname>
 
-Examples:
+コマンド例:
     /msg &nick& FDROP foo

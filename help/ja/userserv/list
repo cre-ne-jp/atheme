@@ -6,10 +6,10 @@ pattern. Wildcards are allowed.
 If user@host is also given, only accounts
 whose last seen host matches it are shown.
 
-Syntax: LIST <pattern>
-Syntax: LIST <pattern>!<user@host>
+構文: LIST <pattern>
+構文: LIST <pattern>!<user@host>
 
-Examples:
+コマンド例:
     /msg &nick& LIST james*
     /msg &nick& LIST *a?ambert*
     /msg &nick& LIST *!*@*.de

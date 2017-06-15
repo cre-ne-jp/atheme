@@ -9,7 +9,7 @@ be restored.
 See help on SET FOUNDER and FLAGS for transferring
 a channel to another user.
 
-Syntax: DROP <#channel>
+構文: DROP <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& DROP #foo

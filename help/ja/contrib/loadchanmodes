@@ -5,7 +5,7 @@ the network when they were saved with SAVECHANMODES. LOADCHANMODES looks in
 DATADIR/chanmodes.txt for the saved data. This path is usually
 ~/atheme/etc/chanmodes.txt , but it may vary on your install.
 
-Syntax: LOADCHANMODES
+構文: LOADCHANMODES
 
-Examples:
+コマンド例:
     /msg &nick& LOADCHANMODES

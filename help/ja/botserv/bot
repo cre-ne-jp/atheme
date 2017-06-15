@@ -17,11 +17,11 @@ Note: you cannot create a bot that has a nick that is
 currently registered. If an unregistered user is currently
 using the nick, they will be killed.
 
-Syntax: BOT ADD <nick> <user> <host> <real>
-Syntax: BOT CHANGE <oldnick> <newnick> [<user> [<host> [<real>]]]
-Syntax: BOT DEL <nick>
+構文: BOT ADD <nick> <user> <host> <real>
+構文: BOT CHANGE <oldnick> <newnick> [<user> [<host> [<real>]]]
+構文: BOT DEL <nick>
 
-Examples:
+コマンド例:
     /msg &nick& BOT ADD Security Security security.example.net Security
     /msg &nick& BOT CHANGE Security NetBot NetBot Services.Example.Net MyNet
     /msg &nick& BOT DEL Security

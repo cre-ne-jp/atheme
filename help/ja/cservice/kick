@@ -5,8 +5,8 @@ a channel. The user can immediately rejoin.
 
 Your nick will be added to the kick reason.
 
-Syntax: KICK <#channel> <nick> [reason]
+構文: KICK <#channel> <nick> [reason]
 
-Examples:
+コマンド例:
     /msg &nick& KICK #foo abuser
     /msg &nick& KICK #foo abuser please stop

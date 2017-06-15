@@ -3,7 +3,7 @@ Help for SET SPAM:
 SET SPAM allows network staff to define whether or not new users
 get messaged about services when they connect.
 
-Syntax: SET SPAM TRUE|FALSE
+構文: SET SPAM TRUE|FALSE
 
-Example:
+コマンド例:
     /msg &nick& SET SPAM TRUE

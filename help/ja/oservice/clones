@@ -12,7 +12,7 @@ not useful; if IP addresses are not sent for
 spoofed clients, those clients are exempt from
 CLONES checking.
 
-Syntax: CLONES KLINE ON|OFF|<count>
+構文: CLONES KLINE ON|OFF|<count>
 
 Enables/disables banning IP addresses with more
 than the allowed number clients from the network
@@ -23,13 +23,13 @@ and defaults to off.
 If a count is specified, <count> warning kills will
 be performed before setting a k-line.
 
-Syntax: CLONES LIST
+構文: CLONES LIST
 
 Shows all IP addresses with more than 3 clients
 with the number of clients and whether the IP
 address is exempt.
 
-Syntax: CLONES ADDEXEMPT <ip> <clones> [!P|!T <minutes>] <reason>
+構文: CLONES ADDEXEMPT <ip> <clones> [!P|!T <minutes>] <reason>
 
 Adds an IP address to the clone exemption list.
 The IP address must match exactly with the form
@@ -43,36 +43,36 @@ is exceeded.
 The reason is shown in LISTEXEMPT.
 The clone exemption list is stored in etc/services.db.
 
-Syntax: CLONES DELEXEMPT <ip>
+構文: CLONES DELEXEMPT <ip>
 
 Removes an IP address from the clone exemption list.
 
-Syntax: CLONES SETEXEMPT [DEFAULT | <ip>] <ALLOWED | WARN> <limit>
+構文: CLONES SETEXEMPT [DEFAULT | <ip>] <ALLOWED | WARN> <limit>
 
 Sets either the default or a given exemption's ALLOWED or
 WARN limit to the specified number of clones. WARN or ALLOWED
 can be 0, disabling any warning messages or kills.
 
-Syntax: CLONES SETEXEMPT <ip> <REASON | DURATION> <value>
+構文: CLONES SETEXEMPT <ip> <REASON | DURATION> <value>
 
 Sets the reason or duration of a given exemption to the
 specified value. The DURATION value can be 0, making the
 exemption permanent.
 
-Syntax: CLONES LISTEXEMPT
+構文: CLONES LISTEXEMPT
 
 Shows the clone exemption list with reasons.
 
-Example:
+コマンド例:
     /msg &nick& CLONES ADDEXEMPT 127.0.0.1 100 local
     /msg &nick& CLONES DELEXEMPT 192.168.1.2
 
-Syntax: CLONES DURATION
+構文: CLONES DURATION
 
 Allows modifying the duration that hosts who clone
 are banned for. Defaults to one hour. Is saved between
 restarts.
 
-Example:
+コマンド例:
     /msg &nick& CLONES DURATION 30m
 

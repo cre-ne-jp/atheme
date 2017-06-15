@@ -5,8 +5,8 @@ has offered and use it on your account. If the string
 $account is in the vHost, it will be replaced with your
 account name.
 
-Syntax: TAKE <vHost>
+構文: TAKE <vHost>
 
-Examples:
+コマンド例:
     /msg &nick& TAKE $account.users.example.net
     /msg &nick& TAKE example.net

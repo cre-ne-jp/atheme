@@ -2,9 +2,9 @@ Help for AJOIN:
 
 AJOIN allows you to manage an automatic-join on identify channel list.
 
-Syntax: AJOIN ADD|DEL|LIST|CLEAR [#channel]
+構文: AJOIN ADD|DEL|LIST|CLEAR [#channel]
 
-Examples:
+コマンド例:
     /msg &nick& AJOIN LIST
     /msg &nick& AJOIN ADD #foo
     /msg &nick& AJOIN DEL #foo

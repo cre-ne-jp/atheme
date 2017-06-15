@@ -3,7 +3,7 @@ Help for HOLD:
 HOLD prevents an account and all channels registered to
 it from expiring.
 
-Syntax: HOLD <account> ON|OFF
+構文: HOLD <account> ON|OFF
 
-Examples:
+コマンド例:
     /msg &nick& HOLD jilles ON

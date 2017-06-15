@@ -10,9 +10,9 @@ join flags will be returned to network default.
 See "/msg &nick& HELP FLAGS" for details of the different flags that
 are valid here.
 
-Syntax: SET <!group>  JOINFLAGS [OFF|flags]
+構文: SET <!group>  JOINFLAGS [OFF|flags]
 
-Examples:
+コマンド例:
     /msg &nick& SET !awesome-people JOINFLAGS OFF
     /msg &nick& SET !foo JOINFLAGS +
     /msg &nick& SET !foo JOINFLAGS +v

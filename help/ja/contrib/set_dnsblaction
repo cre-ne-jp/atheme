@@ -8,7 +8,7 @@ NOTIFY - Message the services log channel and notify the user.
 KLINE - Message the services log channel and k-line the user.
 NONE - Disable DNSBL lookups.
 
-Syntax: SET DNSBLACTION <SNOOP|NOTIFY|KLINE|NONE>
+構文: SET DNSBLACTION <SNOOP|NOTIFY|KLINE|NONE>
 
-Example:
+コマンド例:
     /msg &nick& SET DNSBLACTION NOTIFY

@@ -2,10 +2,10 @@ Help for SERVER:
 
 SERVER provides various information about the servers on the network.
 
-Syntax: SERVER COUNT
+構文: SERVER COUNT
 
 Returns the amount of connected servers.
 
-Syntax: SERVER LIST
+構文: SERVER LIST
 
 Returns a list of all connected servers.

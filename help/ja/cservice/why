@@ -3,7 +3,7 @@ Help for WHY:
 The WHY command shows the access entries an online
 user matches.
 
-Syntax: WHY <#channel> [nickname]
+構文: WHY <#channel> [nickname]
 
-Examples:
+コマンド例:
     /msg &nick& WHY #atheme jilles^

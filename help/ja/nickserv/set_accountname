@@ -5,4 +5,4 @@ name to any nick registered to your account.
 Your account name is used in various places as
 a name for you.
 
-Syntax: SET ACCOUNTNAME <nick>
+構文: SET ACCOUNTNAME <nick>

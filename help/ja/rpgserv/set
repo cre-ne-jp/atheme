@@ -28,7 +28,7 @@ SETTING (free-form text)
 STORYLINE (free-form text)
 SUMMARY (free-form text)
 
-Example:
+コマンド例:
     /msg &nick& SET #ooc GENRE FANTASY
          Set the GENRE for #ooc to FANTASY
     /msg &nick& SET #ooc SYSTEM CHARAPPROVAL DICED

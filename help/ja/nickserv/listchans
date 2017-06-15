@@ -5,14 +5,14 @@ to, including those that you own.
 
 AKICKs and host-based access are not shown.
 
-Syntax: LISTCHANS
+構文: LISTCHANS
 #if priv chan:auspex
 
 Operators with chan:auspex privilege can also
 check another user's access.
 
-Syntax: LISTCHANS <nick>
+構文: LISTCHANS <nick>
 #endif
 
-Example:
+コマンド例:
     /msg &nick& LISTCHANS

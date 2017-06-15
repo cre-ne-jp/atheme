@@ -3,7 +3,7 @@ Help for SERVICES:
 SERVICES allows you to view a list of all services running on the network
 so you can choose one to message and get more help.
 
-Syntax: SERVICES
+構文: SERVICES
 
-Examples:
+コマンド例:
     /msg &nick& SERVICES

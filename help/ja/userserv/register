@@ -12,7 +12,7 @@ follow the instructions in the message sent to the email
 address.
 #endif
 
-Syntax: REGISTER <account> <password> <email-address>
+構文: REGISTER <account> <password> <email-address>
 
-Examples:
+コマンド例:
     /msg &nick& REGISTER foo sesame foo@bar.com

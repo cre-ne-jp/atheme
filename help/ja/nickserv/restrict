@@ -7,8 +7,8 @@ taking an OFFERed vHost.
 
 This is particularly useful if a user starts abusing these commands.
 
-Syntax: RESTRICT <nickname> ON|OFF <reason>
+構文: RESTRICT <nickname> ON|OFF <reason>
 
-Examples:
+コマンド例:
     /msg &nick& RESTRICT game_boy ON Abusing vHost requests
     /msg &nick& RESTRICT nenolod OFF

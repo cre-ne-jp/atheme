@@ -6,7 +6,7 @@ except for users who are channel founders.
 
 This command can only be used by channel founders.
 
-Syntax: CLEAR <#channel> FLAGS
+構文: CLEAR <#channel> FLAGS
 
-Examples:
+コマンド例:
     /msg &nick& CLEAR #atheme FLAGS

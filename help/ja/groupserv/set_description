@@ -4,7 +4,7 @@ SET DESCRIPTION allows you to change or set the description
 of a group. This is shown when a user requests info about
 the group.
 
-Syntax: SET <!group> DESCRIPTION [description]
+構文: SET <!group> DESCRIPTION [description]
 
-Example:
+コマンド例:
     /msg &nick& SET !atheme DESCRIPTION Official Atheme Group

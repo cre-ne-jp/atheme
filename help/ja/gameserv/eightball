@@ -2,7 +2,7 @@ Help for EIGHTBALL:
 
 Asks the magic 8-ball a question.
 
-Syntax: EIGHTBALL
+構文: EIGHTBALL
 
-Example:
+コマンド例:
     /msg &nick& EIGHTBALL

@@ -2,7 +2,7 @@ Help for INFO:
 
 INFO is used to display the full profile of a channel. 
 
-Syntax: INFO <#channel>
+構文: INFO <#channel>
 
-Example:
+コマンド例:
     /msg &nick& INFO #ooc

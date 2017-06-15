@@ -4,7 +4,7 @@ STATUS returns information about your current
 state. It will show information about your
 account, IRC operator, and SRA status.
 
-Syntax: STATUS
+構文: STATUS
 
-Example:
+コマンド例:
     /msg &nick& STATUS

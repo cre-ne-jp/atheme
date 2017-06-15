@@ -6,7 +6,7 @@ The names can be gathered from the MODLIST command. They
 are not necessarily equal to the pathnames to load them
 with MODLOAD.
 
-Syntax: MODINSPECT <name>
+構文: MODINSPECT <name>
 
-Example:
+コマンド例:
     /msg &nick& MODINSPECT protocol/charybdis

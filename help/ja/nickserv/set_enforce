@@ -8,4 +8,4 @@ who attempts to use it without identifying in time,
 and temporarily block its use, which can be
 removed at your discretion. See help on RELEASE.
 
-Syntax: SET ENFORCE ON|OFF
+構文: SET ENFORCE ON|OFF

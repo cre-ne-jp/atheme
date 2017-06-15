@@ -6,7 +6,7 @@ privileges on channels.
 The LIST subcommand displays a list of users and
 their privileges.
 
-Syntax: ACCESS <#channel> LIST
+構文: ACCESS <#channel> LIST
 
 The ADD subcommand adds a user to the access list
 or changes their privileges if they were already on
@@ -18,13 +18,13 @@ help files. If not, the user will be given
 privileges appropriate for day-to-day management
 of the channel.
 
-Syntax: ACCESS <#channel> ADD <nickname> [level]
+構文: ACCESS <#channel> ADD <nickname> [level]
 
 The DEL subcommand removes a user from the access list.
 
-Syntax: ACCESS <#channel> DEL <nickname>
+構文: ACCESS <#channel> DEL <nickname>
 
-Examples:
+コマンド例:
     /msg &nick& ACCESS #foo LIST
     /msg &nick& ACCESS #foo ADD bar OP
     /msg &nick& ACCESS #foo DEL bar

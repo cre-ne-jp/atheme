@@ -4,7 +4,7 @@ KILL kills a user with Services. This is slightly different from
 the KILL command in your IRCd as many clients won't automatically
 reconnect to your network after a kill from Services.
 
-Syntax: KILL <target> <reason>
+構文: KILL <target> <reason>
 
-Examples:
+コマンド例:
     /msg &nick& KILL jdhore Pants!

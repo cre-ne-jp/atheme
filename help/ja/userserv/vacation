@@ -8,7 +8,7 @@ if your account is registered long enough.
 Vacation mode is disabled automatically the
 next time you log in to &nick&.
 
-Syntax: VACATION
+構文: VACATION
 
-Examples:
+コマンド例:
     /msg &nick& VACATION

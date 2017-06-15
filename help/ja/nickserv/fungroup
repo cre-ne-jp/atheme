@@ -11,12 +11,12 @@ another nick registered to it.
 You cannot ungroup account names.
 #endif
 
-Syntax: FUNGROUP <nickname>
+構文: FUNGROUP <nickname>
 #if module nickserv/set_accountname
-Syntax: FUNGROUP <account> <newname>
+構文: FUNGROUP <account> <newname>
 #endif
 
-Examples:
+コマンド例:
     /msg &nick& FUNGROUP SomeNick
 #if module nickserv/set_accountname
     /msg &nick& FUNGROUP SomeName SomeNick

@@ -3,7 +3,7 @@ Help for CLOSE:
 Close the help request from the given nick.
 The user will be notified that their request was closed.
 
-Syntax: CLOSE <nick> [reason]
+構文: CLOSE <nick> [reason]
 
-Examples:
+コマンド例:
     /msg &nick& CLOSE Grue It is now no longer pitch dark.

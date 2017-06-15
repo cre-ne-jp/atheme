@@ -3,7 +3,7 @@ Help for SET GROUPNAME:
 SET GROUPNAME allows you to change or set the name of your group.
 This is shown when a user requests info about the group.
 
-Syntax: SET <!OldGroupName> GROUPNAME <!NewGroupName>
+構文: SET <!OldGroupName> GROUPNAME <!NewGroupName>
 
-Example:
+コマンド例:
     /msg &nick& SET !OldGroup GROUPNAME !NewGroup

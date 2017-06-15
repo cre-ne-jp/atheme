@@ -28,12 +28,12 @@ the same as those required for the corresponding
 FLAGS commands.
 
 #if halfops
-Syntax: VOP|HOP|AOP|SOP <#channel> ADD|DEL|LIST <nickname|hostmask>
+構文: VOP|HOP|AOP|SOP <#channel> ADD|DEL|LIST <nickname|hostmask>
 #else
-Syntax: VOP|AOP|SOP <#channel> ADD|DEL|LIST <nickname|hostmask>
+構文: VOP|AOP|SOP <#channel> ADD|DEL|LIST <nickname|hostmask>
 #endif
 
-Examples:
+コマンド例:
     /msg &nick& VOP #foo ADD bar
     /msg &nick& VOP #foo ADD foo!*@bar.com
     /msg &nick& AOP #foo DEL bar

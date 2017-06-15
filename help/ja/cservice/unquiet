@@ -6,8 +6,8 @@ you are unquieted.
 
 Affected users will be notified that you did it.
 
-Syntax: UNQUIET <#channel> [nickname|hostmask]
+構文: UNQUIET <#channel> [nickname|hostmask]
 
-Examples:
+コマンド例:
     /msg &nick& UNQUIET #chat Diablo-D3
     /msg &nick& UNQUIET #chat *!*@*.trilug.org

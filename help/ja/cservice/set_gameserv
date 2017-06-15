@@ -13,7 +13,7 @@ You can decide who may use GameServ:
 For OP and VOICE, both channel status and &nick&
 flags apply.
 
-Syntax: SET <#channel> GAMESERV ALL|VOICE|OP|OFF
+構文: SET <#channel> GAMESERV ALL|VOICE|OP|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET #foo GAMESERV VOICE

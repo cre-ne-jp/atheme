@@ -7,7 +7,7 @@ If you are logged in to the account associated with
 the nickname, you need not specify a password,
 otherwise you have to.
 
-Syntax: REGAIN <nick> [password]
+構文: REGAIN <nick> [password]
 
-Example:
+コマンド例:
     /msg &nick& REGAIN Dave2 goats

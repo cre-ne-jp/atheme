@@ -8,7 +8,7 @@ removing any ban exceptions matching them first.
 If the channel is set +i, no ban will be set
 and invite exceptions will be removed.
 
-Syntax: SET <#channel> RESTRICTED ON|OFF
+構文: SET <#channel> RESTRICTED ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET #snoop RESTRICTED ON

@@ -4,7 +4,7 @@ SET NOSYNC allows channel staff to disable
 automatic syncing of channel status when it
 is changed.
 
-Syntax: SET <#channel> NOSYNC ON|OFF
+構文: SET <#channel> NOSYNC ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET #foo NOSYNC ON

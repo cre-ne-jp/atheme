@@ -3,7 +3,7 @@ Help for LOGSTREAM:
 LOGSTREAM allows you to "stream" Atheme's logfiles into a channel, similar to
 the snoop channel.
 
-Syntax: LOGSTREAM <#channel>
+構文: LOGSTREAM <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& LOGSTREAM #services

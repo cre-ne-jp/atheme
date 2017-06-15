@@ -2,7 +2,7 @@ Help for ENABLE:
 
 Enables RPGServ for a channel.
 
-Syntax: ENABLE <#channel>
+構文: ENABLE <#channel>
 
-Example:
+コマンド例:
     /msg &nick& ENABLE #ooc

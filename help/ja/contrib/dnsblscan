@@ -5,7 +5,7 @@ logged onto the network) against the list of blacklists. It will take
 whatever the current DNSBLACTION is against the user if their IP is
 listed in one of the blacklists.
 
-Syntax: DNSBLSCAN <user>
+構文: DNSBLSCAN <user>
 
-Examples:
+コマンド例:
     /msg &nick& DNSBLSCAN jdhore

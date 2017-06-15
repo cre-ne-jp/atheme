@@ -5,7 +5,7 @@ so that you have better control. FREGISTER allows
 you to register a channel without needing ops in
 it or even needing to be joined to it.
 
-Syntax: FREGISTER <#channel>
+構文: FREGISTER <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& FREGISTER #atheme

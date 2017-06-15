@@ -6,9 +6,9 @@ channel bots that conflict with ChanServ's default fantasy
 prefix. Providing no prefix argument (or DEFAULT) resets
 the channel fantasy prefix to the network default prefix.
 
-Syntax: SET <#channel> PREFIX [prefix]
+構文: SET <#channel> PREFIX [prefix]
 
-Examples:
+コマンド例:
     /msg &nick& SET #foo PREFIX
     /msg &nick& SET #foo PREFIX '
     /msg &nick& SET #c PREFIX %

@@ -11,4 +11,4 @@ already received an email with the key.
 To set a new password if you know the current
 password, use SET PASSWORD instead of SETPASS.
 
-Syntax: SETPASS <nickname> <key> <password>
+構文: SETPASS <nickname> <key> <password>

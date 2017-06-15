@@ -6,7 +6,7 @@ allows you to maintain a channel access list
 and other functions that are normally
 provided by IRC bots.
 
-Syntax: REGISTER <#channel>
+構文: REGISTER <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& REGISTER #atheme

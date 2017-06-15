@@ -8,7 +8,7 @@ be restored.
 
 See help on FLAGS for transferring a group to another user.
 
-Syntax: DROP <!group>
+構文: DROP <!group>
 
-Examples:
+コマンド例:
     /msg &nick& DROP !baz

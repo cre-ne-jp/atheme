@@ -6,7 +6,7 @@ Once you FDROP a group all of the data associated
 with it (access lists, metadata, etc) are removed and cannot
 be restored.
 
-Syntax: FDROP <!group>
+構文: FDROP <!group>
 
-Examples:
+コマンド例:
     /msg &nick& FDROP !baz

@@ -6,7 +6,7 @@ attempting to use your nickname without authorization.
 If you are logged in to the nick's account, you need
 not specify a password, otherwise you have to.
 
-Syntax: GHOST <nick> [password]
+構文: GHOST <nick> [password]
 
-Example:
+コマンド例:
     /msg &nick& GHOST foo bar

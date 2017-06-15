@@ -4,7 +4,7 @@ INFO displays group information such as
 registration time, group URL, email address
 and founder.
 
-Syntax: INFO <!group>
+構文: INFO <!group>
 
-Examples:
+コマンド例:
     /msg &nick& INFO !baz

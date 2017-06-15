@@ -6,7 +6,7 @@ on your nick will see your real IP address.
 
 For permanent removal of your vHost, please see network staff.
 
-Syntax: OFF
+構文: OFF
 
-Examples:
+コマンド例:
     /msg &nick& OFF

@@ -7,7 +7,7 @@ supports nicknames, groups and hostmasks as targets.
 When only the channel argument is given, a listing of
 permissions granted to users will be displayed.
 
-Syntax: FLAGS <#channel>
+構文: FLAGS <#channel>
 
 Otherwise, an access entry is modified. A modification may be
 specified by a template name (changes the access to the
@@ -62,8 +62,8 @@ $chanacs:#channel - Any user with channel access in the given channel
 If you do not have +f you may still remove your own access
 with -*.
 
-Syntax: FLAGS <#channel> [nickname|hostmask|group template]
-Syntax: FLAGS <#channel> [nickname|hostmask|group flag_changes]
+構文: FLAGS <#channel> [nickname|hostmask|group template]
+構文: FLAGS <#channel> [nickname|hostmask|group flag_changes]
 
 Permissions:
     +v - Enables use of the voice/devoice commands.
@@ -109,7 +109,7 @@ The special permission +* adds all permissions except +b and +F.
 #endif
 The special permission -* removes all permissions including +b and +F.
 
-Examples:
+コマンド例:
     /msg &nick& FLAGS #foo
     /msg &nick& FLAGS #foo foo!*@bar.com VOP
     /msg &nick& FLAGS #foo foo!*@bar.com -V+oO

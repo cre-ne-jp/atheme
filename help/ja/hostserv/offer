@@ -8,9 +8,9 @@ vHost will be replaced by a users' account name when they TAKE it.
 If the !group parameter is provided, only users with the +v flag
 in that group will be able to see it in OFFERLIST and TAKE it.
 
-Syntax: OFFER [!group] <vHost>
+構文: OFFER [!group] <vHost>
 
-Examples:
+コマンド例:
     /msg &nick& OFFER may.explode.on.impact
     /msg &nick& OFFER mynetwork.users.$account
     /msg &nick& OFFER !atheme-users $account.users.atheme.net

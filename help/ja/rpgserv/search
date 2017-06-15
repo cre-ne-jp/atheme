@@ -7,9 +7,9 @@ view the help file for the SET command via /msg &nick& HELP SET
 The search options listed on the SET help file can be used as
 keywords with the SEARCH command. For examples, please see below.
 
-Syntax: SEARCH <keywords>
+構文: SEARCH <keywords>
 
-Example:
+コマンド例:
     /msg &nick& SEARCH FANTASY MIDDLEAGES FREEFORM PG13 R
          Search for a game with a genre of fantasy, period of
          middle ages, ruleset of freeform and a rating of PG13

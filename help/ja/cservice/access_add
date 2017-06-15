@@ -3,7 +3,7 @@ Help for ACCESS ADD:
 ACCESS ADD will assign the given user to the given
 channel role.
 
-Syntax: ACCESS <#channel> ADD <user> <role>
+構文: ACCESS <#channel> ADD <user> <role>
 
-Examples:
+コマンド例:
     /msg &nick& ACCESS #atheme ADD stitch helpers

@@ -2,13 +2,13 @@ Help for SPECS:
 
 SPECS shows the privileges you have in services.
 
-Syntax: SPECS
+構文: SPECS
 
 It is also possible to see the privileges of other
 online users or of oper classes.
 
-Syntax: SPECS USER <nick>
-Syntax: SPECS OPERCLASS <classname>
+構文: SPECS USER <nick>
+構文: SPECS OPERCLASS <classname>
 
-Example:
+コマンド例:
     /msg &nick& SPECS USER w00t

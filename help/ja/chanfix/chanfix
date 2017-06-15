@@ -5,7 +5,7 @@ unregistered channel by fixing certain
 modes and giving ops to the user(s) with 
 the highest scores. 
 
-Syntax: CHANFIX <#channel>
+構文: CHANFIX <#channel>
 
-Example:
+コマンド例:
     /msg &nick& CHANFIX #foo

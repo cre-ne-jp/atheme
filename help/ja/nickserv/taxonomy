@@ -3,5 +3,5 @@ Help for TAXONOMY:
 The taxonomy command lists metadata information associated
 with registered users.
 
-Examples:
+コマンド例:
     /msg &nick& TAXONOMY foo

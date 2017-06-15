@@ -4,7 +4,7 @@ INVITE allows you to invite a user to join a
 "private"/non-open group or a group that is 
 currently full.
 
-Syntax: INVITE <!group> <user>
+構文: INVITE <!group> <user>
 
-Examples:
+コマンド例:
     /msg &nick& INVITE !foo jdhore

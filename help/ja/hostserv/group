@@ -4,7 +4,7 @@ This command will set the current nick's vHost as the
 vHost for all the nicks in the group, including nicks
 that will be added in the future.
 
-Syntax: GROUP
+構文: GROUP
 
-Examples:
+コマンド例:
     /msg &nick& GROUP

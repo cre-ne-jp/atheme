@@ -17,10 +17,10 @@ If the account is omitted the user's nick is used and
 the " -> account" portion of the reply is omitted.
 Account * means the account the user is logged in with.
 
-Syntax: ACC
-Syntax: ACC <nick>
-Syntax: ACC <nick> <account>
-Syntax: ACC <nick> *
+構文: ACC
+構文: ACC <nick>
+構文: ACC <nick> <account>
+構文: ACC <nick> *
 
-Example:
+コマンド例:
     /msg &nick& ACC jilles *

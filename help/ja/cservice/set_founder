@@ -5,13 +5,13 @@ of the channel. The new founder has to
 execute the same command to confirm the
 transfer.
 
-Syntax: SET <#channel> FOUNDER <newnick>
+構文: SET <#channel> FOUNDER <newnick>
 
 If the new founder has not yet confirmed the
 transfer, you can cancel it by specifying
 your own nick as the new founder.
 
-Syntax: SET <#channel> FOUNDER <yournick>
+構文: SET <#channel> FOUNDER <yournick>
 
-Example:
+コマンド例:
     /msg &nick& SET #foo FOUNDER bar

@@ -3,7 +3,7 @@ Help for SET MDLIMIT:
 SET MDLIMIT sets how many pieces of metadata can belong
 to one object (an account, group or channel).
 
-Syntax: SET MDLIMIT <value>
+構文: SET MDLIMIT <value>
 
-Example:
+コマンド例:
     /msg &nick& SET MDLIMIT 30

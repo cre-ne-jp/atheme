@@ -8,4 +8,4 @@ invalid if you identify with your old password.
 To set a new password if you know the current
 password, use SET PASSWORD instead of SETPASS.
 
-Syntax: SETPASS <account> <key> <password>
+構文: SETPASS <account> <key> <password>

@@ -5,7 +5,7 @@ account from other users.
 
 SET PRIVATE ON automatically enables HIDEMAIL too.
 
-Syntax: SET PRIVATE ON|OFF
+構文: SET PRIVATE ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET PRIVATE ON

@@ -6,7 +6,7 @@ as long as services is connected to the uplink and
 can also (on most ircds) be removed with a simple
 /squit command.
 
-Syntax: JUPE <server> <reason>
+構文: JUPE <server> <reason>
 
-Example:
+コマンド例:
     /msg &nick& JUPE irc.blah.net very unstable server

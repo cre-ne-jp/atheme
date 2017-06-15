@@ -3,8 +3,8 @@ Help for LISTMAIL:
 LISTMAIL shows accounts registered to a
 given e-mail address. Wildcards are allowed.
 
-Syntax: LISTMAIL <email>
+構文: LISTMAIL <email>
 
-Examples:
+コマンド例:
     /msg &nick& LISTMAIL patrick@example.com
     /msg &nick& LISTMAIL *@cam.ac.uk

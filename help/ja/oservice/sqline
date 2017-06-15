@@ -7,13 +7,13 @@ A nickname sqline may contain *, ?, # (any digit) and
 @ (any letter) wildcards. A channel sqline must be an
 exact match, starting with # or &.
 
-Syntax: SQLINE ADD <mask> [!P|!T <minutes>] <reason>
+構文: SQLINE ADD <mask> [!P|!T <minutes>] <reason>
 
 If the !P token is specified the SQLINE will never expire (permanent).
 If the !T token is specified expire time must follow, in minutes,
 hours ("h"), days ("d") or weeks ("w").
 
-Examples:
+コマンド例:
     /msg &nick& SQLINE ADD spambot* !T 7d bar reason
     /msg &nick& SQLINE ADD spam??? !P foo reason
 
@@ -22,27 +22,27 @@ The first example denies the use of nicknames starting with
 
 The second example adds a permanent SQLINE on "spam???" for "foo reason."
 
-Syntax: SQLINE DEL <mask|number>
+構文: SQLINE DEL <mask|number>
 
 If number is specified it correlates with the number on SQLINE LIST.
 You may specify multiple numbers by separating with commas.
 You may specify a range by using a colon.
 
-Examples:
+コマンド例:
     /msg &nick& SQLINE DEL foo
     /msg &nick& SQLINE DEL 5
     /msg &nick& SQLINE DEL 1,2,5,10
     /msg &nick& SQLINE DEL 1:5,7,9:11
 
-Syntax: SQLINE LIST [FULL]
+構文: SQLINE LIST [FULL]
 
 If FULL is specified the SQLINE reasons will be shown.
 
-Examples:
+コマンド例:
     /msg &nick& SQLINE LIST
     /msg &nick& SQLINE LIST FULL
 
-Syntax: SQLINE SYNC
+構文: SQLINE SYNC
 
 Sends all sqlines to all servers. This is useful because
 sqlines must be present before the nickname or channel

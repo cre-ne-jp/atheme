@@ -11,8 +11,8 @@ from accounts. To prevent this, you must use them.
 Otherwise, all properties of the account are shared
 among all nicks registered to it.
 
-Syntax: GROUP
+構文: GROUP
 
-Examples:
+コマンド例:
     /msg &nick& IDENTIFY OldNick SecretPassword
     /msg &nick& GROUP

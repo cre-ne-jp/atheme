@@ -4,10 +4,10 @@ SET EMAIL allows you to change or set the email
 address associated with a group. This is shown
 to all users in INFO.
 
-Syntax: SET <!group> EMAIL [email]
+構文: SET <!group> EMAIL [email]
 
 Using the command in this way results in an email
 address being associated with the group.
 
-Example:
+コマンド例:
     /msg &nick& SET !bar EMAIL some@email.address

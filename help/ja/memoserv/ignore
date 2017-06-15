@@ -7,9 +7,9 @@ to register etc.
 
 You can add up to 40 users to your ignore list
 
-Syntax: IGNORE ADD|DEL|LIST|CLEAR <account>
+構文: IGNORE ADD|DEL|LIST|CLEAR <account>
 
-Examples:
+コマンド例:
     /msg &nick& IGNORE ADD kog
     /msg &nick& IGNORE DEL kog
     /msg &nick& IGNORE LIST

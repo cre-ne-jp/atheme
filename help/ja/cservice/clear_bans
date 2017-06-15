@@ -6,9 +6,9 @@ with a channel (e.g. ban exceptions), you can clear
 these by specifying the mode letters. Specify an
 asterisk to clear all lists.
 
-Syntax: CLEAR <#channel> BANS [types]
+構文: CLEAR <#channel> BANS [types]
 
-Examples:
+コマンド例:
     /msg &nick& CLEAR #support BANS
 
 Clears #support ban list.

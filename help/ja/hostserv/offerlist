@@ -3,7 +3,7 @@ Help for OFFERLIST:
 OFFERLIST lists all vHosts currently available from
 the network staff.
 
-Syntax: OFFERLIST
+構文: OFFERLIST
 
-Examples:
+コマンド例:
     /msg &nick& OFFERLIST

@@ -2,7 +2,7 @@ Help for SAY:
 
 Makes the bot say the given text on the given channel.
 
-Syntax: SAY <chan> <text>
+構文: SAY <chan> <text>
 
-Examples:
+コマンド例:
     /msg &nick& SAY #help Welcome to #help!

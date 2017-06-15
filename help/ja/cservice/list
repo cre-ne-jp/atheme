@@ -27,9 +27,9 @@ ACLSIZE      - Channels with an access list larger than a given size.
 REGISTERED   - Channels registered longer ago than a given age.
 LASTUSED     - Channels last used longer ago than a given age.
 
-Syntax: LIST <criteria>
+構文: LIST <criteria>
 
-Examples:
+コマンド例:
     /msg &nick& LIST pattern #*foo*
     /msg &nick& LIST hold
     /msg &nick& LIST closed pattern #x*

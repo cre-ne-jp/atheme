@@ -3,8 +3,8 @@ Help for GENERATEPASS:
 GENERATEPASS generates a random password. It does not automatically
 insert it into any fields.
 
-Syntax: GENERATEPASS [length]
+構文: GENERATEPASS [length]
 
-Examples:
+コマンド例:
     /msg &nick& GENERATEPASS
     /msg &nick& GENERATEPASS 12

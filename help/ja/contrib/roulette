@@ -3,7 +3,7 @@ Help for ROULETTE:
 ROULETTE provides you with a nice game of
 Russian Roulette.
 
-Syntax: ROULETTE
+構文: ROULETTE
 
-Example:
+コマンド例:
     /msg &nick& ROULETTE

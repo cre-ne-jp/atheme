@@ -3,8 +3,8 @@ Help for SET LANGUAGE:
 SET LANGUAGE changes the language services
 uses to communicate with you.
 
-Syntax: SET LANGUAGE <abbreviation>
+構文: SET LANGUAGE <abbreviation>
 
-Example:
+コマンド例:
     /msg &nick& SET LANGUAGE en
     /msg &nick& SET LANGUAGE ru

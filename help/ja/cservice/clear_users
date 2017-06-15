@@ -7,7 +7,7 @@ if you are not on it.
 If a reason is specified, it will be included in the
 kick message.
 
-Syntax: CLEAR <#channel> USERS [reason]
+構文: CLEAR <#channel> USERS [reason]
 
-Examples:
+コマンド例:
     /msg &nick& CLEAR #ChatZone USERS

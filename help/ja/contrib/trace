@@ -19,9 +19,9 @@ COUNT - Gives the number of users who match the given criteria.
 KILL  - KILLs all users matching the given criteria.
 AKILL - AKILLs all users matching the given criteria.
 
-Syntax: TRACE <action> <parameters>
+構文: TRACE <action> <parameters>
 
-Examples:
+コマンド例:
     /msg &nick& TRACE print channel #foo
     /msg &nick& TRACE print server irc.dereferenced.org
     /msg &nick& TRACE kill "reason" server alfred.staticbox.net

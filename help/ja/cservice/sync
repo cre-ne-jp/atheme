@@ -4,7 +4,7 @@ The SYNC command will force all channel statuses to flags, giving and taking
 away ops, voice and so on where necessary. You must have the channel flag +R to
 run this command.
 
-Syntax: SYNC <#channel>
+構文: SYNC <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& SYNC #bar

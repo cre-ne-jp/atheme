@@ -2,13 +2,13 @@ Help for CHANNEL:
 
 CHANNEL provides various minor informations about channels.
 
-Syntax: CHANNEL COUNT
+構文: CHANNEL COUNT
 
 This would give you the total amount of channels.
 
-Syntax: CHANNEL TOPIC <channel>
+構文: CHANNEL TOPIC <channel>
 
-Examples:
+コマンド例:
     /msg &nick& CHANNEL TOPIC #atheme
 
 This example would get the topic for #atheme.

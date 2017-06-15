@@ -4,8 +4,8 @@ Marks you as a network helper by setting user mode +h. This is only useful if
 your IRCd supports user mode +h and you have support staff who are not
 operators. Requires the OPERSERV:HELPME privilege.
 
-Syntax: HELPME
+構文: HELPME
 
-Examples:
+コマンド例:
     /msg &nick& HELPME
 

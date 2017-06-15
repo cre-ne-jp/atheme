@@ -3,7 +3,7 @@ Help for LOGOUT:
 LOGOUT logs you out of the account
 that you are currently logged into.
 
-Syntax: LOGOUT
+構文: LOGOUT
 
-Example:
+コマンド例:
     /msg &nick& LOGOUT

@@ -9,7 +9,7 @@ If you do not specify a nickname, your current
 nickname will be ungrouped. You cannot ungroup
 your account name.
 
-Syntax: UNGROUP [nickname]
+構文: UNGROUP [nickname]
 
-Examples:
+コマンド例:
     /msg &nick& UNGROUP SomeNick

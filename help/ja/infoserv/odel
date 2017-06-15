@@ -4,7 +4,7 @@ ODEL is used to delete informational messages that you no longer
 want opers to see upon oper-up. This will not allow you to delete
 user &nick& messages.
 
-Syntax: ODEL <id>
+構文: ODEL <id>
 
-Example:
+コマンド例:
     /msg &nick& ODEL 1

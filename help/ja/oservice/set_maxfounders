@@ -3,7 +3,7 @@ Help for SET MAXFOUNDERS:
 SET MAXFOUNDERS allows setting the maximum number of founders
 that one channel may have.
 
-Syntax: SET MAXFOUNDERS <value>
+構文: SET MAXFOUNDERS <value>
 
-Example:
+コマンド例:
     /msg &nick& SET MAXFOUNDERS 4

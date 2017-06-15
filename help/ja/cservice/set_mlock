@@ -6,9 +6,9 @@ such as +kl. It can also make it harder to fight evil
 bots, be careful. Locked modes can be seen by anyone
 recreating the channel (this includes keys).
 
-Syntax: SET <#channel> MLOCK [modes]
+構文: SET <#channel> MLOCK [modes]
 
-Examples: (some may use modes your ircd does not support)
+コマンド例: (some may use modes your ircd does not support)
     /msg &nick& SET #foo MLOCK +nt-lk
     /msg &nick& SET #foo MLOCK +inst-kl
     /msg &nick& SET #c MLOCK +ntk c

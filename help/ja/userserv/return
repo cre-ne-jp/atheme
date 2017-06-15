@@ -6,7 +6,7 @@ specified and changes account's email address
 to this address. Any current sessions logged
 in to the account are logged out.
 
-Syntax: RETURN <account> <e-mail>
+構文: RETURN <account> <e-mail>
 
-Examples:
+コマンド例:
     /msg &nick& RETURN jdoe john@example.com

@@ -13,7 +13,7 @@ and moderated and you are invited.
 If you are on channel, you will be opped and
 no ban exception will be added.
 
-Syntax: RECOVER <#channel>
+構文: RECOVER <#channel>
 
-Example:
+コマンド例:
     /msg &nick& RECOVER #foo

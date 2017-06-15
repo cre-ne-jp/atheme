@@ -3,7 +3,7 @@ Help for ACTIVATE:
 Send the requested announcement for the given nick.
 A memo informing the user will also be sent.
 
-Syntax: ACTIVATE <nick>
+構文: ACTIVATE <nick>
 
-Examples:
+コマンド例:
     /msg &nick& ACTIVATE nenolod

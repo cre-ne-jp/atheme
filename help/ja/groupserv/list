@@ -2,8 +2,8 @@ Help for LIST:
 
 LIST shows all groups matching a specified pattern.
 
-Syntax: LIST <group pattern>
+構文: LIST <group pattern>
 
-Examples:
+コマンド例:
     /msg &nick& LIST *
     /msg &nick& LIST !pants*

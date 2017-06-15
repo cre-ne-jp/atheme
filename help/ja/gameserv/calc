@@ -4,8 +4,8 @@ CALC lets you do some simple mathematics with
 services. You can also specify a number of
 calculations that can be done at once.
 
-Syntax: CALC [times] <expression>
+構文: CALC [times] <expression>
 
-Example:
+コマンド例:
     /msg &nick& CALC 6*8
     /msg &nick& CALC 5 1+2

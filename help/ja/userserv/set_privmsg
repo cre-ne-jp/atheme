@@ -3,7 +3,7 @@ Help for SET PRIVMSG:
 SET PRIVMSG causes Services to use private messages
 when talking to the user authenticated on this account.
 
-Syntax: SET PRIVMSG ON|OFF
+構文: SET PRIVMSG ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET PRIVMSG ON

@@ -3,4 +3,4 @@ Help for MODLIST:
 MODLIST displays a listing of all loaded
 modules and their addresses.
 
-Syntax: MODLIST
+構文: MODLIST

@@ -7,8 +7,8 @@ account.
 
 FREEZE information will be displayed in INFO output.
 
-Syntax: FREEZE <account> ON|OFF <reason>
+構文: FREEZE <account> ON|OFF <reason>
 
-Examples:
+コマンド例:
     /msg &nick& FREEZE pfish ON Persistent spammer
     /msg &nick& FREEZE alambert OFF

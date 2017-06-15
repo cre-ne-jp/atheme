@@ -5,9 +5,9 @@ channel registration request list.  (For
 networks that moderate Channel Registration 
 requests)
 
-Syntax: WAITING
+構文: WAITING
 
-Examples:
+コマンド例:
     /msg &nick& WAITING
 See Also:
     /msg &nick& ACTIVATE #FunChat

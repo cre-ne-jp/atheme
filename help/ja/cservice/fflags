@@ -5,8 +5,8 @@ change on a channel. The syntax is the same as FLAGS,
 except that the target and flags changes must be given.
 Viewing any channel's access list is done with FLAGS.
 
-Syntax: FFLAGS <#channel> <nickname|hostmask> <template>
-Syntax: FFLAGS <#channel> <nickname|hostmask> <flag_changes>
+構文: FFLAGS <#channel> <nickname|hostmask> <template>
+構文: FFLAGS <#channel> <nickname|hostmask> <flag_changes>
 
-Examples:
+コマンド例:
     /msg &nick& FFLAGS #foo foo AOP

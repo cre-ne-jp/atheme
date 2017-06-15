@@ -6,9 +6,9 @@ the effects of the changes. Multiple flags should be
 separated by a space and have the modifier (+ or -) before
 each flag.
 
-Syntax: ROLE <#channel> SET <role> <flags>
+構文: ROLE <#channel> SET <role> <flags>
 
-Examples:
+コマンド例:
     /msg &nick& ROLE #atheme SET channel-ops +acl-change +set +recover
     /msg &nick& ROLE #atheme SET helpers +invite
     /msg &nick& ROLE #foo SET helpers -topic -invite

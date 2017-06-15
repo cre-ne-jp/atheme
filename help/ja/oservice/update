@@ -2,7 +2,7 @@ Help for UPDATE:
 
 UPDATE flushes the database to disk.
 
-Syntax: UPDATE
+構文: UPDATE
 
-Example:
+コマンド例:
     /msg &nick& UPDATE

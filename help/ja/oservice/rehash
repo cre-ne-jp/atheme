@@ -5,7 +5,7 @@ the configuration file.  You can perform
 a rehash from system console with a kill -HUP
 command.
 
-Syntax: REHASH
+構文: REHASH
 
-Example:
+コマンド例:
     /msg &nick& REHASH

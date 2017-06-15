@@ -20,9 +20,9 @@ of matches. To override this limit, add
 the FORCE keyword. In any case the actual
 number of matches will be shown.
 
-Syntax: RMATCH /<pattern>/[i][p] [FORCE]
+構文: RMATCH /<pattern>/[i][p] [FORCE]
 
-Example:
+コマンド例:
     /msg &nick& RMATCH /^m(oo|00)cow/i FORCE
     /msg &nick& RMATCH #^[a-z]+!~?[a-z]+@#
     /msg &nick& RMATCH /^[^ ]* [^ ]*$/

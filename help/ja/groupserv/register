@@ -3,7 +3,7 @@ Help for REGISTER:
 REGISTER allows you to register a group so that you can easily
 manage a number of users and channels.
 
-Syntax: REGISTER <!group>
+構文: REGISTER <!group>
 
-Examples:
+コマンド例:
     /msg &nick& REGISTER !developers

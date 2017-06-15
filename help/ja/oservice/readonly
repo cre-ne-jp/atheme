@@ -4,7 +4,7 @@ READONLY allows services operators to enable
 or disable readonly mode while services is
 running.
 
-Syntax: READONLY ON|OFF
+構文: READONLY ON|OFF
 
-Examples:
+コマンド例:
     /msg &nick& READONLY ON

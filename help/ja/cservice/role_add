@@ -3,7 +3,7 @@ Help for ROLE ADD:
 ROLE ADD will create a channel role with the given
 flags. Multiple flags should be separated by a space.
 
-Syntax: ROLE <#channel> ADD <role> [flags]
+構文: ROLE <#channel> ADD <role> [flags]
 
 Flags:
     +voice - Enables use of the voice/devoice commands.
@@ -41,5 +41,5 @@ Flags:
     +founder - Grants full founder access.
     +banned - Enables automatic kickban.
 
-Examples:
+コマンド例:
     /msg &nick& ROLE #atheme ADD helpers topic autovoice

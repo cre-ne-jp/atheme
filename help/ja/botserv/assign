@@ -4,7 +4,7 @@ Assigns a bot pointed out by nick to the channel chan. You
 can then configure the bot for the channel so it fits
 your needs.
 
-Syntax: ASSIGN <chan> <nick>
+構文: ASSIGN <chan> <nick>
 
-Examples:
+コマンド例:
     /msg &nick& ASSIGN #help Security

@@ -4,11 +4,11 @@ SET EMAIL allows you to change or set the email
 address associated with a channel. This is shown
 to all users in INFO.
 
-Syntax: SET <#channel> EMAIL [email]
+構文: SET <#channel> EMAIL [email]
 
 Using the command in this way results in an email
 address being associated with the channel.
 
-Example:
+コマンド例:
     /msg &nick& SET #chat EMAIL some@email.address
 

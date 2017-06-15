@@ -15,7 +15,7 @@ follow the instructions in the message sent to the email
 address.
 #endif
 
-Syntax: REGISTER <password> <email-address>
+構文: REGISTER <password> <email-address>
 
-Examples:
+コマンド例:
     /msg &nick& REGISTER bar foo@bar.com

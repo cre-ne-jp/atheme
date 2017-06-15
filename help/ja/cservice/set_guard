@@ -2,7 +2,7 @@ Help for SET GUARD:
 
 SET GUARD allows you to have &nick& join your channel.
 
-Syntax: SET <#channel> GUARD ON|OFF
+構文: SET <#channel> GUARD ON|OFF
 
-Example:
+コマンド例:
     /msg &nick& SET #atheme GUARD ON

@@ -3,7 +3,7 @@ Help for UNBAN:
 The UNBAN command allows you to remove all bans matching
 you from a channel.
 
-Syntax: UNBAN <#channel>
+構文: UNBAN <#channel>
 
-Examples:
+コマンド例:
     /msg &nick& UNBAN #chat

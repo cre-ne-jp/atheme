@@ -6,8 +6,8 @@ will be set on the user immediately and each time
 they identify when using said nick. If no vHost is
 specified, revert to the account's vHost.
 
-Syntax: VHOSTNICK <nickname> [<vHost>]
+構文: VHOSTNICK <nickname> [<vHost>]
 
-Examples:
+コマンド例:
     /msg &nick& VHOSTNICK spb may.explode.on.impact
     /msg &nick& VHOSTNICK nenolod

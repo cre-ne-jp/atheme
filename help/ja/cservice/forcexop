@@ -11,7 +11,7 @@ wishes to use xOP commands only.
 
 Only a founder can execute this command.
 
-Syntax: FORCEXOP <#channel>
+構文: FORCEXOP <#channel>
 
 #if halfops
 See also: SOP, AOP, HOP, VOP

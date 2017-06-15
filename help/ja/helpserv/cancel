@@ -2,7 +2,7 @@ Help for CANCEL:
 
 CANCEL allows you to cancel a currently pending request for help.
 
-Syntax: CANCEL
+構文: CANCEL
 
-Examples:
+コマンド例:
     /msg &nick& CANCEL
