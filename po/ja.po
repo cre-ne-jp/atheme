@@ -264,11 +264,11 @@ msgstr "  作成日 : %s (%s 前)"
 
 #: modules/botserv/info.c:82
 msgid "  Options : Private"
-msgstr "オプション：プライベート"
+msgstr "オプション: プライベート"
 
 #: modules/botserv/info.c:84
 msgid "  Options : None"
-msgstr "オプション：なし"
+msgstr "オプション: なし"
 
 #: modules/botserv/info.c:85
 #, c-format
@@ -283,36 +283,36 @@ msgstr ""
 #: modules/botserv/info.c:104
 #, c-format
 msgid "Information for channel %s:"
-msgstr "チャンネル %s の情報："
+msgstr "チャンネル %s の情報: "
 
 #: modules/botserv/info.c:106
 #, c-format
 msgid "         Bot nick : %s"
-msgstr "ボットのニックネーム：%s"
+msgstr "ボットのニックネーム: %s"
 
 #: modules/botserv/info.c:108
 msgid "         Bot nick : not assigned yet"
-msgstr "ボットのニックネーム：指定なし"
+msgstr "ボットのニックネーム: 指定なし"
 
 #: modules/botserv/info.c:126
 #, c-format
 msgid "          Options : %s"
-msgstr "オプション：%s"
+msgstr "オプション: %s"
 
 #: modules/botserv/main.c:540 modules/botserv/main.c:561
 #: modules/botserv/main.c:698
 msgid "Syntax: BOT ADD <nick> <user> <host> <real>"
-msgstr "構文：BOT ADD <nick> <user> <host> <real>"
+msgstr "構文: BOT ADD <nick> <user> <host> <real>"
 
 #: modules/botserv/main.c:541 modules/botserv/main.c:562
 #: modules/botserv/main.c:597 modules/botserv/main.c:661
 msgid "Syntax: BOT CHANGE <oldnick> <newnick> [<user> [<host> [<real>]]]"
-msgstr "構文：BOT CHANGE <oldnick> <newnick> [<user> [<host> [<real>]]]"
+msgstr "構文: BOT CHANGE <oldnick> <newnick> [<user> [<host> [<real>]]]"
 
 #: modules/botserv/main.c:542 modules/botserv/main.c:563
 #: modules/botserv/main.c:770
 msgid "Syntax: BOT DEL <nick>"
-msgstr "構文：BOT DEL <nick>"
+msgstr "構文: BOT DEL <nick>"
 
 #: modules/botserv/main.c:604 modules/botserv/main.c:776
 #: modules/botserv/main.c:892
@@ -358,7 +358,7 @@ msgstr "%sはリアルネームとして利用できません。"
 #: modules/botserv/main.c:818
 #, c-format
 msgid "Listing of bots available on %s:"
-msgstr "チャンネル%s有効なボットの一覧："
+msgstr "チャンネル%s有効なボットの一覧: "
 
 #: modules/botserv/main.c:828
 #, c-format
@@ -368,7 +368,7 @@ msgstr "%d個のボットが有効です。"
 #: modules/botserv/main.c:832
 #, c-format
 msgid "Listing of private bots available on %s:"
-msgstr "チャンネル%sで有効なプライベートボットの一覧："
+msgstr "チャンネル%sで有効なプライベートボットの一覧: "
 
 #: modules/botserv/main.c:840
 #, c-format
@@ -377,7 +377,7 @@ msgstr "%d個のプライベートボットが有効です。"
 
 #: modules/botserv/main.c:859
 msgid "Syntax: ASSIGN <#channel> <nick>"
-msgstr "構文：ASSIGN <#channel> <nick>"
+msgstr "構文: ASSIGN <#channel> <nick>"
 
 #: modules/botserv/main.c:865 modules/botserv/main.c:942
 #: modules/chanserv/access.c:675 modules/chanserv/access.c:772
@@ -4206,7 +4206,7 @@ msgstr "サーバメッセージを送信します。"
 
 #: modules/global/main.c:67
 msgid "Syntax: GLOBAL <parameters>|SEND|CLEAR"
-msgstr "構文： GLOBAL <parameters>|SEND|CLEAR"
+msgstr "構文:  GLOBAL <parameters>|SEND|CLEAR"
 
 #: modules/global/main.c:75
 msgid "No message to clear."
@@ -5059,7 +5059,7 @@ msgstr "登録された利用者の接続元ホスト隠蔽を一覧します。
 
 #: modules/hostserv/vhost.c:47
 msgid "Syntax: VHOST <nick> [vhost]"
-msgstr "構文： VHOST <nick> [vhost]"
+msgstr "構文:  VHOST <nick> [vhost]"
 
 #: modules/hostserv/vhost.c:62
 #, c-format
@@ -6002,7 +6002,7 @@ msgstr ""
 
 #: modules/nickserv/info.c:70
 msgid "Syntax: INFO <nickname>"
-msgstr "構文： INFO <nickname>"
+msgstr "構文:  INFO <nickname>"
 
 #: modules/nickserv/info.c:97
 #, c-format
@@ -6017,37 +6017,37 @@ msgstr "アカウント情報: %s (アカウント名 %s)"
 #: modules/nickserv/info.c:140
 #, c-format
 msgid "User reg.  : %s (%s ago)"
-msgstr "登録： %s (%s 前)"
+msgstr "登録:  %s (%s 前)"
 
 #: modules/nickserv/info.c:144
 #, c-format
 msgid "Entity ID  : %s"
-msgstr "登録ID： %s"
+msgstr "登録ID:  %s"
 
 #: modules/nickserv/info.c:167
 #, c-format
 msgid "Last addr  : %s"
-msgstr "最終ログイン接続元：%s"
+msgstr "最終ログイン接続元: %s"
 
 #: modules/nickserv/info.c:187
 #, c-format
 msgid "vHost      : %s"
-msgstr "接続元ホスト隠蔽：%s"
+msgstr "接続元ホスト隠蔽: %s"
 
 #: modules/nickserv/info.c:189
 #, c-format
 msgid "vHost      : %s (assigned%s)"
-msgstr "接続元ホスト隠蔽：%s (%s)"
+msgstr "接続元ホスト隠蔽: %s (%s)"
 
 #: modules/nickserv/info.c:191
 #, c-format
 msgid "vHost      : unassigned%s"
-msgstr "接続元ホスト隠蔽：未登録 (%s)"
+msgstr "接続元ホスト隠蔽: 未登録 (%s)"
 
 #: modules/nickserv/info.c:197
 #, c-format
 msgid "Real addr  : %s"
-msgstr "実際の接続元：%s"
+msgstr "実際の接続元: %s"
 
 #: modules/nickserv/info.c:201
 msgid "Recognized : now (matches access list)"
@@ -6055,17 +6055,17 @@ msgstr ""
 
 #: modules/nickserv/info.c:204 modules/nickserv/info.c:265
 msgid "Last seen  : now"
-msgstr "最終ログイン日時：ログイン中"
+msgstr "最終ログイン日時: ログイン中"
 
 #: modules/nickserv/info.c:210 modules/nickserv/info.c:225
 #, c-format
 msgid "Last seen  : (about %d weeks ago)"
-msgstr "最終ログイン日時：約 %d 週間前"
+msgstr "最終ログイン日時: 約 %d 週間前"
 
 #: modules/nickserv/info.c:212 modules/nickserv/info.c:227
 #, c-format
 msgid "Last seen  : %s (%s ago)"
-msgstr "最終ログイン日時：%s (%s 前)"
+msgstr "最終ログイン日時: %s (%s 前)"
 
 #: modules/nickserv/info.c:232
 #, c-format
@@ -6080,7 +6080,7 @@ msgstr ""
 #: modules/nickserv/info.c:247 modules/nickserv/info.c:255
 #, c-format
 msgid "Logins from: %s"
-msgstr "ログイン中のニックネーム： %s"
+msgstr "ログイン中のニックネーム:  %s"
 
 #: modules/nickserv/info.c:263
 msgid "User seen  : now"
@@ -6089,27 +6089,27 @@ msgstr ""
 #: modules/nickserv/info.c:278 modules/nickserv/info.c:286
 #, c-format
 msgid "Nicks      : %s"
-msgstr "登録されているニックネーム： %s"
+msgstr "登録されているニックネーム:  %s"
 
 #: modules/nickserv/info.c:292
 #, c-format
 msgid "Email      : %s%s"
-msgstr "メールアドレス： %s%s"
+msgstr "メールアドレス:  %s%s"
 
 #: modules/nickserv/info.c:384
 #, c-format
 msgid "Language   : %s"
-msgstr "言語： %s"
+msgstr "言語:  %s"
 
 #: modules/nickserv/info.c:390
 #, c-format
 msgid "Oper class : %s"
-msgstr "オペレータクラス： %s"
+msgstr "オペレータクラス:  %s"
 
 #: modules/nickserv/info.c:406
 #, c-format
 msgid "Channels   : %d founder, %d other"
-msgstr "登録済みチャンネル数： 管理中 %d, それ以外 %d"
+msgstr "登録済みチャンネル数:  管理中 %d, それ以外 %d"
 
 #: modules/nickserv/info.c:424
 #, c-format
@@ -7589,7 +7589,7 @@ msgstr ""
 
 #: modules/operserv/identify.c:55
 msgid "Syntax: IDENTIFY <password>"
-msgstr "構文： IDENTIFY <password>"
+msgstr "構文:  IDENTIFY <password>"
 
 #: modules/operserv/identify.c:61
 msgid "You do not have a services operator account."
@@ -7745,12 +7745,12 @@ msgstr ""
 #: modules/operserv/info.c:47
 #, c-format
 msgid "Nickname expiration time: %d days"
-msgstr "ニックネームの有効期限： %d 日"
+msgstr "ニックネームの有効期限:  %d 日"
 
 #: modules/operserv/info.c:48
 #, c-format
 msgid "Nickname enforce expiry time: %d days"
-msgstr "ニックネームが強制的に無効化される日数： %d 日"
+msgstr "ニックネームが強制的に無効化される日数:  %d 日"
 
 #: modules/operserv/info.c:49
 #, c-format
@@ -7786,7 +7786,7 @@ msgstr ""
 #: modules/operserv/info.c:56
 #, c-format
 msgid "Channel expiration time: %d days"
-msgstr "規定のチャンネル有効期限： %d 日"
+msgstr "規定のチャンネル有効期限:  %d 日"
 
 #: modules/operserv/info.c:58
 #, c-format
@@ -7891,7 +7891,7 @@ msgstr "チャンネルに設定されたチャンネルモード"
 
 #: modules/operserv/mode.c:43
 msgid "Syntax: MODE <channel> <parameters>"
-msgstr "構文： MODE <channel> <parameters>"
+msgstr "構文:  MODE <channel> <parameters>"
 
 #: modules/operserv/mode.c:57
 #, c-format
@@ -7904,7 +7904,7 @@ msgstr "読み込み済みモジュールの情報"
 
 #: modules/operserv/modinspect.c:40
 msgid "Syntax: MODINSPECT <module>"
-msgstr "構文： MODEINSPECT <module>"
+msgstr "構文:  MODEINSPECT <module>"
 
 #: modules/operserv/modinspect.c:50 modules/operserv/modreload.c:71
 #, c-format
@@ -7919,12 +7919,12 @@ msgstr ""
 #: modules/operserv/modinspect.c:62
 #, c-format
 msgid "Name       : %s"
-msgstr "名前： %s"
+msgstr "名前:  %s"
 
 #: modules/operserv/modinspect.c:63
 #, c-format
 msgid "Address    : %p"
-msgstr "アドレス： %p"
+msgstr "アドレス:  %p"
 
 #: modules/operserv/modinspect.c:64
 #, c-format
@@ -7939,22 +7939,22 @@ msgstr ""
 #: modules/operserv/modinspect.c:66
 #, c-format
 msgid "SDK Serial : %s"
-msgstr "SDK のシリアル： %s"
+msgstr "SDK のシリアル:  %s"
 
 #: modules/operserv/modinspect.c:67
 #, c-format
 msgid "Version    : %s"
-msgstr "バージョン： %s"
+msgstr "バージョン:  %s"
 
 #: modules/operserv/modinspect.c:68
 #, c-format
 msgid "Vendor     : %s"
-msgstr "作成者： %s"
+msgstr "作成者:  %s"
 
 #: modules/operserv/modinspect.c:69
 #, c-format
 msgid "Can unload : %s"
-msgstr "読み込み解除の可否： %s"
+msgstr "読み込み解除の可否:  %s"
 
 #: modules/operserv/modlist.c:20
 msgid "Lists loaded modules."
@@ -7962,7 +7962,7 @@ msgstr "読み込まれているモジュールを一覧します。"
 
 #: modules/operserv/modlist.c:38
 msgid "Loaded modules:"
-msgstr "読み込み済みモジュール："
+msgstr "読み込み済みモジュール: "
 
 #: modules/operserv/modlist.c:44
 #, c-format
@@ -7980,7 +7980,7 @@ msgstr "モジュールを読み込みます。"
 
 #: modules/operserv/modload.c:42
 msgid "Syntax: MODLOAD <module...>"
-msgstr "構文： MODLOAD <module...>"
+msgstr "構文:  MODLOAD <module...>"
 
 #: modules/operserv/modload.c:51
 #, c-format
@@ -8010,7 +8010,7 @@ msgstr "モジュールを再読込します。"
 
 #: modules/operserv/modreload.c:65
 msgid "Syntax: MODRELOAD <module...>"
-msgstr "構文： MODRELOAD <module...>"
+msgstr "構文:  MODRELOAD <module...>"
 
 #: modules/operserv/modreload.c:81
 #, c-format
@@ -8052,7 +8052,7 @@ msgstr "モジュールを切り離します。"
 
 #: modules/operserv/modunload.c:43
 msgid "Syntax: MODUNLOAD <module...>"
-msgstr "構文： MODUNLOAD <module...>"
+msgstr "構文:  MODUNLOAD <module...>"
 
 #: modules/operserv/modunload.c:54
 #, c-format
