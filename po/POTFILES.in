@@ -86,6 +86,7 @@ modules/contrib/ns_generatehash.c
 modules/contrib/ns_goodmail.c
 modules/contrib/ns_guestnoreg.c
 modules/contrib/ns_listlogins.c
+modules/contrib/ns_sendpassmail.c
 modules/contrib/ns_waitreg.c
 modules/contrib/os_defcon.c
 modules/contrib/os_helpme.c
