@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: http://wiki.arabeyes.org/Technical_Dictionary\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: https://github.com/atheme/atheme/issues\n"
+"POT-Creation-Date: 2016-10-19 16:27+0300\n"
+"PO-Revision-Date: 2017-06-15 15:02+0900\n"
+"Last-Translator: koi-chan <koi-chan@mail.kazagakure.net>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
-"POT-Creation-Date: 2016-10-19 16:27+0300\n"
-"PO-Revision-Date: 2017-06-14 14:25+0900\n"
-"Last-Translator: koi-chan <koi-chan@mail.kazagakure.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -462,7 +462,7 @@ msgstr "SET のヘルプ:"
 
 #: modules/botserv/set_core.c:50
 msgid "Configures different botserv bot options."
-msgstr ""
+msgstr "BotServ に登録されている異なるボットの設定を行ないます。"
 
 #: modules/botserv/set_core.c:54 modules/chanserv/set_core.c:52
 #: modules/groupserv/set.c:57
@@ -712,7 +712,7 @@ msgstr ""
 #: modules/chanfix/fix.c:522 modules/chanserv/info.c:312
 #: modules/groupserv/info.c:96 modules/rpgserv/info.c:62
 msgid "*** End of Info ***"
-msgstr "*** INFO コマンド　ここまで"
+msgstr "*** INFO コマンド　ここまで ***"
 
 #: modules/chanfix/fix.c:525
 msgid "List information on channel."
@@ -4202,23 +4202,23 @@ msgstr ""
 
 #: modules/global/main.c:30
 msgid "Sends a global notice."
-msgstr ""
+msgstr "サーバメッセージを送信します。"
 
 #: modules/global/main.c:67
 msgid "Syntax: GLOBAL <parameters>|SEND|CLEAR"
-msgstr ""
+msgstr "構文： GLOBAL <parameters>|SEND|CLEAR"
 
 #: modules/global/main.c:75
 msgid "No message to clear."
-msgstr ""
+msgstr "メッセージが登録されていないため、消去しませんでした。"
 
 #: modules/global/main.c:103
 msgid "No message to send."
-msgstr ""
+msgstr "メッセージが登録されていないため、送信しませんでした。"
 
 #: modules/global/main.c:150
 msgid "No messages to list."
-msgstr ""
+msgstr "一覧するメッセージが登録されていません。"
 
 #: modules/global/main.c:184
 #, c-format
@@ -5055,16 +5055,16 @@ msgstr ""
 
 #: modules/hostserv/vhost.c:23
 msgid "Lists user virtual hosts."
-msgstr ""
+msgstr "登録された利用者の接続元ホスト隠蔽を一覧します。"
 
 #: modules/hostserv/vhost.c:47
 msgid "Syntax: VHOST <nick> [vhost]"
-msgstr ""
+msgstr "構文： VHOST <nick> [vhost]"
 
 #: modules/hostserv/vhost.c:62
 #, c-format
 msgid "Deleted all vhosts for %s."
-msgstr ""
+msgstr "ユーザー %s の接続元ホスト隠蔽を全て削除します。"
 
 #: modules/hostserv/vhost.c:73
 #, c-format
@@ -6002,7 +6002,7 @@ msgstr ""
 
 #: modules/nickserv/info.c:70
 msgid "Syntax: INFO <nickname>"
-msgstr ""
+msgstr "構文： INFO <nickname>"
 
 #: modules/nickserv/info.c:97
 #, c-format
@@ -6017,37 +6017,37 @@ msgstr "アカウント情報: %s (アカウント名 %s)"
 #: modules/nickserv/info.c:140
 #, c-format
 msgid "User reg.  : %s (%s ago)"
-msgstr ""
+msgstr "登録： %s (%s 前)"
 
 #: modules/nickserv/info.c:144
 #, c-format
 msgid "Entity ID  : %s"
-msgstr ""
+msgstr "登録ID： %s"
 
 #: modules/nickserv/info.c:167
 #, c-format
 msgid "Last addr  : %s"
-msgstr ""
+msgstr "最終ログイン接続元：%s"
 
 #: modules/nickserv/info.c:187
 #, c-format
 msgid "vHost      : %s"
-msgstr ""
+msgstr "接続元ホスト隠蔽：%s"
 
 #: modules/nickserv/info.c:189
 #, c-format
 msgid "vHost      : %s (assigned%s)"
-msgstr ""
+msgstr "接続元ホスト隠蔽：%s (%s)"
 
 #: modules/nickserv/info.c:191
 #, c-format
 msgid "vHost      : unassigned%s"
-msgstr ""
+msgstr "接続元ホスト隠蔽：未登録 (%s)"
 
 #: modules/nickserv/info.c:197
 #, c-format
 msgid "Real addr  : %s"
-msgstr ""
+msgstr "実際の接続元：%s"
 
 #: modules/nickserv/info.c:201
 msgid "Recognized : now (matches access list)"
@@ -6055,17 +6055,17 @@ msgstr ""
 
 #: modules/nickserv/info.c:204 modules/nickserv/info.c:265
 msgid "Last seen  : now"
-msgstr ""
+msgstr "最終ログイン日時：ログイン中"
 
 #: modules/nickserv/info.c:210 modules/nickserv/info.c:225
 #, c-format
 msgid "Last seen  : (about %d weeks ago)"
-msgstr ""
+msgstr "最終ログイン日時：約 %d 週間前"
 
 #: modules/nickserv/info.c:212 modules/nickserv/info.c:227
 #, c-format
 msgid "Last seen  : %s (%s ago)"
-msgstr ""
+msgstr "最終ログイン日時：%s (%s 前)"
 
 #: modules/nickserv/info.c:232
 #, c-format
@@ -6080,7 +6080,7 @@ msgstr ""
 #: modules/nickserv/info.c:247 modules/nickserv/info.c:255
 #, c-format
 msgid "Logins from: %s"
-msgstr ""
+msgstr "ログイン中のニックネーム： %s"
 
 #: modules/nickserv/info.c:263
 msgid "User seen  : now"
@@ -6089,27 +6089,27 @@ msgstr ""
 #: modules/nickserv/info.c:278 modules/nickserv/info.c:286
 #, c-format
 msgid "Nicks      : %s"
-msgstr ""
+msgstr "登録されているニックネーム： %s"
 
 #: modules/nickserv/info.c:292
 #, c-format
 msgid "Email      : %s%s"
-msgstr ""
+msgstr "メールアドレス： %s%s"
 
 #: modules/nickserv/info.c:384
 #, c-format
 msgid "Language   : %s"
-msgstr ""
+msgstr "言語： %s"
 
 #: modules/nickserv/info.c:390
 #, c-format
 msgid "Oper class : %s"
-msgstr ""
+msgstr "オペレータクラス： %s"
 
 #: modules/nickserv/info.c:406
 #, c-format
 msgid "Channels   : %d founder, %d other"
-msgstr ""
+msgstr "登録済みチャンネル数： 管理中 %d, それ以外 %d"
 
 #: modules/nickserv/info.c:424
 #, c-format
@@ -6125,12 +6125,12 @@ msgstr ""
 #: modules/nickserv/info.c:448
 #, c-format
 msgid "%s has NOT COMPLETED registration verification"
-msgstr ""
+msgstr "%s のユーザー登録は完了していません。"
 
 #: modules/nickserv/info.c:461
 #, c-format
 msgid "%s has requested an email address change to %s on %s"
-msgstr ""
+msgstr "%s は %s による申請により、メールアドレス変更の手続き中です(%s)。"
 
 #: modules/nickserv/list.c:23
 msgid "Lists nicknames registered matching a given pattern."
@@ -7589,29 +7589,29 @@ msgstr ""
 
 #: modules/operserv/identify.c:55
 msgid "Syntax: IDENTIFY <password>"
-msgstr ""
+msgstr "構文： IDENTIFY <password>"
 
 #: modules/operserv/identify.c:61
 msgid "You do not have a services operator account."
-msgstr ""
+msgstr "あなたはサービスの管理用アカウントを持っていません。"
 
 #: modules/operserv/identify.c:67
 msgid "Your services operator account does not have a password set."
-msgstr ""
+msgstr "あなたのサービス管理用アカウントは、パスワードが設定されていません。"
 
 #: modules/operserv/identify.c:73
 #, c-format
 msgid "You are already identified to %s."
-msgstr ""
+msgstr "既に %s としてログインしています。"
 
 #: modules/operserv/identify.c:79
 msgid "Invalid password."
-msgstr ""
+msgstr "パスワードが違います。"
 
 #: modules/operserv/identify.c:85
 #, c-format
 msgid "You are now identified to %s."
-msgstr ""
+msgstr "あなたは %s としてログインしました。"
 
 #: modules/operserv/ignore.c:24
 msgid "Ignore a mask from services."
@@ -7745,12 +7745,12 @@ msgstr ""
 #: modules/operserv/info.c:47
 #, c-format
 msgid "Nickname expiration time: %d days"
-msgstr ""
+msgstr "ニックネームの有効期限： %d 日"
 
 #: modules/operserv/info.c:48
 #, c-format
 msgid "Nickname enforce expiry time: %d days"
-msgstr ""
+msgstr "ニックネームが強制的に無効化される日数： %d 日"
 
 #: modules/operserv/info.c:49
 #, c-format
@@ -7786,7 +7786,7 @@ msgstr ""
 #: modules/operserv/info.c:56
 #, c-format
 msgid "Channel expiration time: %d days"
-msgstr ""
+msgstr "規定のチャンネル有効期限： %d 日"
 
 #: modules/operserv/info.c:58
 #, c-format
@@ -7887,11 +7887,11 @@ msgstr ""
 
 #: modules/operserv/mode.c:20
 msgid "Changes modes on channels."
-msgstr ""
+msgstr "チャンネルに設定されたチャンネルモード"
 
 #: modules/operserv/mode.c:43
 msgid "Syntax: MODE <channel> <parameters>"
-msgstr ""
+msgstr "構文： MODE <channel> <parameters>"
 
 #: modules/operserv/mode.c:57
 #, c-format
@@ -7900,16 +7900,16 @@ msgstr ""
 
 #: modules/operserv/modinspect.c:20
 msgid "Displays information about loaded modules."
-msgstr ""
+msgstr "読み込み済みモジュールの情報"
 
 #: modules/operserv/modinspect.c:40
 msgid "Syntax: MODINSPECT <module>"
-msgstr ""
+msgstr "構文： MODEINSPECT <module>"
 
 #: modules/operserv/modinspect.c:50 modules/operserv/modreload.c:71
 #, c-format
 msgid "%s is not loaded."
-msgstr ""
+msgstr "モジュール %s は読み込まれていません。"
 
 #: modules/operserv/modinspect.c:57
 #, c-format
@@ -7919,12 +7919,12 @@ msgstr ""
 #: modules/operserv/modinspect.c:62
 #, c-format
 msgid "Name       : %s"
-msgstr ""
+msgstr "名前： %s"
 
 #: modules/operserv/modinspect.c:63
 #, c-format
 msgid "Address    : %p"
-msgstr ""
+msgstr "アドレス： %p"
 
 #: modules/operserv/modinspect.c:64
 #, c-format
@@ -7939,63 +7939,63 @@ msgstr ""
 #: modules/operserv/modinspect.c:66
 #, c-format
 msgid "SDK Serial : %s"
-msgstr ""
+msgstr "SDK のシリアル： %s"
 
 #: modules/operserv/modinspect.c:67
 #, c-format
 msgid "Version    : %s"
-msgstr ""
+msgstr "バージョン： %s"
 
 #: modules/operserv/modinspect.c:68
 #, c-format
 msgid "Vendor     : %s"
-msgstr ""
+msgstr "作成者： %s"
 
 #: modules/operserv/modinspect.c:69
 #, c-format
 msgid "Can unload : %s"
-msgstr ""
+msgstr "読み込み解除の可否： %s"
 
 #: modules/operserv/modlist.c:20
 msgid "Lists loaded modules."
-msgstr ""
+msgstr "読み込まれているモジュールを一覧します。"
 
 #: modules/operserv/modlist.c:38
 msgid "Loaded modules:"
-msgstr ""
+msgstr "読み込み済みモジュール："
 
 #: modules/operserv/modlist.c:44
 #, c-format
 msgid "%2d: %-20s [loaded at 0x%lx]"
-msgstr ""
+msgstr "%2d: %-20s [アドレス 0x%lx]"
 
 #: modules/operserv/modlist.c:48
 #, c-format
 msgid "%d modules loaded."
-msgstr ""
+msgstr "%d 個のモジュールが読み込まれています。"
 
 #: modules/operserv/modload.c:21
 msgid "Loads a module."
-msgstr ""
+msgstr "モジュールを読み込みます。"
 
 #: modules/operserv/modload.c:42
 msgid "Syntax: MODLOAD <module...>"
-msgstr ""
+msgstr "構文： MODLOAD <module...>"
 
 #: modules/operserv/modload.c:51
 #, c-format
 msgid "%s is already loaded."
-msgstr ""
+msgstr "モジュール %s は読み込まれています。"
 
 #: modules/operserv/modload.c:59
 #, c-format
 msgid "Module %s loaded."
-msgstr ""
+msgstr "モジュール %s を読み込みました。"
 
 #: modules/operserv/modload.c:61
 #, c-format
 msgid "Module %s failed to load."
-msgstr ""
+msgstr "モジュール %s の読み込みに失敗しました。"
 
 #: modules/operserv/modload.c:69 modules/operserv/modreload.c:182
 #: modules/operserv/rehash.c:48
@@ -8006,11 +8006,11 @@ msgstr ""
 
 #: modules/operserv/modreload.c:15
 msgid "Reloads a module."
-msgstr ""
+msgstr "モジュールを再読込します。"
 
 #: modules/operserv/modreload.c:65
 msgid "Syntax: MODRELOAD <module...>"
-msgstr ""
+msgstr "構文： MODRELOAD <module...>"
 
 #: modules/operserv/modreload.c:81
 #, c-format
@@ -8020,7 +8020,7 @@ msgstr ""
 #: modules/operserv/modreload.c:87
 #, c-format
 msgid "%s is a permanent module; it cannot be reloaded."
-msgstr ""
+msgstr "モジュール %s は永続的なモジュールのため、再読込できません。"
 
 #: modules/operserv/modreload.c:104
 #, c-format
@@ -8048,21 +8048,21 @@ msgstr ""
 
 #: modules/operserv/modunload.c:20
 msgid "Unloads a module."
-msgstr ""
+msgstr "モジュールを切り離します。"
 
 #: modules/operserv/modunload.c:43
 msgid "Syntax: MODUNLOAD <module...>"
-msgstr ""
+msgstr "構文： MODUNLOAD <module...>"
 
 #: modules/operserv/modunload.c:54
 #, c-format
 msgid "%s is not loaded; it cannot be unloaded."
-msgstr ""
+msgstr "モジュール %s は読み込まれていないため、切り離し出来ません。"
 
 #: modules/operserv/modunload.c:62
 #, c-format
 msgid "%s is a permanent module; it cannot be unloaded."
-msgstr ""
+msgstr "モジュール %s は永続的なモジュールのため、切り離すことは出来ません。"
 
 #: modules/operserv/modunload.c:68
 #, c-format
@@ -8072,7 +8072,7 @@ msgstr ""
 #: modules/operserv/modunload.c:77
 #, c-format
 msgid "Module %s unloaded."
-msgstr ""
+msgstr "モジュール %s を切り離しました。"
 
 #: modules/operserv/noop.c:36
 msgid "Restricts IRCop access."
