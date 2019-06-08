@@ -9,6 +9,7 @@
 MODULE = crypto
 
 SRCS =			\
+	argon2d.c	\
 	pbkdf2.c	\
 	pbkdf2v2.c	\
 	posix.c		\
@@ -21,6 +22,4 @@ include ../../buildsys.mk
 include ../../buildsys.module.mk
 
 CPPFLAGS	+= -I../../include
-LIBS		+= ${SSL_LIBS}
-LIBS 		+= -L../../libathemecore -lathemecore ${LDFLAGS_RPATH}
-
+LIBS 		+= -L../../libathemecore -lathemecore ${LDFLAGS_RPATH} ${SSL_LIBS} ${LIBIDN_LIBS}

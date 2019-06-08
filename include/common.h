@@ -50,7 +50,7 @@ typedef enum {
 #define HOSTIPLEN		54
 #define GECOSLEN		51
 #define KEYLEN			24
-#define EMAILLEN		120
+#define EMAILLEN		255
 #define MEMOLEN			300
 
 #define MAXMSIGNORES		40
@@ -127,7 +127,8 @@ enum faultcode_
 	fault_nochange		= 12,
 	fault_already_authed	= 13,
 	fault_unimplemented	= 14,
-	fault_badauthcookie	= 15
+	fault_badauthcookie	= 15,
+	fault_internalerror	= 16,
 };
 
 typedef enum faultcode_ cmd_faultcode_t;
