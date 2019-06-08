@@ -134,11 +134,9 @@ static void do_list(sourceinfo_t *si, mychan_t *mc, unsigned int flags)
 
 	MOWGLI_ITER_FOREACH(n, mc->chanacs.head)
 	{
-		const char *template, *mod_ago;
+		const char *template, *mod_ago, *setter;
 		struct tm tm;
 		char mod_date[64];
-		myentity_t *setter;
-		const char *setter_name;
 
 		ca = n->data;
 
@@ -147,21 +145,17 @@ static void do_list(sourceinfo_t *si, mychan_t *mc, unsigned int flags)
 
 		template = get_template_name(mc, ca->level);
 		mod_ago = ca->tmodified ? time_ago(ca->tmodified) : "?";
+		setter = (ca->setter && *ca->setter) ? ca->setter : "?";
 
 		tm = *localtime(&ca->tmodified);
 		strftime(mod_date, sizeof mod_date, TIME_FORMAT, &tm);
 
-		if (*ca->setter_uid != '\0' && (setter = myentity_find_uid(ca->setter_uid)))
-			setter_name = setter->name;
-		else
-			setter_name = "?";
-
 		if (template != NULL)
-			command_success_nodata(si, _("%-5d %-22s %-20s (%s) (%s) [modified %s ago, on %s by %s]"),
-				i, ca->entity ? ca->entity->name : ca->host, bitmask_to_flags(ca->level), template, mc->name, mod_ago, mod_date, setter_name);
+			command_success_nodata(si, _("%-5d %-22s %-20s (%s) (%s) [modified %s ago, on %s, by %s]"),
+				i, ca->entity ? ca->entity->name : ca->host, bitmask_to_flags(ca->level), template, mc->name, mod_ago, mod_date, setter);
 		else
-			command_success_nodata(si, _("%-5d %-22s %-20s (%s) [modified %s ago, on %s by %s]"),
-				i, ca->entity ? ca->entity->name : ca->host, bitmask_to_flags(ca->level), mc->name, mod_ago, mod_date, setter_name);
+			command_success_nodata(si, _("%-5d %-22s %-20s (%s) [modified %s ago, on %s, by %s]"),
+				i, ca->entity ? ca->entity->name : ca->host, bitmask_to_flags(ca->level), mc->name, mod_ago, mod_date, setter);
 		i++;
 	}
 
@@ -304,7 +298,7 @@ static void cs_cmd_flags(sourceinfo_t *si, int parc, char *parv[])
 		if (flagstr)
 			*flagstr++ = '\0';
 
-		target = sstrdup(parv[2]);
+		target = strdup(parv[2]);
 	}
 
 	{
@@ -467,7 +461,7 @@ static void cs_cmd_flags(sourceinfo_t *si, int parc, char *parv[])
 			req.ca = ca;
 			req.oldlevel = ca->level;
 
-			if (!chanacs_modify(ca, &addflags, &removeflags, restrictflags, si->smu))
+			if (!chanacs_modify(ca, &addflags, &removeflags, restrictflags))
 			{
 				command_fail(si, fault_noprivs, _("You are not allowed to set \2%s\2 on \2%s\2 in \2%s\2."), bitmask_to_flags2(addflags, removeflags), mt->name, mc->name);
 				chanacs_close(ca);
@@ -498,7 +492,7 @@ static void cs_cmd_flags(sourceinfo_t *si, int parc, char *parv[])
 			req.ca = ca;
 			req.oldlevel = ca->level;
 
-			if (!chanacs_modify(ca, &addflags, &removeflags, restrictflags, si->smu))
+			if (!chanacs_modify(ca, &addflags, &removeflags, restrictflags))
 			{
 		                command_fail(si, fault_noprivs, _("You are not allowed to set \2%s\2 on \2%s\2 in \2%s\2."), bitmask_to_flags2(addflags, removeflags), target, mc->name);
 				chanacs_close(ca);
