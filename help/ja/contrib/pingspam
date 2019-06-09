@@ -1,0 +1,8 @@
+Help for PINGSPAM:
+
+PINGSPAM spams a user with pings from every service, plus some bonus notices.
+
+構文: PINGSPAM <target>
+
+コマンド例:
+    /msg &nick& PINGSPAM foo-person

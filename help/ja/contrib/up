@@ -1,0 +1,8 @@
+Help for UP:
+
+UP grants you all access modes you have permission to have on a given channel.
+
+構文: UP <#channel>
+
+コマンド例:
+    /msg &nick& UP #foo

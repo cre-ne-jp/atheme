@@ -1,0 +1,11 @@
+Help for UNBAN:
+
+The UNBAN command allows you to unban a user or hostmask
+from a channel. If no nickname or hostmask is specified,
+you are unbanned.
+
+構文: UNBAN <#channel> [nickname|hostmask]
+
+コマンド例:
+    /msg &nick& UNBAN #chat pfish
+    /msg &nick& UNBAN #chat *!*@*.ucdavis.edu

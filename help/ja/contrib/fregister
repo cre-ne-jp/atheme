@@ -1,0 +1,9 @@
+Help for FREGISTER:
+
+FREGISTER allows a services operator with the user:fregister priv
+to register a nickname on behalf of another user.
+
+構文: FREGISTER <account> <password> <email> [CRYPTPASS|HIDEMAIL|NOOP|NEVEROP]
+
+コマンド例:
+    /msg &nick& FREGISTER nenolod randompass nenolod@nenolod.net

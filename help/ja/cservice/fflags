@@ -1,0 +1,12 @@
+Help for FFLAGS:
+
+The FFLAGS command allows an oper to force a flags
+change on a channel. The syntax is the same as FLAGS,
+except that the target and flags changes must be given.
+Viewing any channel's access list is done with FLAGS.
+
+構文: FFLAGS <#channel> <nickname|hostmask> <template>
+構文: FFLAGS <#channel> <nickname|hostmask> <flag_changes>
+
+コマンド例:
+    /msg &nick& FFLAGS #foo foo AOP

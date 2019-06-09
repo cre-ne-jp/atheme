@@ -1,0 +1,9 @@
+Help for LOGOUT:
+
+LOGOUT logs you out of the account
+that you are currently logged into.
+
+構文: LOGOUT
+
+コマンド例:
+    /msg &nick& LOGOUT

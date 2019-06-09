@@ -1,0 +1,11 @@
+Help for AJOIN:
+
+AJOIN allows you to manage an automatic-join on identify channel list.
+
+構文: AJOIN ADD|DEL|LIST|CLEAR [#channel]
+
+コマンド例:
+    /msg &nick& AJOIN LIST
+    /msg &nick& AJOIN ADD #foo
+    /msg &nick& AJOIN DEL #foo
+    /msg &nick& AJOIN CLEAR

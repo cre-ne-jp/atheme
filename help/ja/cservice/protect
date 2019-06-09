@@ -1,0 +1,14 @@
+Help for PROTECT|DEPROTECT:
+
+These commands perform status mode changes on a channel.
+
+If you perform an operation on another user, they will be
+notified that you did it.
+
+If the last parameter is omitted the action is performed
+on the person requesting the command.
+
+構文: PROTECT|DEPROTECT <#channel> [nickname]
+
+コマンド例:
+    /msg &nick& PROTECT #foo

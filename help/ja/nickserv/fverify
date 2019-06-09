@@ -1,0 +1,11 @@
+Help for FVERIFY:
+
+FVERIFY allows administrators to confirm a change
+associated with an account registration without
+having the verification email.
+
+構文: FVERIFY <operation> <nickname>
+
+コマンド例:
+    /msg &nick& FVERIFY REGISTER jenny
+    /msg &nick& FVERIFY EMAILCHG Aeriana

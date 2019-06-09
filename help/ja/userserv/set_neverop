@@ -1,0 +1,9 @@
+Help for SET NEVEROP:
+
+SET NEVEROP prevents others from adding you to
+channel access lists.
+
+構文: SET NEVEROP ON|OFF
+
+コマンド例:
+    /msg &nick& SET NEVEROP on

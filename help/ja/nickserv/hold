@@ -1,0 +1,9 @@
+Help for HOLD:
+
+HOLD prevents an account and all nicknames registered
+to it from expiring.
+
+構文: HOLD <nick> ON|OFF
+
+コマンド例:
+    /msg &nick& HOLD jilles ON

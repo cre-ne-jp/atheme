@@ -1,0 +1,14 @@
+Help for FREEZE:
+
+FREEZE allows operators to "freeze" an abusive user's
+account. This logs out all sessions logged in to the
+account and prevents further logins. Thus, users
+cannot obtain the access associated with the account.
+
+FREEZE information will be displayed in INFO output.
+
+構文: FREEZE <nick> ON|OFF <reason>
+
+コマンド例:
+    /msg &nick& FREEZE pfish ON Persistent spammer
+    /msg &nick& FREEZE alambert OFF

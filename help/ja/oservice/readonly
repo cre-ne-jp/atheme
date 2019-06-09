@@ -1,0 +1,10 @@
+Help for READONLY:
+
+READONLY allows services operators to enable
+or disable readonly mode while services is
+running.
+
+構文: READONLY ON|OFF
+
+コマンド例:
+    /msg &nick& READONLY ON

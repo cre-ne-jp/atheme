@@ -1,0 +1,8 @@
+Help for ENABLE:
+
+Enables RPGServ for a channel.
+
+構文: ENABLE <#channel>
+
+コマンド例:
+    /msg &nick& ENABLE #ooc

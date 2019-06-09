@@ -1,0 +1,9 @@
+Help for SET HIDELASTLOGIN:
+
+SET HIDELASTLOGIN will OPT you out of the Last Login 
+notice sent to you upon authenticating to Services.
+
+構文: SET HIDELASTLOGIN ON|OFF
+
+コマンド例:
+    /msg &nick& SET HIDELASTLOGIN ON

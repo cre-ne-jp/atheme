@@ -1,0 +1,8 @@
+Help for DISABLE:
+
+Disables RPGServ for a channel.
+
+構文: DISABLE <#channel>
+
+コマンド例:
+    /msg &nick& DISABLE #ooc

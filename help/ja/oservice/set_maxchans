@@ -1,0 +1,9 @@
+Help for SET MAXCHANS:
+
+SET MAXCHANS allows setting how many channels one account may
+be founder of.
+
+構文: SET MAXCHANS <value>
+
+コマンド例:
+    /msg &nick& SET MAXCHANS 7

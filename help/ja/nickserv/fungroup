@@ -1,0 +1,23 @@
+Help for FUNGROUP:
+
+FUNGROUP forcefully unregisters the given nickname
+from the account it is registered to.
+
+#if module nickserv/set_accountname
+If you are ungrouping an account name, you need to
+specify a new name for the account. This must be
+another nick registered to it.
+#else
+You cannot ungroup account names.
+#endif
+
+構文: FUNGROUP <nickname>
+#if module nickserv/set_accountname
+構文: FUNGROUP <account> <newname>
+#endif
+
+コマンド例:
+    /msg &nick& FUNGROUP SomeNick
+#if module nickserv/set_accountname
+    /msg &nick& FUNGROUP SomeName SomeNick
+#endif

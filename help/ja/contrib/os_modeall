@@ -1,0 +1,10 @@
+Help for MODEALL:
+
+構文: MODEALL <mode> [parameters]
+
+MODEALL sets modes on all channels. This may be useful in
+the event of a bot flood, to set all channels +R.
+
+コマンド例:
+    /msg &nick& MODEALL +R
+    /msg &nick& MODEALL +M

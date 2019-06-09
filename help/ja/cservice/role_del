@@ -1,0 +1,8 @@
+Help for ROLE DEL:
+
+ROLE DEL will delete a channel-specific role.
+
+構文: ROLE <#channel> DEL <role>
+
+コマンド例:
+    /msg &nick& ROLE #atheme DEL helpers

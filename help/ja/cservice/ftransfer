@@ -1,0 +1,9 @@
+Help for FTRANSFER:
+
+FTRANSFER forcefully transfers foundership
+of a channel.
+
+構文: FTRANSFER <#channel> <founder>
+
+コマンド例:
+    /msg &nick& FTRANSFER #casual vodkaswirl

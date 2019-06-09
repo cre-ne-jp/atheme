@@ -1,0 +1,8 @@
+Help for TOPIC:
+
+The TOPIC command allows for the changing of a topic on a channel.
+
+構文: TOPIC <#channel> <topic>
+
+コマンド例:
+    /msg &nick& TOPIC #foo bar

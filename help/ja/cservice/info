@@ -1,0 +1,9 @@
+Help for INFO:
+
+INFO displays channel information such as
+registration time, flags, and other details.
+
+構文: INFO <#channel>
+
+コマンド例:
+    /msg &nick& INFO #foo

@@ -1,3 +1,11 @@
+Atheme Services 7.2.9 Release Notes
+===================================
+
+This is a security release fixing use after free that could potentially be abused
+by an attacker already having the privilege to use SASL impersonation to cause a
+denial of service. Users of 7.2.8 should update to version 7.2.9; older releases
+are not affected.
+
 Atheme Services 7.2.8 Release Notes
 ===================================
 
@@ -169,6 +177,8 @@ other
 
 crypto
 ------
+- argon2d:  New module implementing algorithm that won the Password
+            Hashing Competition (2015).
 - pbkdf2v2: Newer module implementing PBKDF2-HMAC digest scheme
             with backward compatibility and limited forward compatibility
 

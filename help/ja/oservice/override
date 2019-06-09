@@ -1,0 +1,8 @@
+Help for OVERRIDE:
+
+OVERRIDE is used for running a command as another user.
+
+構文: OVERRIDE <target> <service> <command> [params]
+
+コマンド例:
+    /msg &nick& OVERRIDE dotslasher ChanServ FLAGS #cows nenolod +*

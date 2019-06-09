@@ -1,0 +1,10 @@
+Help for SET LANGUAGE:
+
+SET LANGUAGE changes the language services
+uses to communicate with you.
+
+構文: SET LANGUAGE <abbreviation>
+
+コマンド例:
+    /msg &nick& SET LANGUAGE en
+    /msg &nick& SET LANGUAGE ru

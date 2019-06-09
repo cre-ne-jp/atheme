@@ -1,0 +1,8 @@
+Help for SAY:
+
+Makes the bot say the given text on the given channel.
+
+構文: SAY <chan> <text>
+
+コマンド例:
+    /msg &nick& SAY #help Welcome to #help!

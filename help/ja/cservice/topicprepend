@@ -1,0 +1,8 @@
+Help for TOPICPREPEND:
+
+The TOPICPREPEND command allows for the addition to a topic on a channel.
+
+構文: TOPICPREPEND <#channel> <topic>
+
+コマンド例:
+    /msg &nick& TOPICPREPEND #foo bar

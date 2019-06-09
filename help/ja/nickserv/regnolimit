@@ -1,0 +1,9 @@
+Help for REGNOLIMIT:
+
+REGNOLIMIT allows a user to maintain an
+unlimited amount of channel registrations.
+
+構文: REGNOLIMIT <user> ON|OFF
+
+コマンド例:
+    /msg &nick& REGNOLIMIT nenolod ON

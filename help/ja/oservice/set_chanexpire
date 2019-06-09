@@ -1,0 +1,9 @@
+Help for SET CHANEXPIRE:
+
+SET CHANEXPIRE allows network staff to modify how often channel
+expirations will be checked.
+
+構文: SET CHANEXPIRE <time in days>
+
+コマンド例:
+    /msg &nick& SET CHANEXPIRE 30

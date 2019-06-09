@@ -1,0 +1,8 @@
+Help for RESTART:
+
+RESTART shuts down services and restarts them.
+
+構文: RESTART
+
+コマンド例:
+    /msg &nick& RESTART

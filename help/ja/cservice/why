@@ -1,0 +1,9 @@
+Help for WHY:
+
+The WHY command shows the access entries an online
+user matches.
+
+構文: WHY <#channel> [nickname]
+
+コマンド例:
+    /msg &nick& WHY #atheme jilles^

@@ -1,0 +1,17 @@
+From: &from&
+To: &to&
+Reply-To: &replyto&
+Subject: &netname& アカウント登録
+Date: &date&
+
+&accountname&,
+
+IRC でのアカウント登録を完了するためには、次のコマンドを IRC に送信してください。
+
+/msg &nicksvs& VERIFY REGISTER &accountname& &param&
+
+&netname& IRC ネットワークにご登録頂き、ありがとうございました。
+
+--
+このメールは、&sourceinfo& によって &date& に送信されました。
+もしこのメールに心当たりがないようでしたら、&replyto& にメール全文を送信してください。

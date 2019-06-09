@@ -1,0 +1,9 @@
+Help for LIST:
+
+LIST shows all groups matching a specified pattern.
+
+構文: LIST <group pattern>
+
+コマンド例:
+    /msg &nick& LIST *
+    /msg &nick& LIST !pants*

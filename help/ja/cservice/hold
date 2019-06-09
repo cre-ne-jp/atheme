@@ -1,0 +1,10 @@
+Help for HOLD:
+
+HOLD prevents a channel from expiring for inactivity.
+Held channels will still expire when there are no
+eligible successors.
+
+構文: HOLD <#channel> ON|OFF
+
+コマンド例:
+    /msg &nick& HOLD #atheme ON

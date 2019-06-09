@@ -1,0 +1,9 @@
+Help for SAVECHANMODES:
+
+SAVECHANMODES saves all channel modes, channel topics and channel bans for
+every channel on the network to a file to be restored later with LOADCHANMODES.
+
+構文: SAVECHANMODES
+
+コマンド例:
+    /msg &nick& SAVECHANMODES

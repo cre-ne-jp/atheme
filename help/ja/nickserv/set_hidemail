@@ -1,0 +1,9 @@
+Help for SET HIDEMAIL:
+
+SET HIDEMAIL prevents an account's e-mail address
+from being shown to other users.
+
+構文: SET HIDEMAIL ON|OFF
+
+コマンド例:
+    /msg &nick& SET HIDEMAIL ON

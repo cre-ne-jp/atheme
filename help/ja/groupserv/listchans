@@ -1,0 +1,11 @@
+Help for LISTCHANS:
+
+LISTCHANS shows the channels that a group has
+access to.
+
+AKICKs are not shown.
+
+構文: LISTCHANS <group>
+
+コマンド例:
+    /msg &nick& LISTCHANS !foo

@@ -1,0 +1,13 @@
+Help for SET PROPERTY:
+
+SET PROPERTY manipulates metadata
+associated with a channel.
+
+To delete a metadata entry, specify
+the name and leave the value blank.
+
+構文: SET <#channel> PROPERTY <name> [value]
+
+コマンド例:
+    /msg &nick& SET #atheme PROPERTY URL http://www.atheme.org/
+    /msg &nick& SET #meat PROPERTY VEGETABLES

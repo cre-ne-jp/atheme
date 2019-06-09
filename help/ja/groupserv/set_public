@@ -1,0 +1,9 @@
+Help for SET PUBLIC:
+
+SET PUBLIC shows group membership when users request NickServ
+INFO of members of the group.
+
+構文: SET <!group> PUBLIC <ON|OFF>
+
+コマンド例:
+    /msg &nick& SET !awesome-people PUBLIC ON

@@ -1,0 +1,19 @@
+Help for VHOST:
+
+VHOST allows operators to set a virtual host (also
+known as a spoof or cloak) on an account. This vHost
+will be set on the user immediately and each time
+they identify.
+
+構文: VHOST <nickname> ON <vHost>
+構文: VHOST <nickname> OFF
+
+If the nickname is marked, you can override this
+using the FORCE keyword.
+
+構文: VHOST <nickname> ON <vHost> FORCE
+構文: VHOST <nickname> OFF FORCE
+
+コマンド例:
+    /msg &nick& VHOST spb ON may.explode.on.impact
+    /msg &nick& VHOST nenolod OFF

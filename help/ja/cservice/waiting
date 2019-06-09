@@ -1,0 +1,14 @@
+Help for WAITING:
+
+WAITING will show Services Operators the
+channel registration request list.  (For 
+networks that moderate Channel Registration 
+requests)
+
+構文: WAITING
+
+コマンド例:
+    /msg &nick& WAITING
+See Also:
+    /msg &nick& ACTIVATE #FunChat
+    /msg &nick& REJECT #BotHouse

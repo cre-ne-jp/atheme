@@ -1,0 +1,8 @@
+Help for UPDATE:
+
+UPDATE flushes the database to disk.
+
+構文: UPDATE
+
+コマンド例:
+    /msg &nick& UPDATE

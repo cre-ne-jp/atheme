@@ -1,0 +1,8 @@
+Help for CANCEL:
+
+CANCEL a pending announcement.
+
+構文: CANCEL
+
+コマンド例:
+    /msg &nick& CANCEL

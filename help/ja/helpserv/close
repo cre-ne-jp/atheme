@@ -1,0 +1,9 @@
+Help for CLOSE:
+
+Close the help request from the given nick.
+The user will be notified that their request was closed.
+
+構文: CLOSE <nick> [reason]
+
+コマンド例:
+    /msg &nick& CLOSE Grue It is now no longer pitch dark.

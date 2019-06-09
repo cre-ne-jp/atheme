@@ -1,0 +1,8 @@
+Help for TOPICAPPEND:
+
+The TOPICAPPEND command allows for the addition to a topic on a channel.
+
+構文: TOPICAPPEND <#channel> <topic>
+
+コマンド例:
+    /msg &nick& TOPICAPPEND #foo bar

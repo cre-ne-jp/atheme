@@ -1,0 +1,9 @@
+Help for ACCESS ADD:
+
+ACCESS ADD will assign the given user to the given
+channel role.
+
+構文: ACCESS <#channel> ADD <user> <role>
+
+コマンド例:
+    /msg &nick& ACCESS #atheme ADD stitch helpers

@@ -1,0 +1,10 @@
+Help for SYNC:
+
+The SYNC command will force all channel statuses to flags, giving and taking
+away ops, voice and so on where necessary. You must have the channel flag +R to
+run this command.
+
+構文: SYNC <#channel>
+
+コマンド例:
+    /msg &nick& SYNC #bar

@@ -1,0 +1,9 @@
+Help for OFFERLIST:
+
+OFFERLIST lists all vHosts currently available from
+the network staff.
+
+構文: OFFERLIST
+
+コマンド例:
+    /msg &nick& OFFERLIST

@@ -1,0 +1,9 @@
+Help for RESETPASS:
+
+RESETPASS sets a random password for the specified
+account.
+
+構文: RESETPASS <account>
+
+コマンド例:
+    /msg &nick& RESETPASS pfish

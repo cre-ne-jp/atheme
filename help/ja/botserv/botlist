@@ -1,0 +1,8 @@
+Help for BOTLIST:
+
+Lists all available bots on this network.
+
+構文: BOTLIST
+
+コマンド例:
+    /msg &nick& BOTLIST

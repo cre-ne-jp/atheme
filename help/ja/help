@@ -1,0 +1,5 @@
+HELP のヘルプ
+
+HELP コマンドは、各サービスの使い方を表示します。
+
+構文: HELP <command> [parameters]

@@ -1,0 +1,8 @@
+Help for TOPICSWAP:
+
+Allows easily swapping out parts of a topic on a channel.
+
+構文: TOPICSWAP <#channel> <search>:[<replace>]
+
+コマンド例:
+    /msg &nick& TOPICSWAP #foo orange:apple

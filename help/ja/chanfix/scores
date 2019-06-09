@@ -1,0 +1,9 @@
+Help for SCORES:
+
+SCORES lists all users' chanfix scores
+for the specified channel.
+
+構文: SCORES <#channel>
+
+コマンド例:
+    /msg &nick& SCORES #foo

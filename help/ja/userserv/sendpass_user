@@ -1,0 +1,18 @@
+Help for SENDPASS:
+
+SENDPASS emails a key to the email address
+corresponding to the specified account
+that can be used to set a new password
+using SETPASS.
+
+構文: SENDPASS <account>
+#if priv user:sendpass
+
+If a key has been emailed but not yet used,
+you can clear it using the CLEAR keyword.
+
+構文: SENDPASS <account> CLEAR
+#endif
+
+コマンド例:
+    /msg &nick& SENDPASS foo

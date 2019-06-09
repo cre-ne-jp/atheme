@@ -1,0 +1,10 @@
+Help for SET URL:
+
+SET URL allows you to change or set the URL
+associated with a channel. This is shown
+to all users joining the channel.
+
+構文: SET <#channel> URL [url]
+
+コマンド例:
+    /msg &nick& SET #chat URL http://slashdot.org

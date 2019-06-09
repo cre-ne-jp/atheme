@@ -1,0 +1,10 @@
+Help for INFO:
+
+INFO displays group information such as
+registration time, group URL, email address
+and founder.
+
+構文: INFO <!group>
+
+コマンド例:
+    /msg &nick& INFO !baz

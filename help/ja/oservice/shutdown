@@ -1,0 +1,9 @@
+Help for SHUTDOWN:
+
+SHUTDOWN shuts down services. Services will
+not reconnect or restart.
+
+構文: SHUTDOWN
+
+コマンド例:
+    /msg &nick& SHUTDOWN

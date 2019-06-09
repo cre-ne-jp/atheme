@@ -1,0 +1,9 @@
+Help for LISTOWNMAIL:
+
+LISTOWNMAIL shows accounts registered to
+your account's e-mail address.
+
+構文: LISTOWNMAIL
+
+コマンド例:
+    /msg &nick& LISTOWNMAIL

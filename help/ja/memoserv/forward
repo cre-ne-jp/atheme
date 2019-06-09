@@ -1,0 +1,11 @@
+Help for FORWARD:
+
+FORWARD allows you to forward a memo to another
+account. Useful for a variety of reasons.
+
+You can also SEND, DELETE, LIST or READ memos.
+
+構文: FORWARD <user|nick> <memo number>
+
+コマンド例:
+    /msg &nick& FORWARD kog 1

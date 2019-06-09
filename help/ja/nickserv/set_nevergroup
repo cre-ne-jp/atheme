@@ -1,0 +1,9 @@
+Help for SET NEVERGROUP:
+
+SET NEVERGROUP prevents others from adding you to
+group access lists.
+
+構文: SET NEVERGROUP ON|OFF
+
+コマンド例:
+    /msg &nick& SET NEVERGROUP ON

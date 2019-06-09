@@ -1,0 +1,10 @@
+Help for MODE:
+
+MODE allows for the editing of modes on a channel. Some networks
+will most likely find this command to be unethical.
+
+構文: MODE <#channel> <mode> [parameters]
+
+コマンド例:
+    /msg &nick& MODE #heh -m
+    /msg &nick& MODE #heh +o foo

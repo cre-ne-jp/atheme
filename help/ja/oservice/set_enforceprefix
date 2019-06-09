@@ -1,0 +1,10 @@
+Help for SET ENFORCEPREFIX:
+
+SET ENFORCEPREFIX changes the prefix of the nick
+that a user will be changed to when they use an
+enforced nickname and fail to authenticate to it.
+
+構文: SET ENFORCEPREFIX <prefix>
+
+コマンド例:
+    /msg &nick& SET ENFORCEPREFIX Guest

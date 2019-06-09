@@ -1,0 +1,8 @@
+Help for RPS:
+
+RPS will randomly reply "Rock", "Paper", or "Scissors".
+
+構文: RPS
+
+コマンド例:
+    /msg &nick& RPS

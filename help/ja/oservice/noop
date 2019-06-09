@@ -1,0 +1,22 @@
+Help for NOOP:
+
+NOOP allows you to deny IRCop access on a per-hostmask
+or per-server basis. If a matching user opers up, they
+will be killed.
+
+構文: NOOP ADD HOSTMASK <nick!user@host> [reason]
+構文: NOOP ADD SERVER <mask> [reason]
+
+コマンド例:
+    /msg &nick& NOOP ADD HOSTMASK *!*@some.spoof Abusive operator
+    /msg &nick& NOOP ADD SERVER bad.server Abusive admin
+
+構文: NOOP DEL HOSTMASK <nick!user@host>
+構文: NOOP DEL SERVER <mask>
+
+コマンド例:
+    /msg &nick& NOOP DEL HOSTMASK *!some@operator.host
+    /msg &nick& NOOP DEL SERVER bad.server
+
+構文: NOOP LIST HOSTMASK
+構文: NOOP LIST SERVER
