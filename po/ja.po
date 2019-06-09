@@ -1475,12 +1475,12 @@ msgstr ""
 msgid ""
 "To avoid accidental use of this command, this operation has to be confirmed. "
 "Please confirm by replying with %s"
-msgstr ""
+msgstr "このコマンドを誤って使わないため、実行内容を確認してください。"
 
 #: modules/chanserv/drop.c:108 modules/nickserv/drop.c:119
 #, c-format
 msgid "Invalid key for %s."
-msgstr ""
+msgstr "%s は有効なキーではありません。"
 
 #: modules/chanserv/drop.c:119 modules/chanserv/drop.c:167
 #, c-format
@@ -1564,7 +1564,7 @@ msgstr ""
 #: modules/chanserv/flags.c:179 modules/nickserv/enforce.c:534
 #, c-format
 msgid "The nick %s is reserved and cannot be registered."
-msgstr ""
+msgstr "ニックネーム %s は予約されているか、登録できません。"
 
 #: modules/chanserv/flags.c:200
 msgid "Syntax: FLAGS <channel> [target] [flags]"
@@ -1770,21 +1770,21 @@ msgstr "すべてのコマンドの冗長な一覧を表示するには、以下
 msgid ""
 "If you're having trouble or you need some additional help, you may want to "
 "join the help channel %s or visit the help webpage %s"
-msgstr ""
+msgstr "問題があったり、追加の情報が必要な場合は、ヘルプチャンネル %s に参加するか、ヘルプページ %s にアクセスしてください。"
 
 #: modules/chanserv/help.c:91 modules/nickserv/help.c:79
 #, c-format
 msgid ""
 "If you're having trouble or you need some additional help, you may want to "
 "join the help channel %s"
-msgstr ""
+msgstr "問題があったり、追加の情報が必要な場合は、ヘルプチャンネル %s に参加するか、ヘルプページ %s にアクセスしてください。"
 
 #: modules/chanserv/help.c:93 modules/nickserv/help.c:81
 #, c-format
 msgid ""
 "If you're having trouble or you need some additional help, you may want to "
 "visit the help webpage %s"
-msgstr ""
+msgstr "問題があったり、追加の情報が必要な場合は、ヘルプチャンネル %s に参加するか、ヘルプページ %s にアクセスしてください。"
 
 #: modules/chanserv/hold.c:20
 msgid "Prevents a channel from expiring."
@@ -1797,26 +1797,26 @@ msgstr ""
 #: modules/chanserv/hold.c:62 modules/nickserv/hold.c:78
 #, c-format
 msgid "%s is already held."
-msgstr ""
+msgstr "%s は既にホールドされています。"
 
 #: modules/chanserv/hold.c:70 modules/nickserv/hold.c:86
 #, c-format
 msgid "%s is now held."
-msgstr ""
+msgstr "%s をホールドしました。"
 
 #: modules/chanserv/hold.c:76 modules/nickserv/hold.c:92
 #, c-format
 msgid "%s is not held."
-msgstr ""
+msgstr "%s はホールドされていません。"
 
 #: modules/chanserv/hold.c:84 modules/nickserv/hold.c:100
 #, c-format
 msgid "%s is no longer held."
-msgstr ""
+msgstr "%s は長いことホールドされていません。"
 
 #: modules/chanserv/info.c:20 modules/nickserv/info.c:20
 msgid "Displays information on registrations."
-msgstr ""
+msgstr "登録情報を表示します。"
 
 #: modules/chanserv/info.c:67
 #, c-format
@@ -1973,17 +1973,17 @@ msgstr ""
 #: modules/chanserv/list.c:250
 #, c-format
 msgid "No channel matched criteria %s"
-msgstr ""
+msgstr "%s に該当する物はありません。"
 
 #: modules/chanserv/list.c:252 modules/nickserv/list.c:335
 #, c-format
 msgid "%d match for criteria %s"
-msgstr ""
+msgstr "%d 件が %s に該当します。"
 
 #: modules/chanserv/list.c:252 modules/nickserv/list.c:335
 #, c-format
 msgid "%d matches for criteria %s"
-msgstr ""
+msgstr "%d 件が %s に該当します。"
 
 #: modules/chanserv/moderate.c:37
 msgid "Activates a pending registration"
@@ -2037,7 +2037,7 @@ msgstr ""
 #: modules/infoserv/main.c:508 modules/nickserv/multimark.c:1064
 #: modules/proxyscan/dnsbl.c:265
 msgid "End of list."
-msgstr ""
+msgstr "以上"
 
 #: modules/chanserv/op.c:22
 msgid "Gives channel ops to a user."
@@ -2240,8 +2240,7 @@ msgid ""
 "The system is currently too busy to process your registration, please try "
 "again later."
 msgstr ""
-"システムが過負荷状態にあり、あなたの登録を処理できませんでした。後ほどもう一"
-"度お試しください。"
+"システムが過負荷状態にあり、あなたの登録を処理できませんでした。後ほどもう一度お試しください。"
 
 #: modules/chanserv/register.c:132
 msgid "You have too many channels registered."
@@ -2586,22 +2585,22 @@ msgstr "無効なプロパティ名です。"
 #: modules/chanserv/set_property.c:80 modules/nickserv/set_property.c:69
 #, c-format
 msgid "Metadata entry %s was not set."
-msgstr ""
+msgstr "%s は設定されていない情報です。"
 
 #: modules/chanserv/set_property.c:86
 #, c-format
 msgid "%s deleted the metadata entry %s"
-msgstr ""
+msgstr "%2$s に設定された %1$s を削除されました。"
 
 #: modules/chanserv/set_property.c:87 modules/nickserv/set_property.c:80
 #, c-format
 msgid "Metadata entry %s has been deleted."
-msgstr ""
+msgstr "%s の情報は削除されています。"
 
 #: modules/chanserv/set_property.c:102 modules/nickserv/set_property.c:92
 #, c-format
 msgid "Cannot add %s to %s metadata table, it is full."
-msgstr ""
+msgstr "登録上限を超えているため、%2$s に %1$s を追加できませんでした。"
 
 #: modules/chanserv/set_property.c:109 modules/nickserv/set_property.c:99
 msgid "Parameters are too long. Aborting."
@@ -2615,7 +2614,7 @@ msgstr ""
 #: modules/chanserv/set_property.c:116 modules/nickserv/set_property.c:112
 #, c-format
 msgid "Metadata entry %s added."
-msgstr ""
+msgstr "%s を追加しました。"
 
 #: modules/chanserv/set_pubacl.c:20
 msgid "Allows the channel ACL to be public."
@@ -2760,7 +2759,7 @@ msgstr "あなたは %s としてログインしています。"
 #: modules/chanserv/status.c:86 modules/nickserv/status.c:107
 #, c-format
 msgid "You are a services operator of class %s."
-msgstr ""
+msgstr "あなたのオペレータクラスは %s です。"
 
 #: modules/chanserv/status.c:97 modules/nickserv/status.c:118
 #, c-format
@@ -3471,7 +3470,7 @@ msgstr ""
 #: modules/nickserv/set_quietchg.c:72
 #, c-format
 msgid "The %s flag is already set for account %s."
-msgstr ""
+msgstr "アカウント %1$s は既に %1$s フラグが設定済みです。"
 
 #: modules/contrib/ns_fenforce.c:64 modules/nickserv/enforce.c:148
 #: modules/nickserv/set_emailmemos.c:88 modules/nickserv/set_hidemail.c:79
@@ -3481,7 +3480,7 @@ msgstr ""
 #: modules/nickserv/set_quietchg.c:80
 #, c-format
 msgid "The %s flag has been set for account %s."
-msgstr ""
+msgstr "アカウント %1$s には、既に %1$s フラグが設定されています。"
 
 #: modules/contrib/ns_fenforce.c:74 modules/nickserv/enforce.c:158
 #: modules/nickserv/resetpass.c:92 modules/nickserv/sendpass.c:234
@@ -3492,7 +3491,7 @@ msgstr ""
 #: modules/nickserv/setpass.c:109 modules/nickserv/set_quietchg.c:96
 #, c-format
 msgid "The %s flag has been removed for account %s."
-msgstr ""
+msgstr "アカウント %2$s には、既に %1$s フラグが削除されています。"
 
 #: modules/contrib/ns_fenforce.c:78 modules/nickserv/enforce.c:162
 #: modules/nickserv/set_emailmemos.c:96 modules/nickserv/set_enforcetime.c:59
@@ -3503,7 +3502,7 @@ msgstr ""
 #: modules/nickserv/set_quietchg.c:88
 #, c-format
 msgid "The %s flag is not set for account %s."
-msgstr ""
+msgstr "アカウント %2$s に %1$s フラグは設定されていません。"
 
 #: modules/contrib/ns_forbid.c:73
 #, c-format
@@ -3569,7 +3568,7 @@ msgstr ""
 #: modules/contrib/ns_listlogins.c:39 modules/nickserv/listownmail.c:40
 msgid ""
 "You have to verify your email address before you can perform this operation."
-msgstr ""
+msgstr "操作を行なう前に、メールアドレス認証を行なってください。"
 
 #: modules/contrib/ns_listlogins.c:50
 #, c-format
@@ -3584,24 +3583,24 @@ msgstr ""
 #: modules/contrib/ns_sendpassmail.c:20 modules/nickserv/sendpass.c:20
 #: modules/nickserv/sendpass_user.c:20
 msgid "Email registration passwords."
-msgstr ""
+msgstr "メールアドレスに登録されているパスワード"
 
 #: modules/contrib/ns_sendpassmail.c:128
 msgid "Syntax: SENDPASSMAIL <email>"
-msgstr ""
+msgstr "書式: SENDPASSMAIL <email>"
 
 #: modules/contrib/ns_sendpassmail.c:136 modules/nickserv/register.c:151
 #: modules/nickserv/set_email.c:68
 #, c-format
 msgid "%s is not a valid email address."
-msgstr ""
+msgstr "%s は、有効なメールアドレスではありません。"
 
 #: modules/contrib/ns_sendpassmail.c:143
 #, c-format
 msgid ""
 "A password reset email has been sent for all accounts matching address %s, "
 "if any."
-msgstr ""
+msgstr "条件 %s に合致する全てのアカウントに、パスワード初期化メールを送信します。"
 
 #: modules/contrib/ns_waitreg.c:32
 msgid ""
